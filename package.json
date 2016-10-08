@@ -1,7 +1,7 @@
 {
   "name": "Sovetsky",
   "version": "0.0.1",
-  "description": "React/Redux WP Theme",
+  "description": "Responsive Restaurant Template | React/Redux & WP REST API",
   "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.5",
