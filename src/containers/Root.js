@@ -11,8 +11,8 @@ import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
 import InteriorImages from '../components/InteriorImages'
 import Slider from 'react-slick'
-import FormsyText from 'formsy-material-ui/lib/FormsyText'
-
+import { default as swal } from 'sweetalert2'
+import $ from 'jquery'
 import '../../less/css/slick.min.css'
 
 class MainHeader extends Component {
@@ -136,6 +136,17 @@ class ContactsMain extends Component {
           });
           DG.marker([51.836645,55.159559]).addTo(map).bindPopup('Ресторан Советский');
       });
+
+      $('#button-send').click( () => {
+        swal({
+          title: 'Отлично!',
+          text: 'Наш менеджер свяжется с вами!',
+          confirmButtonText: 'Продолжить',
+          type: 'success',
+          padding: '50',
+          buttonsStyling: false
+        })
+      });
   }
   render(){
     return(
@@ -148,7 +159,7 @@ class ContactsMain extends Component {
               <div className="col-md-9 col-xs-12">
                 <h2>Свяжитесь с нами для заказа</h2>
                 <input className="input-square" type="text" placeholder="Введите ваш номер телефона" name="phone" />
-                <button className="button-square-send">Отправить заявку</button>
+                <button id="button-send" className="button-square-send">Отправить заявку</button>
 
                 <div className="section-contacts-text">
                   <p>Это умозрительное описание, но, конечно, под ним есть строгие формулы, которые доказывают, что шифрование с одноразовыми блокнотами не взламывается. </p>

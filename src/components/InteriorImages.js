@@ -4,8 +4,10 @@ import { connect } from 'react-redux'
 // import * as LexiActions from '../actions'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import { fetchInterior } from '../actions'
-import Lightbox from 'react-images'
-import Carousel from 'nuka-carousel'
+//import Lightbox from 'react-images'
+//import Carousel from 'nuka-carousel'
+//import lightGallery from 'lightgallery.js'
+//import $ from 'jquery'
 
 // console.log('LG', lightGallery);
 
@@ -38,7 +40,10 @@ export class InteriorImages extends Component {
       const { fetchInterior } = this.props;
       fetchInterior();
   }
-
+  componentDidUpdate() {
+    var gallery = lightGallery(document.getElementById('interior'));
+    console.log( gallery );
+  }
   componentDidMount() {
 
   }
@@ -50,9 +55,7 @@ export class InteriorImages extends Component {
   }
   openLightBox( index ) {
       var images = this.props.interior.interior[0];
-
       console.log(' _openLightBox: ', images, 'index: '+index, images[index].full );
-
       this.setState({
         index: index, isOpen: true
       })
@@ -80,12 +83,12 @@ export class InteriorImages extends Component {
       var images = imagesData.interior[0].map( (obj, key) => {
         return(
           <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
-            <div className="interior-image-link" >
+            <a className="interior-image-link" href={obj.full} >
               <div className="image-overlay" />
               <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
                {/* <img className="interior-image" src={obj.full} />*/}
 
-            </div>
+            </a>
           </div>
         )
       })
