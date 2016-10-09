@@ -352,11 +352,30 @@ button, input {
   cursor:pointer;
 }
 
+.slick-next, .slick-prev {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    display:block;
+    line-height:1rem;
+    font-size:8rem;
+    transition:0.3s all;
+    color: fade(#fff,70%);
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.fullscreen-carousel-close {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    color:#fff;
+    font-size:3rem;
+  }
+}
+
 .fullscreen-carousel {
   &.hidden {
     top:-100%;
   }
-
   display:block;
   position:fixed;
   z-index:6;
@@ -367,7 +386,7 @@ button, input {
   top:0;
   bottom:0;
   .slick-prev, .slick-next {
-    top:45%;
+    top:50%;
     z-index:2;
     position: absolute;
   }

@@ -13,10 +13,10 @@ import MainPage from './components/MainPage'
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
 
+import '../resources/fonts/flaticon.css'
 import '../resources/fonts/styles.css'
 import '../less/styles.less'
 
-//const history = new createBrowserHistory();
 const store = configureStore();
 let rootElement = document.getElementById('root');
 

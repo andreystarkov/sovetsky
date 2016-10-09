@@ -4,6 +4,7 @@
   "description": "Responsive Restaurant Template | React/Redux & WP REST API",
   "license": "MIT",
   "dependencies": {
+    "animejs": "^1.1.1",
     "classnames": "^2.2.5",
     "flexboxgrid": "^6.3.1",
     "formsy-material-ui": "^0.5.0",
@@ -16,6 +17,7 @@
     "material-ui": "^0.16.0",
     "nuka-carousel": "^2.0.3",
     "react": "*",
+    "react-anime": "^0.2.3",
     "react-dom": "*",
     "react-flexbox-grid": "^0.10.2",
     "react-gsap-enhancer": "^0.3.0",

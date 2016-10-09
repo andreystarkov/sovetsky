@@ -58,6 +58,7 @@ class DecorativeMenuSection extends Component {
   }
 }
 
+
 class Carousel extends Component {
     render() {
       var settings = {

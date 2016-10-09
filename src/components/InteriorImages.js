@@ -8,10 +8,26 @@ import Slider from 'react-slick'
 import Transition from 'react-motion-ui-pack'
 import {Motion, spring} from 'react-motion'
 import {prevIcon, nextIcon} from '../svg/controls'
+import anime from 'animejs'
 
 class FullscreenCarousel extends Component {
   closeCarousel(){
 
+  }
+  componentDidUpdate(){
+
+    if( this.props.isOpen ){
+      anime({
+        targets: '.fullscreen-carousel',
+        translateY: {
+          value: [ -(window.innerHeight+400), 0],
+          delay: 0,
+          duration: 850,
+          easing: 'easeInOutExpo'
+        }
+      }
+      )
+    }
   }
   render() {
     var settings = {
@@ -22,8 +38,7 @@ class FullscreenCarousel extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: prevIcon(),
-      nextArrow: nextIcon(),
-
+      nextArrow: nextIcon()
     },
     items = this.props.items,
     first = this.props.first,
@@ -105,7 +120,7 @@ export class InteriorImages extends Component {
     function placeX(isOpen){
       if(isOpen){
         return(
-          <div className="fullscreen-carousel-close" onClick={self.closeLightbox.bind(this)}>x</div>
+          <div className="fullscreen-carousel-close" onClick={self.closeLightbox.bind(this)}><i className="flaticon-cross-out"></i></div>
         )
       }
     }
