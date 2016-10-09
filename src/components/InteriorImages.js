@@ -4,34 +4,63 @@ import { connect } from 'react-redux'
 // import * as LexiActions from '../actions'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import { fetchInterior } from '../actions'
-//import Lightbox from 'react-images'
-//import Carousel from 'nuka-carousel'
-//import lightGallery from 'lightgallery.js'
-//import $ from 'jquery'
-
-// console.log('LG', lightGallery);
+import Slider from 'react-slick'
+import Transition from 'react-motion-ui-pack'
+import {Motion, spring} from 'react-motion'
+import {prevIcon, nextIcon} from '../svg/controls'
 
 class FullscreenCarousel extends Component {
-  render(){
-    var items = this.props.images.map( ( obj, key ) => {
-      return (
-        <img src={obj.full}/>
-      )
-    });
+  closeCarousel(){
 
-    console.log('FullscreenCarousel: ', items);
+  }
+  render() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: prevIcon(),
+      nextArrow: nextIcon(),
+
+    },
+    items = this.props.items,
+    first = this.props.first,
+    isOpen = this.props.isOpen;
+
+    if( items ){
+      var carousel = items.map( (obj,key) => {
+        return(
+          <div key={key} className="food-carousel-item">
+            <img src={obj.full} />
+          </div>
+        )
+      });
+    }
+
+    function initCarousel(isOpen){
+      if( isOpen ){
+        return(
+          <Slider {...settings} key={1} initialSlide={first} className="fullscreen-carousel">
+            {carousel}
+          </Slider>
+        )
+      }
+    }
 
     return(
-      <Carousel>
-        {items}
-      </Carousel>
-    )
+      <div>
+        {initCarousel(isOpen)}
+      </div>
+     )
   }
 }
+
 export class InteriorImages extends Component {
   constructor(props) {
     super(props);
-    this.state = { index: 0, isOpen: false };
+    this.state = { index: 1, isOpen: false };
 
     this.openLightBox = this.openLightBox.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
@@ -39,13 +68,6 @@ export class InteriorImages extends Component {
   componentWillMount() {
       const { fetchInterior } = this.props;
       fetchInterior();
-  }
-  componentDidUpdate() {
-    var gallery = lightGallery(document.getElementById('interior'));
-    console.log( gallery );
-  }
-  componentDidMount() {
-
   }
   closeLightbox(e) {
     e.stopPropagation();
@@ -64,40 +86,36 @@ export class InteriorImages extends Component {
 
     var self = this,
     imagesData = this.props.interior,
-    imglist = imagesData.interior[0],
-    lightbox = '';
-
-    if( this.state.isOpen && this.state.index ){
-      //  var openImage = imglist[this.state.index].full;
-        console.log('open: ', openImage, this.state.index);
-/*        lightbox = (
-            <Lightbox
-                mainSrc={openImage}
-
-                onCloseRequest={this.closeLightbox}
-            />
-        );*/
-    }
+    imagesList = imagesData.interior[0];
 
     if( imagesData.interior.length > 0 ){
       var images = imagesData.interior[0].map( (obj, key) => {
         return(
           <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
-            <a className="interior-image-link" href={obj.full} >
+            <div className="interior-image-link" >
               <div className="image-overlay" />
               <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
                {/* <img className="interior-image" src={obj.full} />*/}
-
-            </a>
+            </div>
           </div>
         )
-      })
+      });
     }
 
-    console.log('InteriorImages', images);
+    function placeX(isOpen){
+      if(isOpen){
+        return(
+          <div className="fullscreen-carousel-close" onClick={self.closeLightbox.bind(this)}>x</div>
+        )
+      }
+    }
+
+    // console.log('InteriorImages', images);
 
     return(
        <section className="interior-grid">
+         {placeX(this.state.isOpen)}
+         <FullscreenCarousel items={imagesList} isOpen={this.state.isOpen} first={this.state.index} />
          <div id="interior" className="container-fluid">
             {images}
          </div>

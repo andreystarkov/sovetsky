@@ -341,3 +341,45 @@ button, input {
     border-color: lighten(@colorMain,8%);
   }
 }
+
+.fullscreen-carousel-close {
+  position:fixed;
+  right:5%;
+  top:5%;
+  font-size:4rem;
+  color:#fff;
+  z-index:66;
+  cursor:pointer;
+}
+
+.fullscreen-carousel {
+  &.hidden {
+    top:-100%;
+  }
+
+  display:block;
+  position:fixed;
+  z-index:6;
+  width:100%;
+  height:100%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  .slick-prev, .slick-next {
+    top:45%;
+    z-index:2;
+    position: absolute;
+  }
+  .slick-next {
+    right:3%;
+    left: auto;
+  }
+  .slick-prev {
+    right:auto;
+    left:3%;
+  }
+  .slick-slide {
+  //  width: 100% !important;
+  }
+}
