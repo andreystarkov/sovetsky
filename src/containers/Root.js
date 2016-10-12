@@ -6,15 +6,16 @@ import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
+import MainCarousel from '../components/MainCarousel'
+
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
 import InteriorImages from '../components/InteriorImages'
-import Slider from 'react-slick'
+// import Slider from 'react-slick'
 import { default as swal } from 'sweetalert2'
 import $ from 'jquery'
-import '../../less/css/slick.min.css'
-import {prevIcon, nextIcon} from '../svg/controls'
+
 
 class MainHeader extends Component {
   render() {
@@ -59,51 +60,6 @@ class DecorativeMenuSection extends Component {
 }
 
 
-class Carousel extends Component {
-    render() {
-      var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: prevIcon(),
-        nextArrow: nextIcon()
-      };
-        return (
-            <Slider {...settings} className="food-carousel">
-                <div className="food-carousel-item">
-                  <img src="/resources/images/samples/1.jpg" />
-                  <div className="food-carousel-description">
-                    <div className="box">
-                      <b>Чудеснейшее блюдо</b>
-                      <span>180 р.</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="food-carousel-item">
-                  <img src="/resources/images/samples/2.jpg" />
-                  <div className="food-carousel-description">
-                    <div className="box">
-                      <b>Чудеснейsasa юдо</b>
-                      <span>180 р.</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="food-carousel-item">
-                  <img src="/resources/images/samples/3.jpg" />
-                  <div className="food-carousel-description">
-                    <div className="box">
-                      <b>Чудеснfdsfейшее блюдо</b>
-                      <span>180 р.</span>
-                    </div>
-                  </div>
-                </div>
-            </Slider>
-        );
-    }
-}
 
 class ContactsMain extends Component {
   componentDidMount(){
@@ -162,7 +118,7 @@ export default class LexiTheme extends Component {
                 <MainHeader />
                 <InteriorImages />
                 <DecorativeMenuSection />
-                <Carousel />
+                <MainCarousel />
                 <ContactsMain />
 {/*                <div className="container">
                     <div className="row">

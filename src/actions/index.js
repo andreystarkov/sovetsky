@@ -1,10 +1,12 @@
-import fetch from 'isomorphic-fetch';
-import { WP_URL } from '../wp-url';
+import fetch from 'isomorphic-fetch'
+import { WP_URL, api } from '../config'
 
 export const RECEIVE_PAGE = 'RECEIVE_PAGE';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_MENUS = 'RECEIVE_MENUS';
 export const RECEIVE_INTERIOR = 'RECEIVE_INTERIOR';
+export const RECEIVE_INTERIOR_MAIN = 'RECEIVE_INTERIOR_MAIN';
+export const RECEIVE_SLIDER_MAIN = 'RECEIVE_SLIDER_MAIN';
 
 const POSTS_PER_PAGE = 10;
 
@@ -21,7 +23,7 @@ function receivePage(pageName, pageData) {
 export function fetchPageIfNeeded(pageName) {
     return function(dispatch, getState) {
         if (shouldFetchPage(getState(), pageName)) {
-            return fetch(WP_URL + '/pages?filter[name]=' + pageName)
+            return fetch(WP_URL + '/wp/v2/pages?filter[name]=' + pageName)
                 .then(response => response.json())
                 .then(pages => dispatch(receivePage(pageName, pages[0])));
         }
@@ -35,8 +37,9 @@ function shouldFetchPage(state, pageName) {
 }
 
 export function fetchPosts(pageNum = 1) {
+    console.log('fetchPosts: called');
     return function (dispatch) {
-        return fetch(WP_URL + '/posts?filter[paged]=' + pageNum + '&filter[posts_per_page]=' + POSTS_PER_PAGE)
+        return fetch(WP_URL + '/wp/v2/posts?filter[paged]=' + pageNum + '&filter[posts_per_page]=' + POSTS_PER_PAGE)
             .then(response => Promise.all(
                 [response.headers.get('X-WP-TotalPages'), response.json()]
             ))
@@ -56,10 +59,8 @@ function receiveMenus(menus){
 }
 
 export function fetchMenus() {
-  console.log('fetchMenus');
     return function (dispatch) {
-        console.log('dfsds');
-        return fetch('http://sv.dev:666/wp-json/wp-api-menus/v2/menus/2')
+        return fetch(WP_URL + '/wp-api-menus/v2/menus/2')
             .then(response => Promise.all([response.json()]))
             .then(menusData => dispatch(
                 receiveMenus(menusData)
@@ -88,23 +89,67 @@ export function fetchInterior() {
     }
 }
 
-/*
-export function fetchMenus() {
-    return function (dispatch) {
-        return fetch('http://sv.dev:666/wp-json/wp-api-menus/v2/menus/2')
-            .then(response => response.json())
-            .then(menusData => dispatch(
-                receiveMenus(menusData)
-            ));
+function receiveInteriorMain(interior){
+  console.log('receiveInteriorMain:' ,interior);
+  return {
+    type: RECEIVE_INTERIOR_MAIN,
+    payload: {
+      interiorMain: interior
+    }
+  }
+}
+
+export function fetchInteriorMain() {
+
+    return function (dispatch, getState) {
+
+        console.log('fetchInteriorMain return ',api.main.interior);
+
+        return fetch(api.main.interior)
+            .then(response => Promise.all([response.json()]))
+            .then(interiorData => {
+
+              const { counter } = getState();
+
+              var list = interiorData[0], total = [];
+
+              console.log('fetchInteriorMain result: ', list);
+
+              if( list ){
+
+                list.map( (obj,key) => {
+
+                  fetch(api.media+obj.featured_media)
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log('InteriorMain media:' ,data);
+                        total.push({
+                          title: obj.title.rendered,
+                          text: obj.content.rendered,
+                          media: obj.featured_media,
+                          full: data.source_url,
+                          image: data.media_details
+                        });
+                        dispatch(receiveInteriorMain(total))
+                      });
+
+                });
+
+                console.log('InteriorMain total: ', total, 'counter: ', counter);
+
+                if( total ) {
+                  //dispatch(receiveInteriorMain(total));
+                  setTimeout( () => {
+                    console.log('Timeout: ', total, counter);
+                   // dispatch(receiveInteriorMain(total));
+                  }, 1500);
+                }
+
+              }
+
+            });
     }
 }
-export function fetchMenus() {
-  return dispatch => {
-    return fetch('http://sv.dev:666/wp-json/wp-api-menus/v2/menus/2')
-      .then(response => response.json())
-      .then(json => dispatch(recieveMenus(json)))
-  }
-}*/
 
 
 function receivePosts(pageNum, totalPages, posts) {
@@ -118,3 +163,65 @@ function receivePosts(pageNum, totalPages, posts) {
     };
 }
 
+
+
+function receiveSliderMain(data){
+  console.log('receiveSliderMain:', data);
+  return {
+    type: RECEIVE_SLIDER_MAIN,
+    payload: {
+      main: data
+    }
+  }
+}
+
+export function fetchSliderMain() {
+
+    return function (dispatch, getState) {
+
+        console.log('fetchSliderMain return ', api.main.slider);
+
+        return fetch(api.main.slider)
+            .then(response => Promise.all([response.json()]))
+            .then(sliderData => {
+
+             // const { counter } = getState();
+
+              var list = sliderData[0], total = [];
+
+              console.log('fetchSliderMain result: ', list);
+
+              if( list ){
+
+                list.map( (obj,key) => {
+
+                  fetch(api.media+obj.featured_media)
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log('sliderMain media:' ,data);
+                        total.push({
+                          title: obj.title.rendered,
+                          text: obj.content.rendered,
+                          media: obj.featured_media,
+                          full: data.source_url,
+                          image: data.media_details
+                        });
+                         dispatch(receiveSliderMain(total))
+                      });
+
+                });
+
+                console.log('SliderMain total: ', total);
+
+                if( total ) {
+                  //dispatch(receiveSliderMain(total));
+                  setTimeout( () => {
+                   // console.log('SliderMain Timeout: ', total);
+                  }, 1500);
+                }
+
+              }
+
+            });
+    }
+}

@@ -2,11 +2,22 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { fetchMenus } from '../actions'
 import { connect } from 'react-redux'
+import fetch from 'isomorphic-fetch';
+
+function postTypes(response){
+  console.log('postTypes: ', response);
+}
 
 export class MainNavigation extends Component {
     componentWillMount() {
         const { fetchMenus } = this.props;
         fetchMenus();
+
+        fetch('http://sv.dev:666/wp-json/wp/v2/types')
+            .then(response => Promise.all([response.json()]))
+            .then(menusData => postTypes(menusData)
+            );
+       // console.log('WTF', a);
     }
     render() {
       var menuData = this.props.menus;

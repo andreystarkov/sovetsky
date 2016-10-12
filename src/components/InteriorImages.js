@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import * as LexiActions from '../actions'
 import { Grid, Row, Col } from 'react-flexbox-grid'
-import { fetchInterior } from '../actions'
+import { fetchInteriorMain } from '../actions'
 import Slider from 'react-slick'
 import Transition from 'react-motion-ui-pack'
 import {Motion, spring} from 'react-motion'
@@ -75,14 +75,15 @@ class FullscreenCarousel extends Component {
 export class InteriorImages extends Component {
   constructor(props) {
     super(props);
-    this.state = { index: 1, isOpen: false };
+    this.state = { index: 1, isOpen: false, loaded: false };
 
     this.openLightBox = this.openLightBox.bind(this);
     this.closeLightbox = this.closeLightbox.bind(this);
   }
   componentWillMount() {
-      const { fetchInterior } = this.props;
-      fetchInterior();
+      const { fetchInteriorMain } = this.props;
+    //  fetchInterior();
+      fetchInteriorMain();
   }
   closeLightbox(e) {
     e.stopPropagation();
@@ -91,8 +92,8 @@ export class InteriorImages extends Component {
     })
   }
   openLightBox( index ) {
-      var images = this.props.interior.interior[0];
-      console.log(' _openLightBox: ', images, 'index: '+index, images[index].full );
+      var images = this.props.interior.main;
+      console.log(' _openLightBox: ', images );
       this.setState({
         index: index, isOpen: true
       })
@@ -100,22 +101,27 @@ export class InteriorImages extends Component {
   render(){
 
     var self = this,
-    imagesData = this.props.interior,
-    imagesList = imagesData.interior[0];
+    imagesData = this.props.interior.main,
+    imagesList = imagesData,
+    images;
 
-    if( imagesData.interior.length > 0 ){
-      var images = imagesData.interior[0].map( (obj, key) => {
-        return(
-          <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
-            <div className="interior-image-link" >
-              <div className="image-overlay" />
-              <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
-               {/* <img className="interior-image" src={obj.full} />*/}
-            </div>
+   // console.log('InteriorImages props: ', imagesList);
+
+    var images = imagesList.map( (obj, key) => {
+     // console.log('imagez', obj);
+      return(
+        <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
+          <div className="interior-image-link" >
+            <div className="image-overlay" />
+            <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
+             {/* <img className="interior-image" src={obj.full} />*/}
           </div>
-        )
-      });
-    }
+        </div>
+      )
+    });
+
+   // console.log('InteriorImages sasa', images);
+
 
     function placeX(isOpen){
       if(isOpen){
@@ -124,8 +130,6 @@ export class InteriorImages extends Component {
         )
       }
     }
-
-    // console.log('InteriorImages', images);
 
     return(
        <section className="interior-grid">
@@ -142,7 +146,7 @@ export class InteriorImages extends Component {
 function mapStateToProps(state) {
     const interior = state.interior;
 
-    console.log('mapStateToProps (interior): ', state);
+    // console.log('mapStateToProps (interior): ', state);
 
     return {
         interior: interior
@@ -151,5 +155,5 @@ function mapStateToProps(state) {
 
 export default connect(
     mapStateToProps,
-    { fetchInterior }
+    { fetchInteriorMain }
 )(InteriorImages);
