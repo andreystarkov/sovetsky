@@ -59,8 +59,6 @@ export class MainCarousel extends Component {
           {slides}
         </Slider>
       )
-    } else {
-      console.log('AAANN');
     }
   }
 

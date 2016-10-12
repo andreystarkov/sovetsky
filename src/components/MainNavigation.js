@@ -33,7 +33,6 @@ export class MainNavigation extends Component {
         return (
             <div className="main-navigation-wrapper">
                 <nav className="main-navigation">
-                    <Link to="/" className="nav-item" activeClassName="active" onlyActiveOnIndex={true}>Home</Link>
                     {menuItems}
                 </nav>
             </div>

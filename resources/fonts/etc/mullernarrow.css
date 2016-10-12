@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Muller Narrow';
+    src: local('Muller Narrow Light'), local('MullerNarrow-Light'), url('Mullernarrowlight.woff2') format('woff2'), url('Mullernarrowlight.woff') format('woff'), url('Mullernarrowlight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Muller Narrow';
+    src: local('Muller Narrow Light Italic'), local('MullerNarrow-LightItalic'), url('Mullernarrowlightitalic.woff2') format('woff2'), url('Mullernarrowlightitalic.woff') format('woff'), url('Mullernarrowlightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Muller Narrow';
+    src: local('Muller Narrow ExtraBold'), local('MullerNarrow-ExtraBold'), url('Mullernarrowextrabold.woff2') format('woff2'), url('Mullernarrowextrabold.woff') format('woff'), url('Mullernarrowextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Muller Narrow';
+    src: local('Muller Narrow ExtraBold Italic'), local('MullerNarrow-ExtraBoldItalic'), url('Mullernarrowextrabolditalic.woff2') format('woff2'), url('Mullernarrowextrabolditalic.woff') format('woff'), url('Mullernarrowextrabolditalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}

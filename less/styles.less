@@ -2,12 +2,21 @@
 //@import "http://archive.andreystarkov.ru/resources/fonts/styles.css";
 
 @colorMain: #ff6f5a;
+@colorRed: #e74232;
 @colorWhite: #fffeff;
+
+@defaultHeading: 'Pobeda';
+@defaultSans: 'Muller Narrow';
+// 'Arian AMU';
+// 'Monitorica';
+// 'Muller Narrow';
+// 'Hattori Hanzo';
+//'Ristretto Pro';
 
 .main-header {
  // min-height: 80vh;
   .react-parallax, .react-parallax-content, .main-header-container {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 }
 
@@ -18,14 +27,34 @@
   //justify-content:center;
   width:100%;
   height:100%;
-  padding-top:10%;
+  padding-top:12%;
+}
+
+.top-phones {
+  position:absolute;
+  right:1rem;
+  top:1rem;
+  text-align:right;
+  b, span {
+    color:#111;
+    font-family: @defaultSans;
+  }
+  .phone {
+    display:block;
+    font-weight:500;
+    font-size:2.4rem;
+    span {
+      color: fade(#000,50%);
+      font-weight:300;
+    }
+  }
 }
 
 .main-logo-wrapper {
   margin: auto;
-  max-width: 30rem;
-  padding:2rem 3rem;
-  background-color:fade(#fff,50%);
+  max-width: 35rem;
+  padding: 2rem 3rem;
+  //background-color:fade(#fff,50%);
   svg {
     width:100%;
   }
@@ -33,7 +62,7 @@
 
 .main-logo {
   path {
-    fill: @colorMain
+    fill: @colorRed
   }
 }
 
@@ -87,13 +116,13 @@
 
 .main-navigation {
   text-align:center;
-  margin-top:5%;
+  margin-top:8%;
   .nav-item {
     margin-left:1.5rem;
     margin-right:1.5rem;
-    font-family: 'Pobeda';
+    font-family: @defaultSans;
     color: #000000;
-    font-weight:700;
+    font-weight:300;
     font-size: 2rem;
   }
 }
@@ -133,32 +162,32 @@
 }
 
 .decorative-section-content {
-  font-family: 'Pobeda';
+  font-family: @defaultHeading;
   h2 {
     font-weight:700;
     font-size:3.4rem;
-    font-family: 'Pobeda';
+    font-family: @defaultHeading;
     margin-bottom:3rem;
   }
 
   p {
-    font-family: 'Pobeda';
+    font-family: @defaultSans;
     font-weight:300;
-    line-height:2.5rem;
-    font-size:2.2rem;
+    line-height:2rem;
+    font-size:1.5rem;
     margin-bottom:4rem;
   }
 }
 
 .swal2-modal h2 {
-  font-family: 'Pobeda';
+  font-family: @defaultHeading;
   color: #111;
   font-size:2.8rem;
   margin-bottom:1.5rem;
 }
 
 .swal2-modal .swal2-content {
-  font-family: 'Pobeda';
+  font-family: @defaultHeading;
   font-size:1.6rem;
 }
 
@@ -167,7 +196,7 @@
    color: @colorMain;
    padding:1.5rem 2.5rem;
    border: 3px solid @colorMain;
-   font-family: 'Pobeda';
+   font-family: @defaultHeading;
    outline: none;
    font-size: 1.5rem;
    padding: 0rem 2.2rem;
@@ -235,7 +264,7 @@
       b,span {
         font-size:3rem;
         color:#000;
-        font-family: 'Pobeda';
+        font-family: @defaultHeading;
       }
       b {
         display: inline-block;
@@ -260,21 +289,21 @@
 .section-contacts-content {
   padding-top: 8rem;
   padding-bottom: 9rem;
-  font-family: 'Pobeda';
+  font-family: @defaultHeading;
   h2 {
     font-weight:700;
     font-size:3.3rem;
-    font-family: 'Pobeda';
+    font-family: @defaultHeading;
     margin-bottom:2.2rem;
   }
 
   p {
     font-weight:200;
-    //font-family: 'Fira Sans';
-    font-size: 1.7rem;
-    line-height: 2.4rem;
+    font-family: @defaultSans;
+    font-size: 1.5rem;
+    line-height: 2rem;
     margin-top: 2rem;
-    font-style:italic;
+   // font-style:italic;
     margin-bottom:2rem;
   }
 }

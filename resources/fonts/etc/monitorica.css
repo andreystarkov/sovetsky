@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Monitorica';
+    src: local('Monitorica'), url('Monitorica.woff2') format('woff2'), url('Monitorica.woff') format('woff'), url('Monitorica.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Monitorica';
+    src: local('Monitorica Italic'), local('Monitorica-Italic'), url('Monitoricaitalic.woff2') format('woff2'), url('Monitoricaitalic.woff') format('woff'), url('Monitoricaitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Monitorica';
+    src: local('Monitorica Bold'), local('Monitorica-Bold'), url('Monitoricabold.woff2') format('woff2'), url('Monitoricabold.woff') format('woff'), url('Monitoricabold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Monitorica';
+    src: local('Monitorica Bold Italic'), local('Monitorica-BoldItalic'), url('Monitoricabolditalic.woff2') format('woff2'), url('Monitoricabolditalic.woff') format('woff'), url('Monitoricabolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

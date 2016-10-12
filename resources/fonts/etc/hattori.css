@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Hattori Hanzo';
+    src: local('Hattori Hanzo Light'), local('HattoriHanzo-Light'), url('hattorihanzolight.woff2') format('woff2'), url('hattorihanzolight.woff') format('woff'), url('hattorihanzolight.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hattori Hanzo';
+    src: local('Hattori Hanzo Light Italic'), local('HattoriHanzo-LightItalic'), url('hattorihanzolightitalic.woff2') format('woff2'), url('hattorihanzolightitalic.woff') format('woff'), url('hattorihanzolightitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
