@@ -12,11 +12,6 @@ export class MainNavigation extends Component {
     componentWillMount() {
         const { fetchMenus } = this.props;
         fetchMenus();
-
-        fetch('http://sv.dev:666/wp-json/wp/v2/types')
-            .then(response => Promise.all([response.json()]))
-            .then(menusData => postTypes(menusData)
-            );
        // console.log('WTF', a);
     }
     render() {

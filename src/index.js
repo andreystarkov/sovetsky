@@ -9,6 +9,7 @@ import PostsContainer from './containers/PostsContainer'
 import PostContainer from './containers/PostContainer'
 import AboutPageContainer from './containers/AboutPageContainer'
 import MainPage from './components/MainPage'
+import InteriorPage from './components/InteriorPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
@@ -27,7 +28,9 @@ ReactDOM.render(
                 <IndexRoute component={MainPage} />
                 <Route path="about" component={AboutPageContainer} />
             </Route>
+        	<Route path="/interior" component={InteriorPage} />
         </Router>
+
     </Provider>,
     rootElement
 );

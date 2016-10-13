@@ -1,7 +1,8 @@
-import { RECEIVE_SLIDER_MAIN } from '../actions';
+import { RECEIVE_SLIDER_MAIN, RECEIVE_SLIDER_INTERIOR } from '../actions'
 
 const defaultState = {
-    main: []
+    main: [],
+    interior: []
 };
 
 export default function slider(state = defaultState, action) {
@@ -13,6 +14,14 @@ export default function slider(state = defaultState, action) {
 
             return Object.assign({}, state, {
                 main: main
+            });
+        case RECEIVE_SLIDER_INTERIOR:
+            const { interior } = action.payload;
+
+            console.log('RECEIVE_SLIDER_INTERIOR: ', interior);
+
+            return Object.assign({}, state, {
+                interior: interior
             });
         default:
             return state;

@@ -1,11 +1,13 @@
-export const WP_URL = 'http://sv.dev:666/wp-json';
+export const WP_URL = 'http://archive.andreystarkov.ru/wp-json';
 
 export const api = {
   main: {
-    slider: WP_URL + '/wp/v2/foodslidermain',
+    slider: WP_URL + '/wp/v2/slidermain',
     interior: WP_URL + '/wp/v2/interiormain'
   },
-  interiorMain: WP_URL + '/wp/v2/interiormain',
-  foodSliderMain: WP_URL + '/wp/v2/foodslidermain',
+  interior: {
+  	slider: WP_URL + '/wp/v2/interiorslider',
+  	gallery: WP_URL + '/wp/v2/interior'
+  },
   media: WP_URL + '/wp/v2/media/'
 }

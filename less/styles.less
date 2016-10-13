@@ -20,6 +20,9 @@
   }
 }
 
+._slider-image {
+  opacity:0;  
+}
 .main-header-container {
   position:relative;
   //display:flex;
@@ -27,7 +30,7 @@
   //justify-content:center;
   width:100%;
   height:100%;
-  padding-top:12%;
+  padding-top:12rem;
 }
 
 .top-phones {
@@ -114,6 +117,13 @@
   transition: .35s all;
 }
 
+.interior-header .main-navigation-wrapper {
+    position: absolute;
+    top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    left: 13rem; 
+}
 .main-navigation {
   text-align:center;
   margin-top:8%;
@@ -137,9 +147,9 @@
     height: 100%;
     position: absolute;
     left:0;
-    top:-5rem;
+    top:2rem;
     width:37%;
-    background-size: auto 100%;
+    background-size: 100% auto;
     background-position: top left;
     background-repeat: no-repeat;
   }
@@ -213,6 +223,10 @@
   position: relative;
   max-height: 42rem;
   overflow: hidden;
+  &.interior-carousel {
+    height:100vh;
+    max-height:none;
+  }
   .slick-slide {
     position: relative;
   }
@@ -429,5 +443,57 @@ button, input {
   }
   .slick-slide {
   //  width: 100% !important;
+  }
+}
+
+.interior-header {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 8rem;
+  .main-logo-wrapper {
+    position: absolute;
+    margin: auto;
+    max-width: 10rem;
+    padding: 0;
+    left: 0;
+    top: 2rem;
+  }
+}
+
+@media screen and (max-width: 1450px){
+  html {
+    font-size:13px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  html {
+    font-size:10px;
+  }
+  .decorative-left, .decorative-right {
+    display:none;
+  }
+  .main-food-text {
+    padding-top:10rem;
+    padding-bottom:7rem;
+  }
+  .decorative-section-content {
+    padding-left:1rem;
+    padding-right:1rem;
+    h2 {
+      font-size:3.2rem;
+    }
+  }
+  .food-carousel-description {
+    top: auto;
+    bottom: 2rem;
+    .box b {
+      font-size:2rem;
+      margin-right:0;
+    }
+  }
+  .slick-next [class^="flaticon-"]:before, .slick-prev [class^="flaticon-"]:before, .slick-next [class*=" flaticon-"]:before, .slick-prev [class*=" flaticon-"]:before, .slick-next [class^="flaticon-"]:after, .slick-prev [class^="flaticon-"]:after, .slick-next [class*=" flaticon-"]:after, .slick-prev [class*=" flaticon-"]:after {
+    font-size:4rem;
   }
 }

@@ -37,7 +37,7 @@ export class MainCarousel extends Component {
   renderSlider(){
      if( !isEmpty(this.props.slider.main) ){
 
-      console.log('renderSlider: ', this.props.slider);
+      //console.log('renderSlider: ', this.props.slider);
       var items = this.props.slider.main;
 
       var slides = items.map( (obj,key) => {
@@ -77,7 +77,7 @@ export class MainCarousel extends Component {
 function mapStateToProps(state) {
     const slider = state.slider;
 
-    console.log('mapStateToProps (slider): ', state, slider);
+    //console.log('mapStateToProps (slider): ', state, slider);
 
     return {
         slider: slider
