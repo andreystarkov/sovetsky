@@ -120,7 +120,7 @@ export class MenuItems extends Component {
 function mapStateToProps(state) {
     const menu = state.menu;
 
-    //console.log('mapStateToProps (menu): ', state, menu);
+    // console.log('mapStateToProps (menu): ', state, menu);
 
     return {
        menu: menu

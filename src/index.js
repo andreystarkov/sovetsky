@@ -11,6 +11,9 @@ import AboutPageContainer from './containers/AboutPageContainer'
 import MainPage from './components/MainPage'
 import InteriorPage from './components/InteriorPage'
 import MenuPage from './components/MenuPage'
+import ContactsPage from './components/ContactsPage'
+import ContactsSection from './components/ContactsSection'
+import First from './containers/First'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
@@ -25,14 +28,15 @@ let rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={Root}>
-                <IndexRoute component={MainPage} />
-                <Route path="about" component={AboutPageContainer} />
-            </Route>
+          <Route path="/" component={Root}>
+              <IndexRoute component={MainPage} />
+          </Route>
         	<Route path="/interior" component={InteriorPage} />
           <Route path="/delivery" component={MenuPage} />
+          <Route path="/contacts" component={ContactsPage}>
+            <IndexRoute component={ContactsSection} />
+          </Route>
         </Router>
-
     </Provider>,
     rootElement
 );

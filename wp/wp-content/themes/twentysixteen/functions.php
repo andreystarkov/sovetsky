@@ -419,3 +419,277 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+
+add_action( 'init', 'cptui_register_my_cpts' );
+function cptui_register_my_cpts() {
+  $labels = array(
+    "name" => __( 'Слайдер (Главная)', 'twentysixteen' ),
+    "singular_name" => __( 'Слайдер (Главная)', 'twentysixteen' ),
+    "menu_name" => __( 'Слайдер (Главная)', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Слайдер (Главная)', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => true,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "slidermain", "with_front" => true ),
+    "query_var" => true,
+    "menu_icon" => "dashicons-images-alt",
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "slidermain", $args );
+
+  $labels = array(
+    "name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "singular_name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "menu_name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => true,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "interiormain", "with_front" => true ),
+    "query_var" => true,
+    "menu_icon" => "dashicons-format-gallery",
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "interiormain", $args );
+
+  $labels = array(
+    "name" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    "singular_name" => __( 'Интерьеры', 'twentysixteen' ),
+    "menu_name" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => false,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "interiorslider", "with_front" => true ),
+    "query_var" => true,
+
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "interiorslider", $args );
+
+  $labels = array(
+    "name" => __( 'Меню', 'twentysixteen' ),
+    "singular_name" => __( 'Меню', 'twentysixteen' ),
+    "menu_name" => __( 'Меню', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Меню', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => false,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "menuitems", "with_front" => true ),
+    "query_var" => true,
+
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "menuitems", $args );
+
+// End of cptui_register_my_cpts()
+}
+
+add_action( 'init', 'cptui_register_my_cpts_interiormain' );
+function cptui_register_my_cpts_interiormain() {
+  $labels = array(
+    "name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "singular_name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "menu_name" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Интерьер (Главная)', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => true,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "interiormain", "with_front" => true ),
+    "query_var" => true,
+    "menu_icon" => "dashicons-format-gallery",
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "interiormain", $args );
+
+// End of cptui_register_my_cpts_interiormain()
+}
+
+add_action( 'init', 'cptui_register_my_cpts_interiorslider' );
+function cptui_register_my_cpts_interiorslider() {
+  $labels = array(
+    "name" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    "singular_name" => __( 'Интерьеры', 'twentysixteen' ),
+    "menu_name" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Слайдер (Интерьер)', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => false,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "interiorslider", "with_front" => true ),
+    "query_var" => true,
+
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "interiorslider", $args );
+
+// End of cptui_register_my_cpts_interiorslider()
+}
+
+add_action( 'init', 'cptui_register_my_cpts_menuitems' );
+function cptui_register_my_cpts_menuitems() {
+  $labels = array(
+    "name" => __( 'Меню', 'twentysixteen' ),
+    "singular_name" => __( 'Меню', 'twentysixteen' ),
+    "menu_name" => __( 'Меню', 'twentysixteen' ),
+    );
+
+  $args = array(
+    "label" => __( 'Меню', 'twentysixteen' ),
+    "labels" => $labels,
+    "description" => "",
+    "public" => true,
+    "publicly_queryable" => true,
+    "show_ui" => true,
+    "show_in_rest" => true,
+    "rest_base" => "",
+    "has_archive" => false,
+    "show_in_menu" => true,
+        "exclude_from_search" => false,
+    "capability_type" => "post",
+    "map_meta_cap" => true,
+    "hierarchical" => false,
+    "rewrite" => array( "slug" => "menuitems", "with_front" => true ),
+    "query_var" => true,
+
+    "supports" => array( "title", "editor", "thumbnail" ),          );
+  register_post_type( "menuitems", $args );
+
+// End of cptui_register_my_cpts_menuitems()
+}
+
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_menu',
+    'title' => 'Menu',
+    'fields' => array (
+      array (
+        'key' => 'field_57ff5793584ed',
+        'label' => 'Цена',
+        'name' => 'price',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57ff57b9584ee',
+        'label' => 'Вес',
+        'name' => 'weight',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57ff57d7584ef',
+        'label' => 'Описание',
+        'name' => 'description',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => '',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'menuitems',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'no_box',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}
