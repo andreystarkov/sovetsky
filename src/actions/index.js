@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch'
 import { WP_URL, api } from '../config'
+import { pushStorage } from '../etc'
 
 export const RECEIVE_PAGE = 'RECEIVE_PAGE';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
@@ -8,6 +9,7 @@ export const RECEIVE_INTERIOR = 'RECEIVE_INTERIOR';
 export const RECEIVE_INTERIOR_MAIN = 'RECEIVE_INTERIOR_MAIN';
 export const RECEIVE_SLIDER_MAIN = 'RECEIVE_SLIDER_MAIN';
 export const RECEIVE_SLIDER_INTERIOR = 'RECEIVE_SLIDER_INTERIOR';
+export const RECEIVE_MENU_ITEMS = 'RECEIVE_MENU_ITEMS';
 
 const POSTS_PER_PAGE = 10;
 
@@ -60,13 +62,25 @@ function receiveMenus(menus){
 }
 
 export function fetchMenus() {
-    return function (dispatch) {
-        return fetch(WP_URL + '/wp-api-menus/v2/menus/2')
-            .then(response => Promise.all([response.json()]))
-            .then(menusData => dispatch(
-                receiveMenus(menusData)
-            ));
+  var stored = localStorage.getItem('nav');
+  if ( stored ){
+    var parsed = JSON.parse(stored);
+    console.log('fetchMenus: from localStorage: ', parsed);
+    return (dispatch) => {
+      return dispatch( receiveMenus(parsed) )
     }
+  } else {
+    return function (dispatch) {
+        return fetch(api.nav)
+            .then(response => Promise.all([response.json()]))
+            .then(menusData => {
+              if( menusData ) {
+                pushStorage('nav', menusData);
+                dispatch(receiveMenus(menusData));
+              }
+            });
+    }
+  }
 }
 
 function receiveInterior(interior){
@@ -274,6 +288,83 @@ export function fetchSliderInterior() {
                 });
 
                 console.log('SliderInterior total: ', total);
+
+                if( total ) {
+                  //dispatch(receiveSliderMain(total));
+                  setTimeout( () => {
+                   // console.log('SliderMain Timeout: ', total);
+                  }, 1500);
+                }
+
+              }
+
+            });
+    }
+}
+
+
+
+function receiveMenuItems(data){
+  console.log('receiveMenuItems:', data);
+  return {
+    type: RECEIVE_MENU_ITEMS,
+    payload: {
+      menu: data
+    }
+  }
+}
+
+export function fetchMenuItems() {
+
+    return function (dispatch, getState) {
+
+        console.log('fetchMenuItems return ', api.menu);
+
+        return fetch(api.menu)
+            .then(response => Promise.all([response.json()]))
+            .then(menuData => {
+
+             // const { counter } = getState();
+             console.log('fetchMenu: ', menuData);
+              var list = menuData[0], total = [];
+
+              console.log('fetchMenuItems result: ', list);
+
+              if( list ){
+
+                list.map( (obj,key) => {
+
+                  fetch(api.acf.post + obj.id)
+                    .then(response => response.json())
+                    .then(acf => {
+                      console.log('fetchMenuItems ACF:' ,acf);
+                      if( obj.featured_media ){
+                        fetch(api.media + obj.featured_media)
+                            .then(response => response.json())
+                            .then(data => {
+                              console.log('fetchMenuItems media:' ,data);
+                              if( !data.code ){
+                                total.push({
+                                  title: obj.title.rendered,
+                                  description: acf.acf.description,
+                                  price: acf.acf.price,
+                                  weight: acf.acf.weight,
+                                  media: obj.featured_media,
+                                  full: data.source_url,
+                                  image: data.media_details
+                                  //fields: acf.acf
+                                });
+                                dispatch(receiveMenuItems(total))
+                              }
+                            });
+                      }
+                    });
+
+
+
+                });
+
+                console.log('SliderMenuItems  total: ', total);
 
                 if( total ) {
                   //dispatch(receiveSliderMain(total));

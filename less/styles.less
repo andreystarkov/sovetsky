@@ -8,8 +8,14 @@
 @defaultHeading: 'Pobeda';
 @defaultSans: 'Hattori Hanzo';
 
+@catalogItemNameFont: @defaultHeading;
+@catalogItemDescriptionFont: @defaultSans;
 @mainNavigationFont: @defaultSans;
 
+
+@colorLightBrown: #C8B595;
+@colorPaleRed: #BD4335;
+@colorBrown: #8B3834;
 
 // 'Airport'; // 'Exo 2 Condensed'; // 'BravoRG'; //'Ristretto Pro';
 
@@ -21,6 +27,124 @@
 // 'Muller Narrow';
 // 'Hattori Hanzo';
 //'Ristretto Pro';
+
+@colorCaptionBg: mix(#fff,@colorLightBrown, 20%);
+
+.swal2-modal.modal-confirm {
+  h2 {
+    font-size:2.2rem;
+  }
+  .swal2-content {
+    font-family: @defaultSans;
+    font-size:1.25rem;
+  }
+}
+
+.section-catalog {
+  .catalog-grid-item {
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+  }
+  .catalog-item {
+    position:relative;
+    img {
+      width:100%;
+    }
+    .catalog-item-overlay {
+      position:absolute;
+      top:0; left:0;
+     // background: fade(#fff,50%);
+      width:100%;
+      height:100%;
+      opacity:1;
+      transition: 0.3s background-color;
+    }
+    &:hover {
+      .catalog-params {
+        transform:scale(1) translateY(0);
+        opacity:1;
+      }
+      .catalog-item-overlay {
+        background: fade(#fff,30%);
+      }
+      .catalog-name {
+        background: mix(@colorCaptionBg,#fff,10%);
+      }
+      .catalog-description {
+        background: mix(@colorCaptionBg,#fff,40%);
+      }
+    }
+    .catalog-caption {
+      position:absolute;
+      bottom:1rem;
+      .catalog-name {
+        font-family: @catalogItemNameFont;
+        background: mix(@colorCaptionBg,#fff,30%);
+        padding: 0.5rem 1rem;
+        color: #111;
+        font-size:1.7rem;
+        display:inline-block;
+      }
+      .catalog-description {
+        font-family: @catalogItemDescriptionFont;
+        background: mix(@colorCaptionBg,#fff,70%);
+        padding: 0.5rem 1rem;
+        color: #111;
+        font-size:1rem;
+        display:block;
+      }
+      .catalog-name, .catalog-description {
+        transition:0.4s ease-in all;
+      }
+    }
+    .catalog-params {
+      transition: 0.35s ease-in-out all;
+      transform: scale(0.5) translateY(-200px);
+      opacity:0;
+      position: absolute;
+      top: 30%;
+      width:100%;
+      display:block;
+      text-align:center;
+      .catalog-price, .catalog-weight {
+        font-family: @catalogItemDescriptionFont;
+        background: fade(mix(@colorCaptionBg,#fff,30%),50%);
+        padding: 0.5rem 1rem;
+        color: #111;
+        margin-left:1rem; margin-right:1rem;
+        font-size:1.2rem;
+        display:inline-block;
+      }
+
+      .catalog-weight {
+        background: fade(mix(@colorCaptionBg,#fff,80%),50);
+      }
+    }
+  }
+}
+
+
+.button-square-buy {
+   display:block;
+   margin: 2rem auto;
+   font-size:1.8rem;
+   color: #fff;
+   background: mix(@colorPaleRed,@colorRed,50%);
+   padding:1.5rem 2.5rem;
+   border: 0;
+   font-family: @defaultHeading;
+   outline: none;
+   font-size: 1.5rem;
+   padding: 0rem 2.2rem;
+   font-weight: 600;
+   line-height: 2.7rem;
+ //  background: transparent;
+   &:hover {
+     background: mix(mix(@colorPaleRed,@colorRed,50%),#fff,95%);
+   }
+}
 
 .main-header {
  // min-height: 80vh;
@@ -211,7 +335,7 @@
   font-size:1.6rem;
 }
 
-.button-square-red, .swal2-confirm {
+.button-square-red, .swal2-confirm, .swal2-cancel {
    font-size:1.8rem;
    color: @colorMain;
    padding:1.5rem 2.5rem;
@@ -219,10 +343,21 @@
    font-family: @defaultHeading;
    outline: none;
    font-size: 1.5rem;
-   padding: 0rem 2.2rem;
+   padding: 0rem 1.5rem;
    font-weight: 600;
    line-height: 2.7rem;
    background: @colorWhite;
+   margin-left:0.7rem;
+   margin-right:0.7rem;
+   &.swal2-cancel {
+    border: 3px solid fade(darken(@colorLightBrown,15%),50%);
+    color: fade(darken(@colorLightBrown,15%),50%);
+    &:hover {
+      border-color:darken(@colorLightBrown,15%);
+      color:darken(@colorLightBrown,15%);
+      background-color:transparent;
+    }
+   }
    &:hover {
     color: #fff;
     background: @colorMain;

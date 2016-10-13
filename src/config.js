@@ -1,13 +1,20 @@
-export const WP_URL = 'http://archive.andreystarkov.ru/wp-json';
+export const WP_URL = 'http://sovetsky.dev';
 
 export const api = {
   main: {
-    slider: WP_URL + '/wp/v2/slidermain',
-    interior: WP_URL + '/wp/v2/interiormain'
+    slider: WP_URL + '/wp-json/wp/v2/slidermain',
+    interior: WP_URL + '/wp-json/wp/v2/interiormain'
   },
   interior: {
-  	slider: WP_URL + '/wp/v2/interiorslider',
-  	gallery: WP_URL + '/wp/v2/interior'
+  	slider: WP_URL + '/wp-json/wp/v2/interiorslider',
+  	gallery: WP_URL + '/wp-json/wp/v2/interior'
   },
-  media: WP_URL + '/wp/v2/media/'
+  acf: {
+    post: WP_URL + '/wp-json/acf/v2/post/'
+  },
+  nav: WP_URL + '/wp-json/wp-api-menus/v2/menus/2',
+  menu: WP_URL + '/wp-json/wp/v2/menuitems',
+  media: WP_URL + '/wp-json/wp/v2/media/',
+  mail: WP_URL + '/mail.php'
 }
+

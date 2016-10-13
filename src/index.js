@@ -10,6 +10,7 @@ import PostContainer from './containers/PostContainer'
 import AboutPageContainer from './containers/AboutPageContainer'
 import MainPage from './components/MainPage'
 import InteriorPage from './components/InteriorPage'
+import MenuPage from './components/MenuPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
