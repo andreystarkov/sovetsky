@@ -9,7 +9,8 @@ export default function posts(state = defaultState, action) {
         case RECEIVE_MENU_ITEMS:
             const { menu } = action.payload;
 
-            console.log( 'RECEIVE_MENU_ITEMS', menu);
+           // console.log( 'RECEIVE_MENU_ITEMS', menu);
+
             return Object.assign({}, state, {
                 items: menu
             });

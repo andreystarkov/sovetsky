@@ -264,10 +264,12 @@
   .nav-item {
     margin-left:1.5rem;
     margin-right:1.5rem;
-    font-family: @mainNavigationFont;
-    color: darken(@colorRed,17%);
+    //font-family: @mainNavigationFont;
+   // color: darken(@colorRed,17%);
     font-weight:300;
-    font-size: 1.8rem;
+    font-family: 'Pobeda';
+    font-size: 2rem;
+    color: #000;
   }
 }
 
@@ -436,7 +438,11 @@
     }
 }
 
+@sectionBgMedium: #e0d6c4;
+@sectionBgLight: desaturate(mix(@sectionBgMedium,#fff,70%),5%);
+
 .section-contacts {
+  background-color: @sectionBgLight;
   position:relative;
   .decorative-left {
     height: 100%;
@@ -477,7 +483,7 @@
 
 .section-contacts {
     .map {
-      border-top: 10px solid #ddd;
+      border-top: 10px solid darken(@sectionBgLight,10%);
       width:100%;
       height:650px;
     }
@@ -496,7 +502,7 @@
 
     &.address_ {
       color: @colorMain;
-      background: lighten(#ddd,3%);
+      background: lighten(#f1f1f1,3%);
       font-size: 2.1rem;
     }
     font-weight: 700;

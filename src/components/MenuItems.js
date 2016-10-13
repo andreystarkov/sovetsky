@@ -49,7 +49,7 @@ export class MenuItems extends Component {
               return new Promise( (resolve, reject) => {
                 if (value) {
                   $.get(api.mail+'/?phone='+value, (response) =>{
-                    console.log('Mailer: ', response);
+                   // console.log('Mailer: ', response);
                   });
                   resolve();
                 } else {
@@ -76,7 +76,7 @@ export class MenuItems extends Component {
         items,
         self = this;
 
-    console.log('MenuItems render: ', menu, this.props);
+   // console.log('MenuItems render: ', menu, this.props);
 
     if ( !isEmpty(menu) ) {
       items = menu.items.map( (obj, key) => {
@@ -103,7 +103,7 @@ export class MenuItems extends Component {
       });
     }
 
-    console.log('MenuItems: ', this.props.menu, this.state);
+   // console.log('MenuItems: ', this.props.menu, this.state);
 
     return(
     <section className="section-catalog">
@@ -120,7 +120,7 @@ export class MenuItems extends Component {
 function mapStateToProps(state) {
     const menu = state.menu;
 
-    console.log('mapStateToProps (menu): ', state, menu);
+    //console.log('mapStateToProps (menu): ', state, menu);
 
     return {
        menu: menu

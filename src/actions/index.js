@@ -95,7 +95,7 @@ function receiveInterior(interior){
 export function fetchInterior() {
  // console.log('fetchInterior');
     return function (dispatch) {
-        console.log('fetchInterior return');
+       // console.log('fetchInterior return');
         return fetch('http://localhost:3000/data/interiorImages.json')
             .then(response => Promise.all([response.json()]))
             .then(interiorData => dispatch(
@@ -242,7 +242,7 @@ export function fetchSliderMain() {
 }
 
 function receiveSliderInterior(data){
-  console.log('receiveSliderInterior:', data);
+  //console.log('receiveSliderInterior:', data);
   return {
     type: RECEIVE_SLIDER_INTERIOR,
     payload: {
@@ -255,7 +255,7 @@ export function fetchSliderInterior() {
 
     return function (dispatch, getState) {
 
-        console.log('fetchSliderMain return ', api.main.slider);
+       // console.log('fetchSliderMain return ', api.main.slider);
 
         return fetch(api.interior.slider)
             .then(response => Promise.all([response.json()]))
@@ -265,7 +265,7 @@ export function fetchSliderInterior() {
 
               var list = sliderData[0], total = [];
 
-              console.log('fetchSliderInterior result: ', list);
+             // console.log('fetchSliderInterior result: ', list);
 
               if( list ){
 
@@ -274,7 +274,7 @@ export function fetchSliderInterior() {
                   fetch(api.media+obj.featured_media)
                       .then(response => response.json())
                       .then(data => {
-                        console.log('sliderInterior media:' ,data);
+                   //     console.log('sliderInterior media:' ,data);
                         total.push({
                           title: obj.title.rendered,
                           text: obj.content.rendered,
@@ -287,7 +287,7 @@ export function fetchSliderInterior() {
 
                 });
 
-                console.log('SliderInterior total: ', total);
+             //   console.log('SliderInterior total: ', total);
 
                 if( total ) {
                   //dispatch(receiveSliderMain(total));
@@ -305,7 +305,7 @@ export function fetchSliderInterior() {
 
 
 function receiveMenuItems(data){
-  console.log('receiveMenuItems:', data);
+ // console.log('receiveMenuItems:', data);
   return {
     type: RECEIVE_MENU_ITEMS,
     payload: {
@@ -318,17 +318,16 @@ export function fetchMenuItems() {
 
     return function (dispatch, getState) {
 
-        console.log('fetchMenuItems return ', api.menu);
+    //  console.log('fetchMenuItems return ', api.menu);
 
         return fetch(api.menu)
             .then(response => Promise.all([response.json()]))
             .then(menuData => {
 
-             // const { counter } = getState();
-             console.log('fetchMenu: ', menuData);
+           // console.log('fetchMenu: ', menuData);
               var list = menuData[0], total = [];
 
-              console.log('fetchMenuItems result: ', list);
+          // console.log('fetchMenuItems result: ', list);
 
               if( list ){
 
@@ -337,7 +336,7 @@ export function fetchMenuItems() {
                   fetch(api.acf.post + obj.id)
                     .then(response => response.json())
                     .then(acf => {
-                      console.log('fetchMenuItems ACF:' ,acf);
+                  //    console.log('fetchMenuItems ACF:' ,acf);
                       if( obj.featured_media ){
                         fetch(api.media + obj.featured_media)
                             .then(response => response.json())
@@ -364,7 +363,7 @@ export function fetchMenuItems() {
 
                 });
 
-                console.log('SliderMenuItems  total: ', total);
+               // console.log('SliderMenuItems  total: ', total);
 
                 if( total ) {
                   //dispatch(receiveSliderMain(total));

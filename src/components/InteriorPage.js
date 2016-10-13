@@ -71,10 +71,13 @@ export default class InteriorPage extends Component {
       isOpen: false
     };
   }
+  componentDidMount(){
+
+  }
   render() {
       return (
           <div id="top-wrapper">
-            <Menu pageWrapId={ "page-wrapper" }  outerContainerId={ "top-container" } right>
+            <Menu pageWrapId={ "page-wrapper" }  outerContainerId={ "top-wrapper" } right>
               <MainLogo />
               <MainNavigation />
             </Menu>
