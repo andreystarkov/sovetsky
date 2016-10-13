@@ -12,6 +12,7 @@
     "jquery": "^3.1.1",
     "react": "*",
     "react-anime": "^0.2.3",
+    "react-burger-menu": "^1.10.8",
     "react-dom": "*",
     "react-flexbox-grid": "^0.10.2",
     "react-gsap-enhancer": "^0.3.0",

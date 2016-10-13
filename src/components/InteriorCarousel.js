@@ -34,15 +34,17 @@ class InteriorHeader extends Component {
   render() {
     return(
       <section className="main-header interior-header">
-
-          <div className="main-header-container container">
-            <div className="top-phones">
-              <b className="phone"><span>(3532)</span> 55-00-57</b>
-              <span className="address">г. Оренбург. ул. Просторная 21/1</span>
-            </div>
-
+          <div className="page-navigation">
             <MainLogo />
             <MainNavigation />
+          </div>
+          <div className="main-header-container container">
+{/*            <div className="top-phones">
+              <b className="phone"><span>(3532)</span> 55-00-57</b>
+              <span className="address">г. Оренбург. ул. Просторная 21/1</span>
+            </div>*/}
+
+
           </div>
 
       </section>
@@ -80,7 +82,6 @@ export class InteriorCarousel extends Component {
 
       return(
       <div className="interior-slider-wrapper">
-        <InteriorHeader />
         <Slider {...sliderSettings} className="food-carousel interior-carousel">
           {slides}
         </Slider>

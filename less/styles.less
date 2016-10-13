@@ -6,7 +6,16 @@
 @colorWhite: #fffeff;
 
 @defaultHeading: 'Pobeda';
-@defaultSans: 'Muller Narrow';
+@defaultSans: 'Hattori Hanzo';
+
+@mainNavigationFont: @defaultSans;
+
+
+// 'Airport'; // 'Exo 2 Condensed'; // 'BravoRG'; //'Ristretto Pro';
+
+//'/Bukhari Script';
+
+// 'Muller Narrow'
 // 'Arian AMU';
 // 'Monitorica';
 // 'Muller Narrow';
@@ -21,8 +30,9 @@
 }
 
 ._slider-image {
-  opacity:0;  
+  opacity:0;
 }
+
 .main-header-container {
   position:relative;
   //display:flex;
@@ -122,7 +132,7 @@
     top: 3rem;
     font-size: 1.8rem;
     font-weight: 600;
-    left: 13rem; 
+    left: 13rem;
 }
 .main-navigation {
   text-align:center;
@@ -130,10 +140,10 @@
   .nav-item {
     margin-left:1.5rem;
     margin-right:1.5rem;
-    font-family: @defaultSans;
-    color: #000000;
+    font-family: @mainNavigationFont;
+    color: darken(@colorRed,17%);
     font-weight:300;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -226,6 +236,10 @@
   &.interior-carousel {
     height:100vh;
     max-height:none;
+    .food-carousel-description {
+      top: auto;
+      bottom: 15rem;
+    }
   }
   .slick-slide {
     position: relative;
@@ -451,13 +465,19 @@ button, input {
   z-index: 9;
   width: 100%;
   height: 8rem;
+}
+
+.page-navigation {
+
   .main-logo-wrapper {
     position: absolute;
     margin: auto;
-    max-width: 10rem;
-    padding: 0;
-    left: 0;
-    top: 2rem;
+    z-index: 66;
+    max-width: 14rem;
+    padding: 1.2rem 1.3rem;
+    left: 4rem;
+    top: 0;
+    background: #fff;
   }
 }
 
@@ -496,4 +516,84 @@ button, input {
   .slick-next [class^="flaticon-"]:before, .slick-prev [class^="flaticon-"]:before, .slick-next [class*=" flaticon-"]:before, .slick-prev [class*=" flaticon-"]:before, .slick-next [class^="flaticon-"]:after, .slick-prev [class^="flaticon-"]:after, .slick-next [class*=" flaticon-"]:after, .slick-prev [class*=" flaticon-"]:after {
     font-size:4rem;
   }
+}
+
+
+.page-navigation {
+  .main-navigation {
+    margin-top:0;
+  }
+}
+
+.bm-menu {
+  .main-navigation .nav-item {
+    .main-logo-wrapper {
+    margin: auto;
+    max-width: 35rem;
+    padding: 3rem 3rem;
+    padding-bottom: 1rem;
+    }
+    display: block;
+    color: #111;
+    font-family: 'Pobeda';
+    font-weight: 600;
+    font-size:1.9rem;
+    padding-top:0.7rem;
+    padding-bottom:0.7rem;
+    transition: 0.3s all;
+    margin-left:0;
+    margin-right:0;
+    &:hover {
+      text-decoration: none;
+      background: fade(#fff,10%);
+    }
+  }
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 2rem;
+  top: 2rem;
+  z-index:5;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: @colorRed;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: mix(#E0DFD5, #fff, 50%);
+  padding: 0;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #3C3C3C;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  overflow-y:hidden;
+  //padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(255, 255, 255, 0.3) !important;
 }

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Thin Condensed'), local('Exo2-ThinCondensed'), url('exo2thincondensed.woff2') format('woff2'), url('exo2thincondensed.woff') format('woff'), url('exo2thincondensed.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Extra Light Condensed'), local('Exo2-ExtraLightCondensed'), url('exo2extralightcondensed.woff2') format('woff2'), url('exo2extralightcondensed.woff') format('woff'), url('exo2extralightcondensed.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Light Condensed'), local('Exo2-LightCondensed'), url('exo2lightcondensed.woff2') format('woff2'), url('exo2lightcondensed.woff') format('woff'), url('exo2lightcondensed.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Regular Condensed'), local('Exo2-RegularCondensed'), url('exo2regularcondensed.woff2') format('woff2'), url('exo2regularcondensed.woff') format('woff'), url('exo2regularcondensed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Medium Condensed'), local('Exo2-MediumCondensed'), url('exo2mediumcondensed.woff2') format('woff2'), url('exo2mediumcondensed.woff') format('woff'), url('exo2mediumcondensed.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Semi Bold Condensed'), local('Exo2-SemiBoldCondensed'), url('exo2semiboldcondensed.woff2') format('woff2'), url('exo2semiboldcondensed.woff') format('woff'), url('exo2semiboldcondensed.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Bold Condensed'), local('Exo2-BoldCondensed'), url('exo2boldcondensed.woff2') format('woff2'), url('exo2boldcondensed.woff') format('woff'), url('exo2boldcondensed.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Extra Bold Condensed'), local('Exo2-ExtraBoldCondensed'), url('exo2extraboldcondensed.woff2') format('woff2'), url('exo2extraboldcondensed.woff') format('woff'), url('exo2extraboldcondensed.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: local('Exo 2 Black Condensed'), local('Exo2-BlackCondensed'), url('exo2blackcondensed.woff2') format('woff2'), url('exo2blackcondensed.woff') format('woff'), url('exo2blackcondensed.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

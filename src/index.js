@@ -29,6 +29,7 @@ ReactDOM.render(
                 <Route path="about" component={AboutPageContainer} />
             </Route>
         	<Route path="/interior" component={InteriorPage} />
+          <Route path="/delivery" component={MenuPage} />
         </Router>
 
     </Provider>,
