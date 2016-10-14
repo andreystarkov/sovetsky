@@ -1,4 +1,4 @@
-export const WP_URL = 'http://sovetsky.dev';
+export const WP_URL = 'http://xn----7sbhjdshgxidscmfdhj.xn--p1ai';
 
 export const api = {
   main: {

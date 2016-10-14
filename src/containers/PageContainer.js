@@ -98,7 +98,7 @@ export default class PageContainer extends Component {
   }*/
   componentDidMount(){
 
-    $(document).on('click', '.nav-item', function(){
+    $(document).on('click', '.bm-menu .nav-item', function(){
       $('.bm-cross-button button').click();
       $(window).scrollTop(0);
     })

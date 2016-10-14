@@ -51,6 +51,7 @@ export default class MenuPage extends Component {
             <section>
             <MenuItems />
             </section>
+            <Contacts />
           </div>
       );
   }
