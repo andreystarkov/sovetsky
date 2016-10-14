@@ -26,21 +26,7 @@ import '../less/styles.less'
 
 const store = configureStore();
 let rootElement = document.getElementById('root');
-/*
-    <Provider store={store}>
-        <Router history={browserHistory}>
-          <Route path="/" component={Root}>
-              <IndexRoute component={MainPage} />
-          </Route>
-          <Route path="/interior" component={InteriorPage} />
-          <Route path="/delivery" component={MenuPage} />
-          <Route path="/contacts" component={ContactsPage}>
-            <IndexRoute component={ContactsSection} />
-          </Route>
-        </Router>
-    </Provider>,
 
- */
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>

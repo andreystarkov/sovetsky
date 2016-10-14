@@ -67,14 +67,6 @@ export default class Root extends Component {
                 <DecorativeMenuSection />
                 <MainCarousel />
                 <Contacts />
-{/*                <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12 blog-main">
-                            {this.props.children}
-                        </div>
-                    </div>
-                </div>*/}
-                {/*<Footer />*/}
             </div>
         );
     }

@@ -17,6 +17,8 @@
 @colorPaleRed: #BD4335;
 @colorBrown: #8B3834;
 
+@colorWhite: #fff;
+
 // 'Airport'; // 'Exo 2 Condensed'; // 'BravoRG'; //'Ristretto Pro';
 
 //'/Bukhari Script';
@@ -29,6 +31,87 @@
 //'Ristretto Pro';
 
 @colorCaptionBg: mix(#fff,@colorLightBrown, 20%);
+
+.page-footer {
+  padding: 2.5rem 0;
+  color: #111;
+  text-align: center;
+  background-color: #d5cab7;
+  font-family: @defaultSans;
+  border-top: .1rem solid darken(#d5cab7,10%);
+}
+.contact-items {
+  margin-top:3rem;
+}
+
+.contact-item-address {
+  display:block;
+  color: @colorWhite;
+  margin-top:2rem;
+  b {
+    line-height:2rem;
+    display: inline-block;
+    margin-left: 1rem;
+    font-weight:300;
+    font-size: 2rem;
+    span {
+      opacity: .5;
+    }
+  }
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+}
+
+.contacts-header {
+  .main-header-container {
+    padding-top:10rem;
+  }
+  .react-parallax-content {
+    background: fade(#000,30%);
+  }
+}
+
+.button-map {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.contact-item {
+  display:inline-block;
+  color: @colorWhite;
+  b {
+    line-height:2rem;
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 3rem;
+    span {
+      opacity: .5;
+    }
+  }
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+  }
+}
+
+
+.contact-us {
+  text-align:center;
+  font-family: @defaultHeading;
+  h3 {
+    color: #fff;
+    font-family: 'Pobeda';
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 
 .swal2-modal.modal-confirm {
   h2 {
@@ -455,8 +538,28 @@
     background-repeat: no-repeat;
   }
 }
+
+.contacts-bg {
+  .section-contacts-content {
+    text-align:center;
+    color:#fff;
+    h1,h2,h3 {
+      color: #fff;
+    }
+    input {
+      color: #000
+    }
+  }
+  .parallax-inner {
+    width:100%;
+    height:100%;
+    position:relative;
+    background:fade(#000,30%);
+  }
+}
 .section-contacts-content {
   padding-top: 8rem;
+
   padding-bottom: 9rem;
   font-family: @defaultHeading;
   h2 {
@@ -481,11 +584,63 @@
   img { width: 100%; }
 }
 
+.section-map {
+    .map {
+      border-top: 10px solid darken(@sectionBgLight,10%);
+      width:100%;
+      height:80vh;
+    }
+}
+
+.page-preloader {
+  visibility:hidden;
+  padding-left:300px;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  z-index:9;
+  background: @sectionBgLight;
+  text-align:center;
+  padding-top:10rem;
+
+  .main-logo-loading {
+    path, .path {
+      fill: none;
+      stroke-miterlimit: 1;
+      stroke-linecap: butt;
+      stroke-linejoin: bevel;
+    }
+    .path {
+      stroke-width:1px;
+    }
+    .path-1 {
+      stroke:fade(darken(@colorRed,12%),50%);
+    }
+
+    .path-2 {
+      stroke:fade(darken(@colorRed,12%),65%);
+    }
+
+    .path-3 {
+      stroke:fade(darken(@colorRed,12%),80%);
+    }
+
+    .path-4 {
+      stroke:fade(darken(@colorRed,12%),95%);
+    }
+  }
+
+}
+
 .section-contacts {
     .map {
       border-top: 10px solid darken(@sectionBgLight,10%);
       width:100%;
-      height:650px;
+      height:450px;
     }
 }
 
@@ -738,3 +893,4 @@ button, input {
 .bm-overlay {
   background: rgba(255, 255, 255, 0.3) !important;
 }
+

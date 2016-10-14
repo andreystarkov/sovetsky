@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 09/10/2016 17:27
+    Creation date: 14/10/2016 09:25
     */
 
     @font-face {
@@ -36,28 +36,48 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-cancel:before { content: "\f100"; }
-.flaticon-cross-out:before { content: "\f101"; }
-.flaticon-delete:before { content: "\f102"; }
-.flaticon-error:before { content: "\f103"; }
-.flaticon-left-arrow:before { content: "\f104"; }
-.flaticon-next:before { content: "\f105"; }
-.flaticon-paper-plane:before { content: "\f106"; }
-.flaticon-phone-call:before { content: "\f107"; }
-.flaticon-phone-call-fat:before { content: "\f108"; }
-.flaticon-place-localizer:before { content: "\f109"; }
-.flaticon-search:before { content: "\f10a"; }
-.flaticon-smartphone:before { content: "\f10b"; }
+    .flaticon-call:before { content: "\f100"; }
+.flaticon-cancel:before { content: "\f101"; }
+.flaticon-cross-out:before { content: "\f102"; }
+.flaticon-down-arrow:before { content: "\f103"; }
+.flaticon-download:before { content: "\f104"; }
+.flaticon-error:before { content: "\f105"; }
+.flaticon-food:before { content: "\f106"; }
+.flaticon-left-arrow:before { content: "\f107"; }
+.flaticon-next:before { content: "\f108"; }
+.flaticon-paper-plane:before { content: "\f109"; }
+.flaticon-phone-call:before { content: "\f10a"; }
+.flaticon-phone-call-1:before { content: "\f10b"; }
+.flaticon-place-localizer:before { content: "\f10c"; }
+.flaticon-search:before { content: "\f10d"; }
+.flaticon-smartphone:before { content: "\f10e"; }
+.flaticon-social-media:before { content: "\f10f"; }
+.flaticon-technology:before { content: "\f110"; }
+.flaticon-technology-1:before { content: "\f111"; }
+.flaticon-technology-2:before { content: "\f112"; }
+.flaticon-telephone:before { content: "\f113"; }
+.flaticon-telephone-1:before { content: "\f114"; }
+.flaticon-transport:before { content: "\f115"; }
     
-    $font-Flaticon-cancel: "\f100";
-    $font-Flaticon-cross-out: "\f101";
-    $font-Flaticon-delete: "\f102";
-    $font-Flaticon-error: "\f103";
-    $font-Flaticon-left-arrow: "\f104";
-    $font-Flaticon-next: "\f105";
-    $font-Flaticon-paper-plane: "\f106";
-    $font-Flaticon-phone-call: "\f107";
-    $font-Flaticon-phone-call-fat: "\f108";
-    $font-Flaticon-place-localizer: "\f109";
-    $font-Flaticon-search: "\f10a";
-    $font-Flaticon-smartphone: "\f10b";
+    $font-Flaticon-call: "\f100";
+    $font-Flaticon-cancel: "\f101";
+    $font-Flaticon-cross-out: "\f102";
+    $font-Flaticon-down-arrow: "\f103";
+    $font-Flaticon-download: "\f104";
+    $font-Flaticon-error: "\f105";
+    $font-Flaticon-food: "\f106";
+    $font-Flaticon-left-arrow: "\f107";
+    $font-Flaticon-next: "\f108";
+    $font-Flaticon-paper-plane: "\f109";
+    $font-Flaticon-phone-call: "\f10a";
+    $font-Flaticon-phone-call-1: "\f10b";
+    $font-Flaticon-place-localizer: "\f10c";
+    $font-Flaticon-search: "\f10d";
+    $font-Flaticon-smartphone: "\f10e";
+    $font-Flaticon-social-media: "\f10f";
+    $font-Flaticon-technology: "\f110";
+    $font-Flaticon-technology-1: "\f111";
+    $font-Flaticon-technology-2: "\f112";
+    $font-Flaticon-telephone: "\f113";
+    $font-Flaticon-telephone-1: "\f114";
+    $font-Flaticon-transport: "\f115";

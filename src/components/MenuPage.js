@@ -47,6 +47,7 @@ export default class MenuPage extends Component {
           <div>
             <MainCarousel />
             <MenuItems />
+            <Contacts />
           </div>
       );
   }
