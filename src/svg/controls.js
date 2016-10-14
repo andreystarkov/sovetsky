@@ -3,7 +3,7 @@ import React from 'react';
 export function prevIcon(){
   return(
     <div className="carousel-prev">
-      <i className="flaticon-prev"></i>
+      <i className="flaticon-left-arrow"></i>
     </div>
   )
 }

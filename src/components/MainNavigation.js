@@ -21,7 +21,7 @@ export class MainNavigation extends Component {
         var menuItems = menuData.menus[0].items.map( (obj, key) => {
           console.log('menus loop: ', obj);
           return(
-            <Link to={'/'+obj.object_slug} className="nav-item" key={key} activeClassName="active">{obj.title}</Link>
+            <Link to={obj.url} className="nav-item" key={key} activeClassName="active">{obj.title}</Link>
           )
         })
       }

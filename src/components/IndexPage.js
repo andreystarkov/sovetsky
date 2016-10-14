@@ -10,6 +10,8 @@ import InteriorImages from '../components/InteriorImages'
 
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
+import $ from 'jquery'
+//require('jquery-scrollify');
 
 class MainHeader extends Component {
   render() {
@@ -21,7 +23,6 @@ class MainHeader extends Component {
               <b className="phone"><span>(3532)</span> 55-00-57</b>
               <span className="address">г. Оренбург. ул. Просторная 21/1</span>
             </div>
-
             <MainLogo />
             <MainNavigation />
           </div>
@@ -59,14 +60,46 @@ class DecorativeMenuSection extends Component {
 }
 
 export default class Root extends Component {
+    componentDidMount(){
+
+/*      $.scrollify({
+          section : ".scroll-section",
+          sectionName : "section-name",
+
+          easing: "easeOutExpo",
+          scrollSpeed: 900,
+          offset : 0,
+          scrollbars: true,
+          standardScrollElements: "",
+          setHeights: true,
+          overflowScroll: true,
+          before:function() {},
+          after:function(e) {
+            console.log('scrolled: ', e);
+          },
+          afterResize:function() {},
+          afterRender:function() {}
+      });*/
+    }
     render() {
         return (
             <div>
-                <MainHeader />
-                <InteriorImages />
-                <DecorativeMenuSection />
+                <section className="scroll-section" data-section-name="index-top">
+                  <MainHeader className="scroll-section" />
+                </section>
+                <section className="scroll-section" data-section-name="index-interior">
+                  <InteriorImages className="scroll-section" />
+                </section>
+                <section className="scroll-section" data-section-name="index-menu">
+                  <DecorativeMenuSection />
+                </section>
+                <section className="scroll-section" data-section-name="index-carousel">
                 <MainCarousel />
-                <Contacts />
+                </section>
+                <section className="scroll-section" data-section-name="index-contacts">
+                <Contacts  />
+                </section>
+
             </div>
         );
     }

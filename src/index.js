@@ -16,6 +16,7 @@ import ContactsSection from './components/ContactsSection'
 import First from './containers/First'
 import PageContainer from './containers/PageContainer'
 import IndexPage from './components/IndexPage'
+import GalleryPage from './components/IndexPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
@@ -32,12 +33,12 @@ ReactDOM.render(
         <Router history={browserHistory}>
           <Route path="/" component={PageContainer}>
               <IndexRoute component={IndexPage} />
-              <Route path="главная" component={IndexPage} />
+              <Route path="index" component={IndexPage} />
               <Route path="interior" component={InteriorPage} />
               <Route path="delivery" component={MenuPage} />
               <Route path="contacts" component={ContactsPage} />
+              <Route path="gallery" component={GalleryPage} />
           </Route>
-
         </Router>
     </Provider>,
     rootElement

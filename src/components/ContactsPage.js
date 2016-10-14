@@ -10,6 +10,7 @@ import InteriorImages from '../components/InteriorImages'
 //import Menu from 'react-burger-menu'
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
+import $ from 'jquery'
 
 var Menu = require('react-burger-menu').push;
 //   width="512px" height="512px"
@@ -43,7 +44,7 @@ class MainHeader extends Component {
                   </div>
                 </div>
 
-                <button className="button-map">
+                <button className="button-map" id="scroll-to-map">
                   Посмотреть на карте <i className="flaticon-down-arrow" />
                 </button>
             </div>
@@ -55,11 +56,17 @@ class MainHeader extends Component {
 }
 
 export default class ContactsPage extends Component {
+  componentDidMount(){
+    $('#scroll-to-map').click(function(){
+      $(document.body).animate({
+          'scrollTop':  $('#map').offset().top
+      }, 1000);
+    });
+  }
   render() {
       return (
           <div>
             <MainHeader />
-            <TheMap />
           </div>
       );
   }

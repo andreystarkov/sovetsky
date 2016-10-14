@@ -7,25 +7,29 @@ import { Parallax } from 'react-parallax'
 
 export class TheMap extends Component {
   componentDidMount(){
+    console.log('mount');
       DG.then(function() {
           var map = DG.map('map', {
               center: [51.836645,55.159559],
-              zoom: 16
+              zoom: 16,
+              scrollWheelZoom: false
           });
           DG.marker([51.836645,55.159559]).addTo(map).bindPopup('Ресторан Советский');
       });
+
   }
   render(){
     return(
-      <section className="section-map">
+      <div>
         <div id="map" className="map"></div>
-      </section>
+      </div>
     )
   }
 }
 
 export default class Contacts extends Component {
   componentDidMount(){
+
       $('#button-send').click( () => {
         swal({
           title: 'Отлично!',
@@ -36,6 +40,7 @@ export default class Contacts extends Component {
           buttonsStyling: false
         })
       });
+
   }
   render(){
     return(
@@ -73,8 +78,6 @@ export default class Contacts extends Component {
               </div>
             </div>
           </Parallax>
-
-          <TheMap />
         </section>
     )
   }

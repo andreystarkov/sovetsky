@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import InteriorCarousel from '../components/InteriorCarousel'
-import Contacts from '../components/Contacts'
+import {Contacts, TheMap} from '../components/Contacts'
 import InteriorImages from '../components/InteriorImages'
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
@@ -98,13 +98,15 @@ export default class PageContainer extends Component {
   }*/
   componentDidMount(){
 
-  }
-  componentDidUpdate(){
+    $(document).on('click', '.nav-item', function(){
+      $('.bm-cross-button button').click();
+      $(window).scrollTop(0);
+    })
 
   }
   render() {
       return (
-          <div id="top-wrapper">
+          <div id="top-wrapper" data-path={location.pathname}>
             <Menu pageWrapId={ "page-wrapper" }  outerContainerId={ "top-wrapper" } right>
               <MainLogo />
               <MainNavigation />
@@ -120,11 +122,12 @@ export default class PageContainer extends Component {
                 </div>
 
                 <div className="page-content-wrapper">
-                <RouteTransition pathname={ location.pathname }>
-                    {this.props.children}
-                </RouteTransition>
+                  <RouteTransition pathname={ location.pathname }>
+                      {this.props.children}
+                  </RouteTransition>
                 </div>
 
+                <TheMap />
                 <Footer />
             </div>
           </div>

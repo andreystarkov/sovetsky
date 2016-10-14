@@ -27,8 +27,6 @@ class InteriorHeader extends Component {
               <b className="phone"><span>(3532)</span> 55-00-57</b>
               <span className="address">г. Оренбург. ул. Просторная 21/1</span>
             </div>*/}
-
-
           </div>
 
       </section>
@@ -79,6 +77,7 @@ export default class InteriorPage extends Component {
       <div>
         <InteriorCarousel />
         <InteriorImages />
+        <Contacts />
       </div>
       );
   }
