@@ -4,33 +4,28 @@ import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
-import InteriorCarousel from '../components/InteriorCarousel'
+import MainCarousel from '../components/MainCarousel'
 import Contacts from '../components/Contacts'
 import InteriorImages from '../components/InteriorImages'
-//import Menu from 'react-burger-menu'
+
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
 
-var Menu = require('react-burger-menu').push;
-//   width="512px" height="512px"
-
-
-class InteriorHeader extends Component {
+class MainHeader extends Component {
   render() {
     return(
-      <section className="main-header interior-header">
-          <div className="page-navigation container">
-            <MainLogo />
-          </div>
+      <section className="main-header">
+        <Parallax bgImage="/resources/images/main-header/1.jpg" strength={400}>
           <div className="main-header-container container">
-{/*            <div className="top-phones">
+            <div className="top-phones">
               <b className="phone"><span>(3532)</span> 55-00-57</b>
               <span className="address">г. Оренбург. ул. Просторная 21/1</span>
-            </div>*/}
+            </div>
 
-
+            <MainLogo />
+            <MainNavigation />
           </div>
-
+        </Parallax>
       </section>
     )
   }
@@ -63,24 +58,26 @@ class DecorativeMenuSection extends Component {
   }
 }
 
-
-export default class InteriorPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false
-    };
-  }
-  componentDidMount(){
-
-  }
-  render() {
-      return (
-      <div>
-        <InteriorCarousel />
-        <InteriorImages />
-      </div>
-      );
-  }
+export default class Root extends Component {
+    render() {
+        return (
+            <div>
+                <MainHeader />
+                <InteriorImages />
+                <DecorativeMenuSection />
+                <MainCarousel />
+                <Contacts />
+{/*                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12 blog-main">
+                            {this.props.children}
+                        </div>
+                    </div>
+                </div>*/}
+                {/*<Footer />*/}
+            </div>
+        );
+    }
 }
+
 

@@ -44,21 +44,9 @@ export default class MenuPage extends Component {
   }
   render() {
       return (
-          <div id="top-wrapper">
-            <Menu pageWrapId={ "page-wrapper" }  outerContainerId={ "top-container" } right>
-              <MainLogo />
-              <MainNavigation />
-            </Menu>
-            <div id="page-wrapper">
-                <div className="page-navigation container">
-                  <MainLogo />
-                </div>
-                <MainCarousel />
-
-                <MenuItems />
-                <Contacts />
-
-            </div>
+          <div>
+            <MainCarousel />
+            <MenuItems />
           </div>
       );
   }

@@ -14,6 +14,8 @@ import MenuPage from './components/MenuPage'
 import ContactsPage from './components/ContactsPage'
 import ContactsSection from './components/ContactsSection'
 import First from './containers/First'
+import PageContainer from './containers/PageContainer'
+import IndexPage from './components/IndexPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
@@ -24,18 +26,32 @@ import '../less/styles.less'
 
 const store = configureStore();
 let rootElement = document.getElementById('root');
-
-ReactDOM.render(
+/*
     <Provider store={store}>
         <Router history={browserHistory}>
           <Route path="/" component={Root}>
               <IndexRoute component={MainPage} />
           </Route>
-        	<Route path="/interior" component={InteriorPage} />
+          <Route path="/interior" component={InteriorPage} />
           <Route path="/delivery" component={MenuPage} />
           <Route path="/contacts" component={ContactsPage}>
             <IndexRoute component={ContactsSection} />
           </Route>
+        </Router>
+    </Provider>,
+
+ */
+ReactDOM.render(
+    <Provider store={store}>
+        <Router history={browserHistory}>
+          <Route path="/" component={PageContainer}>
+              <IndexRoute component={IndexPage} />
+              <Route path="главная" component={IndexPage} />
+              <Route path="interior" component={InteriorPage} />
+              <Route path="delivery" component={MenuPage} />
+              <Route path="contacts" component={ContactsPage} />
+          </Route>
+
         </Router>
     </Provider>,
     rootElement

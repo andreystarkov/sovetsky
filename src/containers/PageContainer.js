@@ -27,13 +27,11 @@ export default class PageContainer extends Component {
                 <div className="page-navigation container">
                   <MainLogo />
                 </div>
-                 <div className="container">
-                    <div className="row">
-                        <div className="col-sm-12 blog-main">
-                            {this.props.children}
-                        </div>
-                    </div>
+
+                <div className="page-content-wrapper">
+                    {this.props.children}
                 </div>
+
                 <Contacts />
 
                 <Footer />
