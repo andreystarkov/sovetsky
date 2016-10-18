@@ -120,7 +120,7 @@ export function fetchInteriorMain() {
 
         //console.log('fetchInteriorMain return ',api.main.interior);
 
-        return fetch(api.main.interior)
+        return fetch(api.main.interior + '?per_page=100')
             .then(response => Promise.all([response.json()]))
             .then(interiorData => {
 
@@ -128,7 +128,7 @@ export function fetchInteriorMain() {
 
               var list = interiorData[0], total = [];
 
-              //console.log('fetchInteriorMain result: ', list);
+              console.log('fetchInteriorMain result: ', list);
 
               if( list ){
 
@@ -196,7 +196,7 @@ export function fetchSliderMain() {
 
        // console.log('fetchSliderMain return ', api.main.slider);
 
-        return fetch(api.main.slider)
+        return fetch(api.main.slider + '?per_page=100')
             .then(response => Promise.all([response.json()]))
             .then(sliderData => {
 
@@ -257,7 +257,7 @@ export function fetchSliderInterior() {
 
        // console.log('fetchSliderMain return ', api.main.slider);
 
-        return fetch(api.interior.slider)
+        return fetch(api.interior.slider + '?per_page=100')
             .then(response => Promise.all([response.json()]))
             .then(sliderData => {
 
@@ -320,7 +320,7 @@ export function fetchMenuItems() {
 
     //  console.log('fetchMenuItems return ', api.menu);
 
-        return fetch(api.menu)
+        return fetch(api.menu + '?per_page=100')
             .then(response => Promise.all([response.json()]))
             .then(menuData => {
 

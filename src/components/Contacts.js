@@ -45,7 +45,7 @@ export default class Contacts extends Component {
   render(){
     return(
         <section className="section-contacts contacts-bg">
-          <Parallax blur={2} bgImage="http://sovetsky.dev/wp-content/uploads/2016/10/DSC01974.jpg" strength={300}>
+          <Parallax blur={2} bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/1-3.jpg" strength={300}>
             <div className="parallax-inner">
               <div className="section-contacts-content container">
                 <div className="row">

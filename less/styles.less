@@ -5,13 +5,29 @@
 @colorRed: #e74232;
 @colorWhite: #fffeff;
 
-@defaultHeading: 'Pobeda';
-@defaultSans: 'Hattori Hanzo';
+@defaultHeading: 'Pobeda'; // 'Lora'; // 'Merriweather', serif; // 'Pobeda';
+@defaultSans: 'Roboto Condensed'; // 'Hattori Hanzo';
+
+@defaultHeadingWeight: 600;
+
+// font-family: 'Noto Serif', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Tinos', serif;
 
 @catalogItemNameFont: @defaultHeading;
 @catalogItemDescriptionFont: @defaultSans;
 @mainNavigationFont: @defaultSans;
+@mainNavigationFontSize: 1.5rem;
+@mainNavigationFontWeight: 400;
 
+@contactsFontWeight: 600;
+@contactsFontSize: 2rem;
+@contactsFont: 'Roboto Condensed';
+
+@buttonFontSize: 1.5em;
+@buttonFontWeight:600;
+@buttonFont: 'Pobeda';
+@buttonLineHeight:auto;
 
 @colorLightBrown: #C8B595;
 @colorPaleRed: #BD4335;
@@ -41,19 +57,19 @@
   border-top: .1rem solid darken(#d5cab7,5%);
 }
 .contact-items {
-  margin-top:3rem;
+  margin-top:6rem;
 }
 
 .contact-item-address {
   display:block;
-  color: @colorWhite;
-  margin-top:2rem;
+  color: #111;
+  margin-top:4rem;
   b {
     line-height:2rem;
     display: inline-block;
     margin-left: 1rem;
     font-weight:300;
-    font-size: 2rem;
+    font-size: 1.5rem;
     span {
       opacity: .5;
     }
@@ -69,7 +85,7 @@
     padding-top:10rem;
   }
   .react-parallax-content {
-    background: fade(#000,30%);
+    background: fade(#fff,30%);
   }
 }
 
@@ -85,12 +101,16 @@
 
 .contact-item {
   display:inline-block;
-  color: @colorWhite;
+  ._subscript {
+    font-weight:200;
+  }
   b {
     line-height:2rem;
     display: inline-block;
     margin-left: 1rem;
-    font-size: 3rem;
+    font-weight:300;
+    color:#111;
+    font-size: 2.5rem;
     span {
       opacity: .5;
     }
@@ -106,8 +126,8 @@
   text-align:center;
   font-family: @defaultHeading;
   h3 {
-    color: #fff;
-    font-family: 'Pobeda';
+
+    font-family: @defaultHeading;
     font-size: 2rem;
     margin-bottom: 2rem;
   }
@@ -208,7 +228,6 @@
   }
 }
 
-
 .button-square-buy {
    display:block;
    margin: 2rem auto;
@@ -217,12 +236,13 @@
    background: mix(@colorPaleRed,@colorRed,50%);
    padding:1.5rem 2.5rem;
    border: 0;
-   font-family: @defaultHeading;
+   font-size: @buttonFontSize;
+   font-weight: @buttonFontWeight;
+   font-family: @buttonFont;
+   line-height: @buttonLineHeight;
    outline: none;
-   font-size: 1.5rem;
    padding: 0rem 2.2rem;
-   font-weight: 600;
-   line-height: 2.7rem;
+
  //  background: transparent;
    &:hover {
      background: mix(mix(@colorPaleRed,@colorRed,50%),#fff,95%);
@@ -323,7 +343,7 @@
 
 .image-overlay {
   position:absolute;
-  z-index:1;
+  z-index:0;
   left:0;
   top:0;
   right:0;
@@ -338,20 +358,19 @@
     position: absolute;
     top: 3rem;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: @defaultHeadingWeight;
     left: 13rem;
 }
+
 .main-navigation {
   text-align:center;
   margin-top:8%;
   .nav-item {
     margin-left:1.5rem;
     margin-right:1.5rem;
-    //font-family: @mainNavigationFont;
-   // color: darken(@colorRed,17%);
-    font-weight:300;
-    font-family: 'Pobeda';
-    font-size: 2rem;
+    font-family: @mainNavigationFont;
+    font-size: @mainNavigationFontSize;
+    font-weight: @mainNavigationFontWeight;
     color: #000;
   }
 }
@@ -393,7 +412,7 @@
 .decorative-section-content {
   font-family: @defaultHeading;
   h2 {
-    font-weight:700;
+    font-weight: @defaultHeadingWeight;
     font-size:3.4rem;
     font-family: @defaultHeading;
     margin-bottom:3rem;
@@ -401,7 +420,7 @@
 
   p {
     font-family: @defaultSans;
-    font-weight:300;
+    font-weight: 300;
     line-height:2rem;
     font-size:1.5rem;
     margin-bottom:4rem;
@@ -423,14 +442,14 @@
 .button-square-red, .swal2-confirm, .swal2-cancel {
    font-size:1.8rem;
    color: @colorMain;
-   padding:1.5rem 2.5rem;
+   padding:0.5rem 1.5rem;
    border: 3px solid @colorMain;
-   font-family: @defaultHeading;
+   font-size: @buttonFontSize;
+   font-weight: @buttonFontWeight;
+   font-family: @buttonFont;
+   line-height: @buttonLineHeight;
    outline: none;
-   font-size: 1.5rem;
-   padding: 0rem 1.5rem;
-   font-weight: 600;
-   line-height: 2.7rem;
+  // padding: 0rem 1.5rem;
    background: @colorWhite;
    margin-left:0.7rem;
    margin-right:0.7rem;
@@ -542,9 +561,8 @@
 .contacts-bg {
   .section-contacts-content {
     text-align:center;
-    color:#fff;
+    color:#111;
     h1,h2,h3 {
-      color: #fff;
     }
     input {
       color: #000
@@ -554,19 +572,21 @@
     width:100%;
     height:100%;
     position:relative;
-    background:fade(#000,30%);
+    background:fade(#fff,30%);
   }
 }
 .section-contacts-content {
   padding-top: 8rem;
-
   padding-bottom: 9rem;
-  font-family: @defaultHeading;
+  font-family: @contactsFont;
   h2 {
-    font-weight:700;
-    font-size:3.3rem;
+    font-weight: @contactsFontWeight;
+    font-size: @contactsFontSize;
     font-family: @defaultHeading;
-    margin-bottom:2.2rem;
+
+    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    font-weight: @defaultHeadingWeight;
   }
 
   p {
@@ -668,8 +688,8 @@
   outline: none;
   border: 3px solid @colorMain;
   padding: 0.4rem 1.3rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: @buttonFontSize;
+  font-weight: 400;
   min-width: 22rem;
   &:hover {
     border-color: lighten(@colorMain,12%);
@@ -680,12 +700,16 @@ button, input {
   transition: 0.3s all;
 }
 
+
 .button-square-send {
   outline: none;
   border: 3px solid @colorMain;
   padding: 0.4rem 1.3rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: @buttonFontSize;
+  text-transform:uppercase;
+  font-weight: @buttonFontWeight;
+  font-family: @buttonFont;
+  line-height: @buttonLineHeight;
   background-color: @colorMain;
   color: #fff;
   min-width: 16rem;
@@ -825,6 +849,24 @@ button, input {
   height:100vh;
 }
 
+
+
+
+
+
+/*
+------------------  Burger Menu -----------------------
+*/
+
+@menuBgColor: lighten(#d5cab7,10%);
+
+.bm-menu-wrap {
+  z-index:301 !important;
+}
+.bm-burger-button {
+  z-index:300 !important;
+}
+
 .bm-menu {
   .main-logo-wrapper {
     max-width:18rem;
@@ -839,9 +881,10 @@ button, input {
     }
     display: block;
     color: #111;
-    font-family: 'Pobeda';
-    font-weight: 600;
-    font-size:1.9rem;
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    font-size:1.52rem;
+    text-transform:uppercase;
     padding-top:0.7rem;
     padding-bottom:0.7rem;
     transition: 0.3s all;
@@ -859,8 +902,6 @@ button, input {
   }
 }
 
-@menuBgColor: lighten(#d5cab7,10%);
-
 .bm-burger-button {
   position: fixed;
   width: 2.5rem;
@@ -870,34 +911,28 @@ button, input {
   z-index:5;
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: @colorRed;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   background: mix(@menuBgColor,#000,50%);
 }
 
-/* General sidebar styles */
 .bm-menu {
   background: @menuBgColor;
   padding: 0;
 }
 
-/* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #3C3C3C;
 }
 
-/* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
   overflow-y:hidden;
@@ -905,9 +940,28 @@ button, input {
   //padding: 0.8em;
 }
 
-/* Styling of overlay */
 .bm-overlay {
   background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.section-index-top {
+  position:relative;
+  .top-header-overlay {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    background-color:fade(#fff,30%);
+  }
+}
+[data-path="/index"], [data-path="/"] {
+  .top-logo-square {
+    display: none;
+  }
 }
 
 [data-path="/contacts"] {
@@ -916,7 +970,7 @@ button, input {
   }
 }
 
-[data-path="/deliver"] {
+[data-path="/delivery"] {
   .map {
     display:none;
     height:100vh;

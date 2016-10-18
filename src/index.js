@@ -8,7 +8,7 @@ import Root from './containers/Root'
 import PostsContainer from './containers/PostsContainer'
 import PostContainer from './containers/PostContainer'
 import AboutPageContainer from './containers/AboutPageContainer'
-import MainPage from './components/MainPage'
+
 import InteriorPage from './components/InteriorPage'
 import MenuPage from './components/MenuPage'
 import ContactsPage from './components/ContactsPage'

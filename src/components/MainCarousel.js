@@ -41,6 +41,7 @@ export class MainCarousel extends Component {
       var items = this.props.slider.main;
 
       var slides = items.map( (obj,key) => {
+        console.log('Slides key = ', key)
         return(
           <div key={key} className="food-carousel-item">
             <img src={obj.full} />

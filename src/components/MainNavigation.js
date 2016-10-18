@@ -19,7 +19,7 @@ export class MainNavigation extends Component {
 
       if( menuData.menus.length > 0 ){
         var menuItems = menuData.menus[0].items.map( (obj, key) => {
-          console.log('menus loop: ', obj);
+          //console.log('menus loop: ', obj);
           return(
             <Link to={obj.url} className="nav-item" key={key} activeClassName="active">{obj.title}</Link>
           )
@@ -38,7 +38,7 @@ export class MainNavigation extends Component {
 function mapStateToProps(state) {
     const menus = state.menus;
 
-    console.log('mapStateToProps: ', state, menus);
+  //  console.log('mapStateToProps (MainNavigation_: ', state, menus);
 
     return {
         menus: menus

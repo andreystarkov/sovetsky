@@ -69,8 +69,9 @@ export default class InteriorPage extends Component {
       isOpen: false
     };
   }
-  componentDidMount(){
-
+  componentWillUnmount(){
+       window.scroll(0, 0);
+       history.pushState('', document.title, window.location.pathname);
   }
   render() {
       return (

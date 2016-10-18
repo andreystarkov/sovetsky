@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Slider from 'react-slick'
 import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
@@ -7,26 +7,54 @@ import Footer from '../components/Footer'
 import MainCarousel from '../components/MainCarousel'
 import Contacts from '../components/Contacts'
 import InteriorImages from '../components/InteriorImages'
-
+import { prevIcon, nextIcon } from '../svg/controls'
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
 import $ from 'jquery'
-//require('jquery-scrollify');
+require('jquery-scrollify')
+
+var sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 1500,
+  autoplay: true,
+  slidesToShow: 1,
+  pauseOnHover: false,
+  accessibility: false,
+  arrows: false,
+  autoplaySpeed: 5000,
+  fade: true,
+  slidesToScroll: 1,
+  prevArrow: prevIcon(),
+  nextArrow: nextIcon()
+};
+
 
 class MainHeader extends Component {
   render() {
     return(
       <section className="main-header">
-        <Parallax bgImage="/resources/images/main-header/1.jpg" strength={400}>
+        <div className="top-header-overlay">
           <div className="main-header-container container">
             <div className="top-phones">
-              <b className="phone"><span>(3532)</span> 55-00-57</b>
+              <b className="phone"><span>(3532)</span> 55-00-55</b>
               <span className="address">г. Оренбург. ул. Просторная 21/1</span>
             </div>
             <MainLogo />
             <MainNavigation />
           </div>
-        </Parallax>
+        </div>
+        <Slider {...sliderSettings} className="food-carousel interior-carousel">
+          <div>
+            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0020.jpg" strength={300} />
+          </div>
+          <div>
+            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0027.jpg" strength={300} />
+          </div>
+          <div>
+            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/2-1.jpg" strength={300} />
+          </div>
+        </Slider>
       </section>
     )
   }
@@ -62,41 +90,34 @@ class DecorativeMenuSection extends Component {
 export default class Root extends Component {
     componentDidMount(){
 
-/*      $.scrollify({
-          section : ".scroll-section",
-          sectionName : "section-name",
+      console.log('ROOT', this.props);
 
-          easing: "easeOutExpo",
-          scrollSpeed: 900,
-          offset : 0,
-          scrollbars: true,
-          standardScrollElements: "",
-          setHeights: true,
-          overflowScroll: true,
-          before:function() {},
-          after:function(e) {
-            console.log('scrolled: ', e);
-          },
-          afterResize:function() {},
-          afterRender:function() {}
-      });*/
+
+
+
+
     }
+
+    componentWillUnmount(){
+      //$.scrollify.destroy();
+    }
+
     render() {
         return (
             <div>
-                <section className="scroll-section" data-section-name="index-top">
-                  <MainHeader className="scroll-section" />
+                <section id="index-top" className="section-index-top index-scroll-section" data-index-section-name="index-top">
+                  <MainHeader className="index-scroll-section" />
                 </section>
-                <section className="scroll-section" data-section-name="index-interior">
-                  <InteriorImages className="scroll-section" />
+                <section className="index-scroll-section" data-index-section-name="index-interior">
+                  <InteriorImages className="index-scroll-section" />
                 </section>
-                <section className="scroll-section" data-section-name="index-menu">
+                <section className="index-scroll-section" data-index-section-name="index-menu">
                   <DecorativeMenuSection />
                 </section>
-                <section className="scroll-section" data-section-name="index-carousel">
+                <section className="index-scroll-section" data-index-section-name="index-carousel">
                 <MainCarousel />
                 </section>
-                <section className="scroll-section" data-section-name="index-contacts">
+                <section className="index-scroll-section" data-index-section-name="index-contacts">
                 <Contacts  />
                 </section>
 

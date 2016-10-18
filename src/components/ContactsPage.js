@@ -19,7 +19,7 @@ class MainHeader extends Component {
   render() {
     return(
       <section className="main-header contacts-header">
-        <Parallax blur={5} bgImage="http://sovetsky.dev/wp-content/uploads/2016/10/DSC01974.jpg" strength={600}>
+        <Parallax blur={5} bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/DSC01974.jpg" strength={600}>
           <div className="main-header-container container">
             <div className="contact-us">
 

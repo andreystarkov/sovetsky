@@ -4,7 +4,7 @@ import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
-import {TheMap, Contacts} from '../components/Contacts'
+import Contacts from '../components/Contacts'
 import MainCarousel from '../components/MainCarousel'
 import MenuItems from '../components/MenuItems'
 //import Menu from 'react-burger-menu'
@@ -51,7 +51,9 @@ export default class MenuPage extends Component {
             <section>
             <MenuItems />
             </section>
-            <Contacts />
+            <section>
+              <Contacts />
+            </section>
           </div>
       );
   }

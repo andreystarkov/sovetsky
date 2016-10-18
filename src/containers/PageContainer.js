@@ -97,12 +97,41 @@ export default class PageContainer extends Component {
     }
   }*/
   componentDidMount(){
+/*    $.scrollify({
+        section : ".scroll-section",
+        sectionName : "section-name",
 
+        easing: "easeOutExpo",
+        scrollSpeed: 900,
+        offset : 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: true,
+        overflowScroll: true,
+        before:function() {},
+        after:function(e) {
+          console.log('scrolled: ', e);
+        },
+        afterResize:function() {},
+        afterRender:function() {
+          alert('a');
+        }
+    });*/
     $(document).on('click', '.bm-menu .nav-item', function(){
       $('.bm-cross-button button').click();
       $(window).scrollTop(0);
+      history.pushState('', document.title, window.location.pathname);
     })
 
+  }
+  componentWillUpdate(){
+
+  }
+  componentDidUpdate(){
+    window.scroll(0, 0);
+
+    $(window).scrollTop(0);
+   // $.scrollify.update()
   }
   render() {
       return (
@@ -117,7 +146,7 @@ export default class PageContainer extends Component {
                   <MainLogoLoading />
                 </div>
 
-                <div className="page-navigation container">
+                <div className="page-navigation top-logo-square container">
                   <MainLogo />
                 </div>
 

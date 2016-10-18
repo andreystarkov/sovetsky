@@ -693,3 +693,11 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
 }
+
+if ( function_exists( 'add_image_size' ) ) {
+  add_image_size( 'Full HD', 1920, 1080, true ); //(cropped)
+  add_image_size( '1600', 1600, 1024, true );
+  add_image_size( '1400', 1400, 900, true);
+}
+
+add_filter('image_size_names_choose', 'my_image_sizes');
