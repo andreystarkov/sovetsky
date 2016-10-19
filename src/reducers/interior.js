@@ -11,7 +11,7 @@ export default function interior(state = defaultState, action) {
         case RECEIVE_INTERIOR:
             const { interior } = action.payload;
 
-            console.log('RECEIVE_INTERIOR: ', action.payload)
+           // console.log('RECEIVE_INTERIOR: ', action.payload)
 
             return Object.assign({}, state, {
                 interior: interior
@@ -19,7 +19,7 @@ export default function interior(state = defaultState, action) {
         case RECEIVE_INTERIOR_MAIN:
             const { interiorMain } = action.payload;
 
-            console.log('RECEIVE_INTERIOR_MAIN:', interiorMain)
+           // console.log('RECEIVE_INTERIOR_MAIN:', interiorMain)
 
             return Object.assign({}, state, {
                 main: interiorMain

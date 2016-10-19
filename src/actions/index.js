@@ -65,7 +65,7 @@ export function fetchMenus() {
   var stored = localStorage.getItem('nav');
   if ( stored ){
     var parsed = JSON.parse(stored);
-    console.log('fetchMenus: from localStorage: ', parsed);
+    //console.log('fetchMenus: from localStorage: ', parsed);
     return (dispatch) => {
       return dispatch( receiveMenus(parsed) )
     }
@@ -74,6 +74,7 @@ export function fetchMenus() {
         return fetch(api.nav)
             .then(response => Promise.all([response.json()]))
             .then(menusData => {
+             // console.log('MENUS: ', menusData);
               if( menusData ) {
                 pushStorage('nav', menusData);
                 dispatch(receiveMenus(menusData));
@@ -128,7 +129,7 @@ export function fetchInteriorMain() {
 
               var list = interiorData[0], total = [];
 
-              console.log('fetchInteriorMain result: ', list);
+             // console.log('fetchInteriorMain result: ', list);
 
               if( list ){
 

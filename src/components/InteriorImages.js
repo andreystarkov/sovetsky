@@ -103,13 +103,14 @@ export class InteriorImages extends Component {
     var self = this,
     imagesData = this.props.interior.main,
     imagesList = imagesData,
-    images;
+    images,
+    maximum = this.props.max || 8;
 
    // console.log('InteriorImages props: ', imagesList);
 
     var images = imagesList.map( (obj, key) => {
      // console.log('imagez', obj);
-      return(
+      if ( key < maximum ) return(
         <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
           <div className="interior-image-link" >
             <div className="image-overlay" />

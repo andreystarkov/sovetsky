@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import InteriorCarousel from '../components/InteriorCarousel'
 import {Contacts, TheMap} from '../components/Contacts'
@@ -120,7 +119,20 @@ export default class PageContainer extends Component {
     $(document).on('click', '.bm-menu .nav-item', function(){
       $('.bm-cross-button button').click();
       $(window).scrollTop(0);
-      history.pushState('', document.title, window.location.pathname);
+    //  history.pushState('', document.title, window.location.pathname);
+    });
+
+    var docHeight = $('.section-header').height()-150,
+        navigation = $('.page-navigation');
+
+    $(document).on('scroll', function(){
+
+      if( ($(this).scrollTop() > docHeight) ){
+        navigation.addClass('scrolled')
+      }
+      if( ($(this).scrollTop() < docHeight) ){
+        navigation.removeClass('scrolled')
+      }
     })
 
   }
@@ -128,17 +140,18 @@ export default class PageContainer extends Component {
 
   }
   componentDidUpdate(){
-    window.scroll(0, 0);
+   window.scroll(0, 0);
 
-    $(window).scrollTop(0);
+   // $(window).scrollTop(0);
    // $.scrollify.update()
+
   }
   render() {
       return (
           <div id="top-wrapper" data-path={location.pathname}>
             <Menu pageWrapId={ "page-wrapper" }  outerContainerId={ "top-wrapper" } right>
               <MainLogo />
-              <MainNavigation />
+              <MainNavigation path={location.pathname} />
             </Menu>
             <div id="page-wrapper">
 
@@ -147,7 +160,16 @@ export default class PageContainer extends Component {
                 </div>
 
                 <div className="page-navigation top-logo-square container">
-                  <MainLogo />
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-md-3">
+                        <MainLogo />
+                      </div>
+                      <div className="col-md-9">
+                        <MainNavigation path={location.pathname} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="page-content-wrapper">

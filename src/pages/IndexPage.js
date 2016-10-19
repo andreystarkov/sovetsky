@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+
 import Footer from '../components/Footer'
 import MainCarousel from '../components/MainCarousel'
 import Contacts from '../components/Contacts'
@@ -35,14 +35,14 @@ class MainHeader extends Component {
     return(
       <section className="main-header">
         <div className="top-header-overlay">
-          <div className="main-header-container container">
+{/*          <div className="main-header-container container">
             <div className="top-phones">
               <b className="phone"><span>(3532)</span> 55-00-55</b>
               <span className="address">г. Оренбург. ул. Просторная 21/1</span>
             </div>
             <MainLogo />
             <MainNavigation />
-          </div>
+          </div>*/}
         </div>
         <Slider {...sliderSettings} className="food-carousel interior-carousel">
           <div>
@@ -92,32 +92,51 @@ export default class Root extends Component {
 
       console.log('ROOT', this.props);
 
-
-
-
+/*      $.scrollify({
+        section : ".index-scroll-section",
+        sectionName : false,
+      //  interstitialSection : "",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: true,
+     //   standardScrollElements: "",
+        setHeights: true,
+        interstitialSection: '.standart-scroll',
+        standardScrollElements: '.standart-scroll',
+        overflowScroll: true,
+        before:function() {},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
+      });*/
 
     }
 
+    componenDidUpdate(){
+    //  alert('a');
+    }
     componentWillUnmount(){
-      //$.scrollify.destroy();
+    //  alert('didunmount')
+    //  $.scrollify.disable();
     }
 
     render() {
         return (
             <div>
-                <section id="index-top" className="section-index-top index-scroll-section" data-index-section-name="index-top">
+                <section id="index-top" className="section-header section-index-top index-scroll-section" data-index-section-name="index-top">
                   <MainHeader className="index-scroll-section" />
                 </section>
-                <section className="index-scroll-section" data-index-section-name="index-interior">
-                  <InteriorImages className="index-scroll-section" />
+                <section className="standart-scroll" data-index-section-name="index-interior">
+                  <InteriorImages  />
                 </section>
-                <section className="index-scroll-section" data-index-section-name="index-menu">
+                <section className="standart-scroll" data-index-section-name="index-menu">
                   <DecorativeMenuSection />
                 </section>
-                <section className="index-scroll-section" data-index-section-name="index-carousel">
+                <section className="standart-scroll" data-index-section-name="index-carousel">
                 <MainCarousel />
                 </section>
-                <section className="index-scroll-section" data-index-section-name="index-contacts">
+                <section className="standart-scroll" data-index-section-name="index-contacts">
                 <Contacts  />
                 </section>
 

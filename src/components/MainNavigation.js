@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { fetchMenus } from '../actions'
 import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch';
+import $ from 'jquery'
 
 function postTypes(response){
   console.log('postTypes: ', response);
@@ -14,14 +15,19 @@ export class MainNavigation extends Component {
         fetchMenus();
        // console.log('WTF', a);
     }
-    render() {
-      var menuData = this.props.menus;
+    componentDidUpdate(){
 
+    }
+    render() {
+      var menuData = this.props.menus, classNames = 'nav-item';
       if( menuData.menus.length > 0 ){
         var menuItems = menuData.menus[0].items.map( (obj, key) => {
-          //console.log('menus loop: ', obj);
+          if( location.pathname == obj.url) {
+            classNames = 'nav-item active';
+            console.log('Found: ', location.pathname, obj.url);
+          } else classNames = 'nav-item';
           return(
-            <Link to={obj.url} className="nav-item" key={key} activeClassName="active">{obj.title}</Link>
+            <Link to={obj.url} className={classNames} key={key}>{obj.title}</Link>
           )
         })
       }

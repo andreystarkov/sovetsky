@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import MainNavigation from '../components/MainNavigation'
 import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
+
 import Footer from '../components/Footer'
 import InteriorCarousel from '../components/InteriorCarousel'
 import {TheMap, Contacts} from '../components/Contacts'

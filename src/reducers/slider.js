@@ -10,7 +10,7 @@ export default function slider(state = defaultState, action) {
         case RECEIVE_SLIDER_MAIN:
             const { main } = action.payload;
 
-            console.log('RECEIVE_SLIDER_MAIN: ', main);
+          //  console.log('RECEIVE_SLIDER_MAIN: ', main);
 
             return Object.assign({}, state, {
                 main: main
@@ -18,7 +18,7 @@ export default function slider(state = defaultState, action) {
         case RECEIVE_SLIDER_INTERIOR:
             const { interior } = action.payload;
 
-            console.log('RECEIVE_SLIDER_INTERIOR: ', interior);
+          //  console.log('RECEIVE_SLIDER_INTERIOR: ', interior);
 
             return Object.assign({}, state, {
                 interior: interior

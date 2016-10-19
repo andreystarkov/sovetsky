@@ -6,7 +6,7 @@ const defaultState = {
 
 export default function menus(state = defaultState, action) {
 
-    console.log( 'menus call: ', action.type);
+  //  console.log( 'menus call: ', action.type);
 
     switch(action.type) {
         case RECEIVE_MENUS:
