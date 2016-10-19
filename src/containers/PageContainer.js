@@ -61,7 +61,6 @@ export class MainLogoLoading extends Component {
 
 var isAnimating = false;
 
-export default class PageContainer extends Component {
 /*  componentWillUpdate(){
     var elem = document.getElementById('page-preloader');
 
@@ -95,7 +94,7 @@ export default class PageContainer extends Component {
       console.log('Double animating attempt');
     }
   }*/
-  componentDidMount(){
+
 /*    $.scrollify({
         section : ".scroll-section",
         sectionName : "section-name",
@@ -116,28 +115,42 @@ export default class PageContainer extends Component {
           alert('a');
         }
     });*/
+
+export default class PageContainer extends Component {
+
+  componentDidMount(){
+
     $(document).on('click', '.bm-menu .nav-item', function(){
       $('.bm-cross-button button').click();
       $(window).scrollTop(0);
     //  history.pushState('', document.title, window.location.pathname);
     });
 
-    var docHeight = $('.section-header').height()-150,
+/*    var docHeight = $('.section-header').height()-150,
         navigation = $('.page-navigation');
 
     $(document).on('scroll', function(){
-
       if( ($(this).scrollTop() > docHeight) ){
         navigation.addClass('scrolled')
       }
       if( ($(this).scrollTop() < docHeight) ){
         navigation.removeClass('scrolled')
       }
-    })
+    });*/
 
+    window.addEventListener('scroll', this.handleScroll);
   }
-  componentWillUpdate(){
-
+  handleScroll(event){
+    let scrollTop = event.srcElement.body.scrollTop;
+    //console.log('scroll: event',event, 'scrolltop: '+scrollTop);
+    if ( scrollTop > 100 ){
+      $('.page-navigation').addClass('scrolled');
+    } else {
+      $('.page-navigation').removeClass('scrolled');
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
   componentDidUpdate(){
    window.scroll(0, 0);
@@ -155,18 +168,16 @@ export default class PageContainer extends Component {
             </Menu>
             <div id="page-wrapper">
 
-                <div id="page-preloader" className="page-preloader">
-                  <MainLogoLoading />
-                </div>
-
-                <div className="page-navigation top-logo-square container">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-3">
-                        <MainLogo />
-                      </div>
-                      <div className="col-md-9">
-                        <MainNavigation path={location.pathname} />
+                <div className="page-navigation-wrapper">
+                  <div className="page-navigation top-logo-square container">
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-md-3 top-logo-container">
+                          <MainLogo />
+                        </div>
+                        <div className="col-md-9">
+                          <MainNavigation path={location.pathname} />
+                        </div>
                       </div>
                     </div>
                   </div>

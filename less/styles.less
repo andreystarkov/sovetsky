@@ -302,7 +302,7 @@
 
 .main-logo {
   path {
-    fill: @colorRed
+    fill: saturate(darken(@colorRed,8%), 8%);
   }
 }
 
@@ -364,9 +364,12 @@
 
 
 .main-food-text {
-  padding-top: 14rem;
-  min-height: 38rem;
-  padding-bottom: 14rem;
+  padding-top: 7rem;
+  min-height: 35rem;
+  padding-bottom: 7rem;
+
+  //min-height: 38rem;
+  //padding-bottom: 14rem;
   background-color: @colorWhite;
   position:relative;
   .decorative-left {
@@ -776,6 +779,21 @@ button, input {
   height: 8rem;
 }
 
+.section-down-wrapper {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:8rem;
+  .arrow-down {
+    text-align:center;
+    position:relative;
+    height:100%;
+    svg {
+      max-width:6rem;
+    }
+  }
+}
 .main-navigation {
   text-align:center;
 //  margin-top:8%;
@@ -798,16 +816,32 @@ button, input {
   }
 }
 
+.page-navigation-wrapper {
+  //background: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  right: 0;
+  height: 7rem;
+}
+
+
 .page-navigation {
   transition: 0.4s ease-in-out 0.2s;
-  .col-md-* {
-
-  }
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left:0;
+  padding-right:0;
+  background:fade(#fff,30%);b n
   .container {
     height:100%;
   }
   .main-logo-wrapper {
-    transition: all 0.2s ease-in-out 0.3s;
+    transition: all 0.2s ease-in-out;
   }
   .main-navigation-wrapper {
     transform: all 0.3s ease-in-out;
@@ -819,7 +853,7 @@ button, input {
   }
   &.scrolled {
     .main-logo-wrapper {
-      transform:scale(0.36) translateY(-6.6rem);
+      transform: scale(0.42) translateY(-4.55rem);
     }
     .main-navigation {
       margin-top: 0rem;
@@ -831,21 +865,12 @@ button, input {
     }
     background: #fff;
   }
-
-  position: fixed;
-  /* width: 100vw; */
-  //padding-bottom: 0.3rem;
-  /* padding-top: 0.3rem; */
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
   .main-logo-wrapper {
    // position: absolute;
     margin: auto;
     z-index: 66;
     //max-width: 14rem;
-    padding: 1.2rem 1.3rem;
+    padding: 0.7rem 1.3rem; // 1.2rem 1.3rem;
     left: 4rem;
     top: 0;
     background: #fff;
@@ -858,6 +883,11 @@ button, input {
   }
 }
 
+@media screen and (max-width: 960px){
+  .page-navigation {
+    display:none;
+  }
+}
 @media screen and (max-width: 1024px){
   html {
     font-size:10px;
@@ -893,6 +923,7 @@ button, input {
 .map {
   height:100vh;
 }
+
 
 
 
@@ -1001,8 +1032,32 @@ button, input {
   }
 }
 
-[data-path="/index"], [data-path="/"] {
+.header-logo-wrapper {
+  position:absolute;
+  top:16rem;
+  text-align:center;
+  height:14rem;
+  left:0; right:0;
+  .header-logo {
+    position:relative;
+    margin:0 auto;
+    height:100%;
+  }
+  .main-logo-wrapper {
+    height:100%;
+    svg {
+      height:100%;
+      width:auto;
+    }
+  }
+}
+
+[data-path="/index"],
+[data-path="/"] {
   .main-navigation .nav-item:first-child {
+   // display:none;
+  }
+  .top-logo-container {
    // display:none;
   }
 }
@@ -1034,4 +1089,11 @@ body {
   margin-left:0;
   margin-right:0;
 }
+}
+
+.ussr-path {
+  stroke-width:2px;
+  stroke:#000;
+  stroke-dasharray:0;
+  fill:transparent;
 }
