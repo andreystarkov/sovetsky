@@ -20,7 +20,7 @@ var sliderSettings = {
 export default class Carousel extends Component {
     render() {
       console.log('Carousel: ', this.props.items);
-        return (
+//        return (
           <Slider {...sliderSettings} className="food-carousel">
               <div className="food-carousel-item">
                 <img src="/resources/images/samples/1.jpg" />

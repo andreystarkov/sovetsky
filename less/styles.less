@@ -56,8 +56,10 @@
   font-family: @defaultSans;
   border-top: .1rem solid darken(#d5cab7,5%);
 }
+
 .contact-items {
-  margin-top:6rem;
+  margin-top:3rem;
+  font-family: @defaultSans;
 }
 
 .contact-item-address {
@@ -101,6 +103,7 @@
 
 .contact-item {
   display:inline-block;
+  margin-right:2rem;
   ._subscript {
     font-weight:200;
   }
@@ -1096,4 +1099,66 @@ body {
   stroke:#000;
   stroke-dasharray:0;
   fill:transparent;
+}
+
+.icon-bread {
+  position: absolute;
+  width: 9em;
+  left: 13rem;
+  top: 15rem;
+  transform: rotate(20deg);
+}
+
+.icon-tomato {
+  position: absolute;
+  width: 8rem;
+  left: 7rem;
+  top: 13rem;
+}
+
+.icon-brew {
+  position: absolute;
+  z-index: 2;
+  top: 8rem;
+  width: 14rem;
+  left:19rem;
+}
+
+.icon-soup {
+  text-align: center;
+  margin-top: 2rem;
+  position: absolute;
+  top: 0rem;
+  width: 18rem;
+  left: 8rem;
+  svg {
+    width:100%;
+  }
+}
+
+.ani-icon {
+  path, ellipse,circle {
+    fill-opacity:0;
+  }
+}
+
+.ani-icon-phone {
+  position: absolute;
+  width: 16rem;
+  top: 5rem;
+  left: 13rem;
+}
+
+.ani-icon-map {
+  position: absolute;
+  width: 14rem;
+  top: 7rem;
+  left: 5rem;
+}
+.svg-icn {
+  display:inline-block;
+  width:2rem;
+  svg {
+    width:100%;
+  }
 }

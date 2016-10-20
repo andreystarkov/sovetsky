@@ -1,5 +1,9 @@
+.DS_STORE
+*.log
+
 node_modules
+
 dist
-npm-debug.log
-src/wp-url.js
-mail.php
+coverage
+
+.idea/
