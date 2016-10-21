@@ -38,15 +38,6 @@ class InteriorHeader extends Component {
             <MainLogo />
             <MainNavigation />
           </div>
-          <div className="main-header-container container">
-{/*            <div className="top-phones">
-              <b className="phone"><span>(3532)</span> 55-00-57</b>
-              <span className="address">г. Оренбург. ул. Просторная 21/1</span>
-            </div>*/}
-
-
-          </div>
-
       </section>
     )
   }
@@ -73,7 +64,6 @@ export class InteriorCarousel extends Component {
             <div className="food-carousel-description" style={styles}>
               <div className="box">
                 <b>{obj.title}</b>
-                {/*<i>{obj.title}</i>*/}
               </div>
             </div>
           </div>
@@ -92,7 +82,7 @@ export class InteriorCarousel extends Component {
 
   render(){
 
-   console.log('InteriorCarousel2: ', this.props.slider, this.state);
+  // console.log('InteriorCarousel2: ', this.props.slider, this.state);
 
     return(
       <div>

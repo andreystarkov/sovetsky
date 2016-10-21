@@ -115,11 +115,22 @@ function receiveInteriorMain(interior){
   }
 }
 
+/* fetch(api.media+obj.featured_media)
+.then(response => response.json())
+.then(data => {
+  total.push({
+    title: obj.title.rendered,
+    text: obj.content.rendered,
+    media: obj.featured_media,
+    full: data.source_url,
+    image: data.media_details
+  });
+  dispatch(receiveInteriorMain(total))
+});*/
+
 export function fetchInteriorMain() {
 
     return function (dispatch, getState) {
-
-        //console.log('fetchInteriorMain return ',api.main.interior);
 
         return fetch(api.main.interior + '?per_page=100')
             .then(response => Promise.all([response.json()]))
@@ -129,37 +140,19 @@ export function fetchInteriorMain() {
 
               var list = interiorData[0], total = [];
 
-             // console.log('fetchInteriorMain result: ', list);
+              //console.log('fetchInteriorMain result: ', list);
 
               if( list ){
 
                 list.map( (obj,key) => {
-
-                  fetch(api.media+obj.featured_media)
-                      .then(response => response.json())
-                      .then(data => {
-                     //   console.log('InteriorMain media:' ,data);
-                        total.push({
-                          title: obj.title.rendered,
-                          text: obj.content.rendered,
-                          media: obj.featured_media,
-                          full: data.source_url,
-                          image: data.media_details
-                        });
-                        dispatch(receiveInteriorMain(total))
-                      });
-
+                    total.push({
+                      title: obj.title.rendered,
+                      text: obj.content.rendered,
+                      media: obj.better_featured_image,
+                      full: obj.better_featured_image.source_url
+                    });
+                    dispatch(receiveInteriorMain(total))
                 });
-
-              //  console.log('InteriorMain total: ', total, 'counter: ', counter);
-
-                if( total ) {
-                  //dispatch(receiveInteriorMain(total));
-                  setTimeout( () => {
-                    console.log('Timeout: ', total, counter);
-                   // dispatch(receiveInteriorMain(total));
-                  }, 1500);
-                }
 
               }
 
@@ -210,33 +203,18 @@ export function fetchSliderMain() {
               if( list ){
 
                 list.map( (obj,key) => {
-
-                  fetch(api.media+obj.featured_media)
-                      .then(response => response.json())
-                      .then(data => {
-                       // console.log('sliderMain media:' ,data);
-                        total.push({
-                          title: obj.title.rendered,
-                          text: obj.content.rendered,
-                          media: obj.featured_media,
-                          full: data.source_url,
-                          image: data.media_details
-                        });
-                         dispatch(receiveSliderMain(total))
-                      });
-
+                    total.push({
+                      title: obj.title.rendered,
+                      text: obj.content.rendered,
+                      media: obj.better_featured_image,
+                      image: obj.better_featured_image,
+                      full: obj.better_featured_image.source_url
+                    });
+                    dispatch(receiveSliderMain(total))
                 });
 
-               // console.log('SliderMain total: ', total);
-
-                if( total ) {
-                  //dispatch(receiveSliderMain(total));
-                  setTimeout( () => {
-                   // console.log('SliderMain Timeout: ', total);
-                  }, 1500);
-                }
-
               }
+
 
             });
     }

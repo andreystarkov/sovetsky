@@ -19,6 +19,7 @@ import GalleryPage from './pages/IndexPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'
+import '../sass/sweetalert2.scss'
 
 import '../resources/fonts/flaticon.css'
 import '../resources/fonts/styles.css'
