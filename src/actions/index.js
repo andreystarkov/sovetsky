@@ -10,6 +10,7 @@ export const RECEIVE_INTERIOR_MAIN = 'RECEIVE_INTERIOR_MAIN';
 export const RECEIVE_SLIDER_MAIN = 'RECEIVE_SLIDER_MAIN';
 export const RECEIVE_SLIDER_INTERIOR = 'RECEIVE_SLIDER_INTERIOR';
 export const RECEIVE_MENU_ITEMS = 'RECEIVE_MENU_ITEMS';
+export const RECEIVE_GALLERY_ITEMS = 'RECEIVE_GALLERY_ITEMS';
 
 const POSTS_PER_PAGE = 10;
 
@@ -352,6 +353,54 @@ export function fetchMenuItems() {
                 }
 
               }
+
+            });
+    }
+}
+
+
+
+
+function receiveGallery(data){
+ // console.log('receiveSliderMain:', data);
+  return {
+    type: RECEIVE_GALLERY_ITEMS,
+    payload: {
+      gallery: data
+    }
+  }
+}
+
+export function fetchGallery() {
+    return function (dispatch, getState) {
+
+        // console.log('fetchSliderMain return ', api.gallery);
+
+        return fetch(api.gallery + '?per_page=100')
+            .then(response => Promise.all([response.json()]))
+            .then(sliderData => {
+
+             // const { counter } = getState();
+
+              var list = sliderData[0], total = [];
+
+              console.log('fetchGallery result: ', list);
+
+              if( list ){
+
+                list.map( (obj,key) => {
+                    total.push({
+                      title: obj.title.rendered,
+                      text: obj.content.rendered,
+                      media: obj.better_featured_image,
+                      image: obj.better_featured_image,
+                      full: obj.better_featured_image.source_url
+                    });
+                    dispatch(receiveGallery(total))
+                });
+
+              }
+
 
             });
     }

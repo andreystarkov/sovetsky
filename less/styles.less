@@ -596,7 +596,10 @@
 }
 
 .food-carousel-item {
-  img { width: 100%; }
+  img {
+    margin-top:-10rem;
+    width: 100%;
+  }
 }
 
 .section-map {
@@ -1137,6 +1140,12 @@ body {
   }
 }
 
+.icon-camera {
+  width: 18rem;
+  position: absolute;
+  left: 13rem;
+}
+
 .ani-icon {
   path, ellipse,circle {
     fill-opacity:0;
@@ -1156,10 +1165,58 @@ body {
   top: 7rem;
   left: 5rem;
 }
+
 .svg-icn {
   display:inline-block;
   width:2rem;
   svg {
     width:100%;
   }
+}
+
+.contacts-page-header {
+     height: 100vh;
+     padding-top:0;
+     padding-bottom:0;
+    .ani-icon-phone {
+      position: absolute;
+      width: 60%;
+      top: 1rem;
+      left: 7rem;
+    }
+    .decorative-section-content {
+      padding-left:0rem;
+    }
+    .input-square {
+      min-width:1 rem;
+    }
+    .ani-icon-map {
+      position: absolute;
+      width: 65%;
+      top: 0rem;
+      left: 0rem;
+    }
+    .icon-delivery {
+      margin-right:0;
+    }
+    .button-square-send {
+      min-width:12rem;
+    }
+    .react-parallax {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height:100%;
+      width:100%;
+    }
+    .react-parallax-content {
+      padding-top:13rem;
+    }
+    .decorative-left {
+      left: 4rem;
+      top: 8rem;
+    }
 }

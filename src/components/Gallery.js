@@ -2,13 +2,10 @@ import { bindActionCreators } from 'redux'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Grid, Row, Col } from 'react-flexbox-grid'
-import { fetchInteriorMain } from '../actions'
+import { fetchGallery } from '../actions'
 import FullscreenCarousel from '../components/FullscreenCarousel'
 
-import anime from 'animejs'
-
-export class InteriorImages extends Component {
+export class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = { index: 1, isOpen: false, loaded: false };
@@ -17,9 +14,9 @@ export class InteriorImages extends Component {
     this.closeLightbox = this.closeLightbox.bind(this);
   }
   componentWillMount() {
-      const { fetchInteriorMain } = this.props;
-    //  fetchInterior();
-      fetchInteriorMain();
+      console.log('a');
+      const { fetchGallery } = this.props;
+      fetchGallery();
   }
   closeLightbox(e) {
     e.stopPropagation();
@@ -28,37 +25,31 @@ export class InteriorImages extends Component {
     })
   }
   openLightBox( index ) {
-      var images = this.props.interior.main;
+      var images = this.props.gallery.items;
       console.log(' _openLightBox: ', images );
       this.setState({
         index: index, isOpen: true
       })
   }
   render(){
+   console.log('Gallery props: ', this.props);
 
     var self = this,
-    imagesData = this.props.interior.main,
+    imagesData = this.props.gallery.items,
     imagesList = imagesData,
-    images,
-    maximum = this.props.max || 8;
-
-   // console.log('InteriorImages props: ', imagesList);
+    images;
 
     var images = imagesList.map( (obj, key) => {
      // console.log('imagez', obj);
-      if ( key < maximum ) return(
+      return(
         <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
           <div className="interior-image-link" >
             <div className="image-overlay" />
             <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
-             {/* <img className="interior-image" src={obj.full} />*/}
           </div>
         </div>
       )
     });
-
-   // console.log('InteriorImages sasa', images);
-
 
     function placeX(isOpen){
       if(isOpen){
@@ -77,20 +68,24 @@ export class InteriorImages extends Component {
          </div>
        </section>
     )
+
+   return(
+    <div></div>
+   )
   }
 }
 
 function mapStateToProps(state) {
-    const interior = state.interior;
+    const gallery = state.gallery;
 
-    // console.log('mapStateToProps (interior): ', state);
+    console.log('mapStateToProps (gallery): ', state);
 
     return {
-        interior: interior
+        gallery: gallery
     };
 }
 
 export default connect(
     mapStateToProps,
-    { fetchInteriorMain }
-)(InteriorImages);
+    { fetchGallery }
+)(Gallery);

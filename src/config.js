@@ -12,9 +12,9 @@ export const api = {
   acf: {
     post: WP_URL + '/wp-json/acf/v2/post/'
   },
+  gallery: WP_URL + '/wp-json/wp/v2/photogallery',
   nav: WP_URL + '/wp-json/wp-api-menus/v2/menus/2',
   menu: WP_URL + '/wp-json/wp/v2/menuitems',
   media: WP_URL + '/wp-json/wp/v2/media/',
   mail: WP_URL + '/mail.php'
 }
-

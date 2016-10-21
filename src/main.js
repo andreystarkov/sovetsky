@@ -15,7 +15,7 @@ import ContactsPage from './pages/ContactsPage'
 import First from './containers/First'
 import PageContainer from './containers/PageContainer'
 import IndexPage from './pages/IndexPage'
-import GalleryPage from './pages/IndexPage'
+import GalleryPage from './pages/GalleryPage'
 
 import '../sass/bootstrap.css'
 import '../sass/bootstrap-blog.css'

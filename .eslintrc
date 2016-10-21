@@ -19,9 +19,24 @@
     "__COVERAGE__" : false
   },
   "rules": {
-    "key-spacing"          : 0,
-    "jsx-quotes"           : [2, "prefer-single"],
-    "max-len"              : [2, 120, 2],
-    "object-curly-spacing" : [2, "always"]
-  }
+    "semi": ["error", "never"],
+    "func-names": "off",
+    "no-console": "off",
+    "comma-dangle": "error",
+    "prefer-template": "off",
+    "import/no-unresolved": "off",
+    "no-restricted-syntax": [
+      "error",
+      "DebuggerStatement",
+      "LabeledStatement",
+      "WithStatement",
+    ],
+    "no-plusplus": "off",
+    "no-continue": "off",
+    "prefer-arrow-callback": "off",
+    "class-methods-use-this": "off",
+    "generator-star-spacing": "off",
+    "space-before-function-paren": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
 }

@@ -5,7 +5,7 @@ import menus from './menus'
 import interior from './interior'
 import slider from './slider'
 import menu from './menu'
-
+import gallery from './gallery'
 // TODO: try to import * from './' instead of importing individual reducers
 
 const rootReducer = combineReducers({
@@ -14,7 +14,8 @@ const rootReducer = combineReducers({
     menus,
     interior,
     slider,
-    menu
+    menu,
+    gallery
 });
 
 export default rootReducer;
