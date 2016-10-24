@@ -246,15 +246,16 @@ class DecorativeMenuSection extends Component {
       aniItemsRandom('.icon-soup .spoon, .icon-soup .leaves');
     });
 
-    aniItemsRandom('.icon-brew path, .icon-brew ellipse, .icon-brew circle', () => {
-    });
+    setTimeout( () => {
+      aniItemsRandom('.icon-brew path, .icon-brew ellipse, .icon-brew circle');
+    }, 800)
 
     setTimeout(() => {
       aniItemsRandom('.icon-bread path, .icon-bread ellipse, .icon-bread circle');
-    },500);
+    },1200);
     setTimeout(() => {
       aniItemsRandom('.icon-tomato path, .icon-tomato ellipse, icon-tomato circle');
-    },1000);
+    },500);
 
   }
   _handleWaypointLeave(){
@@ -263,18 +264,14 @@ class DecorativeMenuSection extends Component {
   render(){
     return (
       <section className="decorative-menu-section main-food-text">
-      <div className="decorative-left" >
-        <FoodComposition />
-      </div>
-      <div className="decorative-right"
-           style={{ backgroundImage: 'url(/resources/images/decorative/carrot.png)' }} />
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-5 icon-composition-container">
+              <FoodComposition />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-7">
             <div className="decorative-section-content">
-              <h2>Доставка блюд из нашего меню</h2>
+              <h2>Доставка блюд</h2>
               <p>Для настящих ценителей качественной советской кухни мы осуществляем доставку блюд на дом. Для заказа передйте в соответствующий раздел.</p>
 
               <button className="button-more button-square-red">Посмотреть меню</button>

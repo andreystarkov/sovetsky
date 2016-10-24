@@ -96,13 +96,14 @@ export default class Contacts extends Component {
         onLeave={this._handleWaypointLeave}
       />
       <div className="decorative-left" >
-        <ContactsComposition />
+
       </div>
       <div className="decorative-right"
            style={{ backgroundImage: 'url(/resources/images/decorative/carrot.png)' }} />
       <div className="container">
         <div className="row">
           <div className="col-md-4">
+            <ContactsComposition />
           </div>
           <div className="col-md-8">
             <div className="decorative-section-content">
