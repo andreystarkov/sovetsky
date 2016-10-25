@@ -18,7 +18,6 @@ export class InteriorImages extends Component {
   }
   componentWillMount() {
       const { fetchInteriorMain } = this.props;
-    //  fetchInterior();
       fetchInteriorMain();
   }
   closeLightbox(e) {
@@ -29,7 +28,6 @@ export class InteriorImages extends Component {
   }
   openLightBox( index ) {
       var images = this.props.interior.main;
-      //console.log(' _openLightBox: ', images );
       this.setState({
         index: index, isOpen: true
       })
@@ -41,8 +39,6 @@ export class InteriorImages extends Component {
     imagesList = imagesData,
     images,
     maximum = this.props.max || 8;
-
-    //console.log('InteriorImages props: ', this.props);
 
     var images = imagesList.map( (obj, key) => {
       var thumbSrc = obj.sizes.thumbnail.source_url || obj.full;
@@ -78,8 +74,6 @@ export class InteriorImages extends Component {
 
 function mapStateToProps(state) {
     const interior = state.interior;
-
-    // console.log('mapStateToProps (interior): ', state);
 
     return {
         interior: interior

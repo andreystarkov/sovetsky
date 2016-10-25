@@ -5,15 +5,10 @@ import { connect } from 'react-redux'
 import fetch from 'isomorphic-fetch';
 import $ from 'jquery'
 
-function postTypes(response){
-  console.log('postTypes: ', response);
-}
-
 export class MainNavigation extends Component {
     componentWillMount() {
         const { fetchMenus } = this.props;
         fetchMenus();
-       // console.log('WTF', a);
     }
     componentDidUpdate(){
 
@@ -24,7 +19,6 @@ export class MainNavigation extends Component {
         var menuItems = menuData.menus[0].items.map( (obj, key) => {
           if( location.pathname == obj.url) {
             classNames = 'nav-item active';
-            console.log('Found: ', location.pathname, obj.url);
           } else classNames = 'nav-item';
           return(
             <Link to={obj.url} className={classNames} key={key}>{obj.title}</Link>
@@ -43,8 +37,6 @@ export class MainNavigation extends Component {
 
 function mapStateToProps(state) {
     const menus = state.menus;
-
-  //  console.log('mapStateToProps (MainNavigation_: ', state, menus);
 
     return {
         menus: menus

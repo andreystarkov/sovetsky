@@ -129,7 +129,7 @@ export class FullscreenPreloader extends Component {
 
    drawSVGPath('.letter__layer');
 
-   console.log('Location: ',location.pathname);
+  // console.log('Location: ',location.pathname);
 
    setTimeout( () => {
       if ( location.pathname == '/index' || location.pathname == '/' ) drawStar();

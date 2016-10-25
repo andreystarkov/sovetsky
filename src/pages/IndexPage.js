@@ -294,7 +294,7 @@ class DecorativeMenuSection extends Component {
 export default class Root extends Component {
     componentDidMount(){
 
-      console.log('ROOT', this.props);
+     // console.log('ROOT', this.props);
 
 /*      $.scrollify({
         section : ".index-scroll-section",

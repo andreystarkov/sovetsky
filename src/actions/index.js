@@ -302,7 +302,7 @@ export function fetchMenuItems() {
                   fetch(api.acf.post + obj.id)
                     .then(response => response.json())
                     .then(acf => {
-                     console.log('fetchMenuItems ACF:' ,acf);
+                     //console.log('fetchMenuItems ACF:' ,acf);
 
                       total.push({
                         title: obj.title.rendered,
@@ -348,7 +348,7 @@ export function fetchGallery() {
 
               var list = sliderData[0], total = [];
 
-              console.log('fetchGallery result: ', list);
+              // console.log('fetchGallery result: ', list);
 
               if( list ){
 

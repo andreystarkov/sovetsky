@@ -30,7 +30,7 @@ function drawPath(selector, callback, options = {
         fill = $(el).attr('fill');
 
     var totalLength = (2 * Math.PI * rect.width) + 100;
-    console.log('drawPath: totalLength', totalLength);
+    //console.log('drawPath: totalLength', totalLength);
 
     $(selector).css({
       'stroke': '#444',
@@ -55,7 +55,7 @@ function drawPath(selector, callback, options = {
       },
       fill: {
         value: (e) => {
-          console.log( 'fill', $(e).attr('fill') );
+          //console.log( 'fill', $(e).attr('fill') );
           return ['rgba(255,255,255,0)', $(e).attr('fill')]
         },
         delay: 500

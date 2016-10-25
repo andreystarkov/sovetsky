@@ -9,7 +9,7 @@ export default function posts(state = defaultState, action) {
         case RECEIVE_GALLERY_ITEMS:
             const { gallery } = action.payload;
 
-            console.log( 'RECEIVE_GALLERY_ITEMS', gallery);
+            //console.log( 'RECEIVE_GALLERY_ITEMS', gallery);
 
             return Object.assign({}, state, {
                 items: gallery

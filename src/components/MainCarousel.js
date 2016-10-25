@@ -40,16 +40,16 @@ export class MainCarousel extends Component {
       var items = this.props.slider.main;
 
       var slides = items.map( (obj,key) => {
-       // console.log('Slides', obj);
+
         //var srcSet = addSrcSet(obj);
         //console.log('src ', srcSet);
+
         return(
           <div key={key} className="food-carousel-item">
             <img src={obj.full}/>
             <div className="food-carousel-description">
               <div className="box">
                 <b>{obj.title}</b>
-                {/*<i>{obj.title}</i>*/}
               </div>
             </div>
           </div>
@@ -65,9 +65,6 @@ export class MainCarousel extends Component {
   }
 
   render(){
-
-   // console.log('MainCarousel: ', this.props.slider, this.state);
-
     return(
       <div>
         {this.renderSlider()}
@@ -78,8 +75,6 @@ export class MainCarousel extends Component {
 
 function mapStateToProps(state) {
     const slider = state.slider;
-
-    //console.log('mapStateToProps (slider): ', state, slider);
 
     return {
         slider: slider

@@ -19,36 +19,10 @@ var sliderSettings = {
 
 export default class Carousel extends Component {
     render() {
-      console.log('Carousel: ', this.props.items);
-//        return (
+     // console.log('Carousel: ', this.props.items);
+        return (
           <Slider {...sliderSettings} className="food-carousel">
-              <div className="food-carousel-item">
-                <img src="/resources/images/samples/1.jpg" />
-                <div className="food-carousel-description">
-                  <div className="box">
-                    <b>Чудеснейшее блюдо</b>
-                    <span>180 р.</span>
-                  </div>
-                </div>
-              </div>
-              <div className="food-carousel-item">
-                <img src="/resources/images/samples/2.jpg" />
-                <div className="food-carousel-description">
-                  <div className="box">
-                    <b>Чудеснейsasa юдо</b>
-                    <span>180 р.</span>
-                  </div>
-                </div>
-              </div>
-              <div className="food-carousel-item">
-                <img src="/resources/images/samples/3.jpg" />
-                <div className="food-carousel-description">
-                  <div className="box">
-                    <b>Чудеснfdsfейшее блюдо</b>
-                    <span>180 р.</span>
-                  </div>
-                </div>
-              </div>
+              {/*   :C   */}
           </Slider>
         );
     }

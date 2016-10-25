@@ -14,7 +14,6 @@ export class Gallery extends Component {
     this.closeLightbox = this.closeLightbox.bind(this);
   }
   componentWillMount() {
-      console.log('a');
       const { fetchGallery } = this.props;
       fetchGallery();
   }
@@ -26,13 +25,11 @@ export class Gallery extends Component {
   }
   openLightBox( index ) {
       var images = this.props.gallery.items;
-      console.log(' _openLightBox: ', images );
       this.setState({
         index: index, isOpen: true
       })
   }
-  render(){
-   console.log('Gallery props: ', this.props);
+  render(){;
 
     var self = this,
     imagesData = this.props.gallery.items,
@@ -40,7 +37,6 @@ export class Gallery extends Component {
     images;
 
     var images = imagesList.map( (obj, key) => {
-     // console.log('imagez', obj);
       return(
         <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
           <div className="interior-image-link" >
@@ -77,8 +73,6 @@ export class Gallery extends Component {
 
 function mapStateToProps(state) {
     const gallery = state.gallery;
-
-    console.log('mapStateToProps (gallery): ', state);
 
     return {
         gallery: gallery

@@ -12,7 +12,7 @@ export default function drawSVGPath(selector, callback, options = {
         fill = $(el).attr('fill');
 
     var totalLength = (2 * Math.PI * rect.width);
-    console.log('drawPath: totalLength', totalLength);
+   // console.log('drawPath: totalLength', totalLength);
 
     $(selector).css({
       'stroke': '#222',

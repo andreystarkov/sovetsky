@@ -52,7 +52,6 @@ export class InteriorCarousel extends Component {
   renderSlider(){
      if( !isEmpty(this.props.slider.interior) ){
 
-      console.log('renderSliderInterior: ', this.props.slider);
       var items = this.props.slider.interior;
 
       var slides = items.map( (obj,key) => {
@@ -82,8 +81,6 @@ export class InteriorCarousel extends Component {
 
   render(){
 
-  // console.log('InteriorCarousel2: ', this.props.slider, this.state);
-
     return(
       <div>
         {this.renderSlider()}
@@ -94,8 +91,6 @@ export class InteriorCarousel extends Component {
 
 function mapStateToProps(state) {
     const slider = state.slider;
-
-    //console.log('mapStateToProps (slider): ', state, slider);
 
     return {
         slider: slider

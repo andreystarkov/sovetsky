@@ -273,17 +273,17 @@ svg {
 .button-square-buy {
    display:block;
    margin: 2rem auto;
-   font-size:1.8rem;
+   font-size:1.7rem;
    color: #fff;
    background: mix(@colorPaleRed,@colorRed,50%);
-   padding:1.5rem 2.5rem;
+   //padding:1.5rem 2.5rem;
    border: 0;
-   font-size: @buttonFontSize;
+   //font-size: @buttonFontSize;
    font-weight: @buttonFontWeight;
    font-family: @buttonFont;
    line-height: @buttonLineHeight;
    outline: none;
-   padding: 0rem 2.2rem;
+   padding: 0.3rem 2.2rem;
 
  //  background: transparent;
    &:hover {
@@ -941,6 +941,17 @@ button, input {
   }
 }
 
+@media screen and (max-width:1100px) and (min-width:1000px){
+  html body {
+    .icon-composition-container {
+     // height:400px;
+    }
+    .main-food-text {
+      min-height:27rem;
+      padding-top:8rem;
+    }
+  }
+}
 @media screen and (max-width: 1450px){
   html {
     font-size:13px;
@@ -949,6 +960,12 @@ button, input {
 
 @media screen and (max-width: 960px){
   body {
+    .button-square-red, .swal2-confirm, .swal2-cancel {
+      padding: 0.3rem 1rem;
+      font-size: 1.6rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
     .contacts-page-header {
       height:auto;
       padding-top:7rem;
@@ -980,12 +997,13 @@ button, input {
      }
     .icon-composition-container {
       .ani-composition, .ani-icon-composition {
-        height: 60%;
-        width: 60%;
+        height: 300px;
+        width: 320px;
         position:relative;
-        margin:1rem auto;
+        margin: 0 auto;
+        margin-bottom:1.8rem;
       }
-      height:250px;
+      height:350px;
     }
     .main-food-text {
       padding-top:3rem;

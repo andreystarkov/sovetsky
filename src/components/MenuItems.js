@@ -31,12 +31,10 @@ export class MenuItems extends Component {
       fetchMenuItems();
   }
   orderClick( obj, e){
-    console.log('orderClick', e, obj);
 
     var userProfile = getUserProfile(),
         inputDefault = userProfile.phone || '';
 
-        console.log('orderClick: ', userProfile, inputDefault);
     swal({
       type: 'question',
       title: 'Подветждение заказа',
@@ -62,7 +60,7 @@ export class MenuItems extends Component {
                     phone: value
                   };
 
-                  console.log('LS | Add User: ', user);
+                  // console.log('LS | Add User: ', user);
 
                   addUserProfile(user);
 
