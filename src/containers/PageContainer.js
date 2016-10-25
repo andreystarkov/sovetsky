@@ -135,14 +135,14 @@ export class FullscreenPreloader extends Component {
       if ( location.pathname == '/index' || location.pathname == '/' ) drawStar();
       anime({
         targets: '#fullscreen-preloader',
-        scale: [1,0],
-        // rotateY: [0,90],
-        translateY: [0, -1500],
+        rotateX: [0,'90deg'],
+       // translateY: [0, -500],
        // borderRadius: [0, 1000],
-        translateX: [0, -800],
        // translateY: [0, 2000],
-        opacity: 0,
-        duration: 1800,
+       // opacity: 0,
+        perspective: 200,
+        duration: 1000,
+        easing: 'easeInOutQuint',
         complete: () => {
           $('#fullscreen-preloader').addClass('hidden');
           aniLogo.animate();

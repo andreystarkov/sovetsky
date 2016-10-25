@@ -444,7 +444,7 @@
    border: 3px solid @colorMain;
    font-size: 1.7rem;
    color: @colorMain;
-   padding:0.5rem 1.5rem;
+   padding:.4rem 1.2rem;
    border: 3px solid @colorMain;
    //font-size: @buttonFontSize;
    font-weight: @buttonFontWeight;
@@ -607,6 +607,9 @@
   img {
    // margin-top:-10rem;
     width: 100%;
+    @media screen and (min-width:1300px) {
+      margin-top:-8%;
+    }
   }
 }
 
@@ -1486,6 +1489,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox=
     text-align: center;
     padding: 5%;
     display: flex;
+    transform-origin: bottom center;
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
