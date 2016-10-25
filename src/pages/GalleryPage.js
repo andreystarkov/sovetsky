@@ -144,8 +144,8 @@ class GalleryHeader extends Component {
   }
   render(){
     return (
-      <div style={{marginTop: '10rem'}}>
-      <section className="decorative-menu-section main-food-text">
+      <div>
+      <section className="decorative-menu-section main-food-text gallery-header">
 
       <div className="container">
         <div className="row">

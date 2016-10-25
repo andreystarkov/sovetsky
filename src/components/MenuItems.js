@@ -60,13 +60,13 @@ export class MenuItems extends Component {
                 }
               })
             }
-          }).then(function(result) {
+          }).then( () => {
 
-            if(result) swal({
+           swal({
               type: 'success',
               title: 'Спасибо за заказ!',
               html: 'В ближайшее время мы позвоним вам на номер ' + result + ', для уточнения деталей',
-              ...confirmModalSettings
+              ...modalSettings
             })
           })
       }

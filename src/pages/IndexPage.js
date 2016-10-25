@@ -51,41 +51,44 @@ var ussrStarStyles = {
   strokeOpacity: 0
 };
 
-class MainHeader extends Component {
-  componentDidMount(){
+export function drawStar(){
+  drawPath('.ussr-path-center', () => {
 
-    drawPath('.ussr-path-center', () => {
+  }, {
+      duration: 1600,
+      loop: false,
+      easing: 'easeInOutQuint'
+  });
+
+  setTimeout( () => {
+    anime({
+      targets: '.ussr-path-center',
+      fill: '#fff',
+      strokeOpacity:0,
+      duration:2300
+    });
+  }, 1400);
+
+  setTimeout( () => {
       anime({
-        targets: '.ussr-path-center',
-        fill: '#fff',
+        targets: '.ussr-path',
+        fill: '#e12210',
         strokeOpacity:0,
         duration:2300
       });
-      drawPath('.ussr-path', () => {
-        anime({
-          targets: '.ussr-path',
-          fill: '#e12210',
-          strokeOpacity:0,
-          duration:2300
-        });
-      });
+  }, 1800);
 
-    });
 
+}
+
+class MainHeader extends Component {
+  componentDidMount(){
+    if (window.isLoaded) drawStar();
   }
   render() {
     return(
       <section className="main-header">
-        <div className="top-header-overlay">
-{/*          <div className="main-header-container container">
-            <div className="top-phones">
-              <b className="phone"><span>(3532)</span> 55-00-55</b>
-              <span className="address">г. Оренбург. ул. Просторная 21/1</span>
-            </div>
-            <MainLogo />
-            <MainNavigation />
-          </div>*/}
-        </div>
+        <div className="top-header-overlay"></div>
         <Slider {...sliderSettings} className="food-carousel interior-carousel">
           <div>
             <Parallax bgImage={WP_URL+'/wp-content/uploads/2016/10/M26A0020.jpg'} strength={300} />
@@ -334,7 +337,7 @@ export default class Root extends Component {
                 <section className="standart-scroll" data-index-section-name="index-menu">
                   <DecorativeMenuSection />
                 </section>
-                <section className="standart-scroll" data-index-section-name="index-carousel">
+                <section className="index-carousel" data-index-section-name="index-carousel">
                 <MainCarousel />
                 </section>
                 <section className="standart-scroll" data-index-section-name="index-contacts">
