@@ -8,6 +8,7 @@ import { fetchSliderMain } from '../actions'
 import Slider from 'react-slick'
 import '../../less/css/slick.min.css'
 import {prevIcon, nextIcon} from '../svg/controls'
+import { addSrcSet } from '../etc'
 
 var sliderSettings = {
   dots: false,
@@ -31,20 +32,20 @@ function isEmpty(obj) {
 export class MainCarousel extends Component {
   componentWillMount() {
       const { fetchSliderMain } = this.props;
-    //  fetchInterior();
       fetchSliderMain();
   }
   renderSlider(){
      if( !isEmpty(this.props.slider.main) ){
 
-      //console.log('renderSlider: ', this.props.slider);
       var items = this.props.slider.main;
 
       var slides = items.map( (obj,key) => {
-        //console.log('Slides key = ', key)
+       // console.log('Slides', obj);
+        //var srcSet = addSrcSet(obj);
+        //console.log('src ', srcSet);
         return(
           <div key={key} className="food-carousel-item">
-            <img src={obj.full} />
+            <img src={obj.full}/>
             <div className="food-carousel-description">
               <div className="box">
                 <b>{obj.title}</b>

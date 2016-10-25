@@ -146,17 +146,16 @@ class GalleryHeader extends Component {
     return (
       <div style={{marginTop: '10rem'}}>
       <section className="decorative-menu-section main-food-text">
-      <div className="decorative-left" >
-        <GalleryComposition />
-      </div>
+
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 col-xs-12">
+            <GalleryComposition />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 col-xs-12">
             <div className="decorative-section-content">
-              <h2>Фотографии из жизни ресторана</h2>
-              <p>Ниже вы можете просмотреть моменты с мероприятий и событий в нашем ресторане. Наслаждайтесь!</p>
+              <h2>Избранные моменты</h2>
+              <p>Ниже вы можете просмотреть фотографии с мероприятий и событий в нашем ресторане. Наслаждайтесь!</p>
             </div>
           </div>
         </div>

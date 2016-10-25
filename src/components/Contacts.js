@@ -5,6 +5,7 @@ import { Parallax } from 'react-parallax'
 import aniItemsRandom from '../animation/aniItemsRandom'
 import drawPath from '../animation/drawPath'
 import Waypoint from 'react-waypoint'
+import {api, swalSettings} from '../config'
 
 export class TheMap extends Component {
   componentDidMount(){
@@ -88,6 +89,23 @@ export default class Contacts extends Component {
   _handleWaypointLeave(){
 
   }
+  onSend(e){
+    var phone = $('#input-contact-phone').val();
+
+    console.log('phone: ', phone);
+
+    if( phone ){
+        $.get(api.mail+'?phone='+phone, (response) =>{
+          swal({
+            type: 'success',
+            title: 'Спасибо за заявку!',
+            html: 'В ближайшее время мы позвоним вам на номер ' + phone + '.',
+            ...swalSettings
+          })
+        });
+    }
+
+  }
   render(){
     return (
       <section className="decorative-menu-section main-food-text">
@@ -95,23 +113,19 @@ export default class Contacts extends Component {
         onEnter={this._handleWaypointEnter}
         onLeave={this._handleWaypointLeave}
       />
-      <div className="decorative-left" >
 
-      </div>
-      <div className="decorative-right"
-           style={{ backgroundImage: 'url(/resources/images/decorative/carrot.png)' }} />
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 col-xs-12 icon-composition-container">
             <ContactsComposition />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 col-xs-12">
             <div className="decorative-section-content">
               <h2>Свяжитесь с нами</h2>
 
               <div className="input-group-send">
                 <input id="input-contact-phone" className="input-square" type="text" placeholder="Введите ваш номер телефона" name="phone" />
-                <button id="button-send" className="button-square-send">Отправить заявку</button>
+                <button onClick={this.onSend.bind(this)} id="button-send" className="button-square-send">Отправить заявку</button>
               </div>
 
               <div className="contact-items">

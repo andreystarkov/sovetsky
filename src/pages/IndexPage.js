@@ -14,7 +14,7 @@ import $ from 'jquery'
 import anime from 'animejs'
 import _ from 'underscore'
 import Waypoint from 'react-waypoint'
-
+import { api, WP_URL } from '../config'
 import drawPath from '../animation/drawPath'
 import aniItemsRandom from '../animation/aniItemsRandom'
 
@@ -59,14 +59,14 @@ class MainHeader extends Component {
         targets: '.ussr-path-center',
         fill: '#fff',
         strokeOpacity:0,
-        duration:3300
+        duration:2300
       });
       drawPath('.ussr-path', () => {
         anime({
           targets: '.ussr-path',
           fill: '#e12210',
           strokeOpacity:0,
-          duration:3300
+          duration:2300
         });
       });
 
@@ -88,13 +88,13 @@ class MainHeader extends Component {
         </div>
         <Slider {...sliderSettings} className="food-carousel interior-carousel">
           <div>
-            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0020.jpg" strength={300} />
+            <Parallax bgImage={WP_URL+'/wp-content/uploads/2016/10/M26A0020.jpg'} strength={300} />
           </div>
           <div>
-            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0027.jpg" strength={300} />
+            <Parallax bgImage={WP_URL+'/wp-content/uploads/2016/10/M26A0027.jpg'} strength={300} />
           </div>
           <div>
-            <Parallax bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/2-1.jpg" strength={300} />
+            <Parallax bgImage={WP_URL+'/wp-content/uploads/2016/10/2-1.jpg'} strength={300} />
           </div>
         </Slider>
 
@@ -266,10 +266,10 @@ class DecorativeMenuSection extends Component {
       <section className="decorative-menu-section main-food-text">
       <div className="container">
         <div className="row">
-          <div className="col-md-5 icon-composition-container">
+          <div className="col-md-5 col-xs-12 icon-composition-container">
               <FoodComposition />
           </div>
-          <div className="col-md-7">
+          <div className="col-md-7 col-xs-12">
             <div className="decorative-section-content">
               <h2>Доставка блюд</h2>
               <p>Для настящих ценителей качественной советской кухни мы осуществляем доставку блюд на дом. Для заказа передйте в соответствующий раздел.</p>

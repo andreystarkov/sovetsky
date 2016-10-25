@@ -5,6 +5,7 @@ import { fetchMenuItems } from '../actions'
 import { default as swal } from 'sweetalert2'
 import $ from 'jquery'
 import {api} from '../config'
+import _ from 'underscore'
 
 function isEmpty(obj) {
     for(var key in obj) {
@@ -14,7 +15,7 @@ function isEmpty(obj) {
     return true;
 }
 
-var confirmModalSettings = {
+var modalSettings = {
     confirmButtonText: 'Продолжить',
     cancelButtonText: 'Отменить',
     showCancelButton: true,
@@ -29,7 +30,7 @@ export class MenuItems extends Component {
       fetchMenuItems();
   }
   orderClick( obj, e){
-    // console.log('orderClick', e, obj);
+    console.log('orderClick', e, obj);
 
     swal({
       type: 'question',
@@ -37,19 +38,21 @@ export class MenuItems extends Component {
       text: 'Наш менеджер свяжется с вами!',
       html: 'Вы выбрали блюдо <b>"' + obj.title + '"</b><br>'+
             'Стоимость: <b>'+obj.price+'</b> Р.',
-            ...confirmModalSettings
+            ...modalSettings
     }).then( (result) => {
       if( result ){
           swal({
             type: 'question',
             title: 'Введите ваш номер телефона',
             input: 'text',
-            ...confirmModalSettings,
+            ...modalSettings,
             inputValidator: (value) => {
               return new Promise( (resolve, reject) => {
                 if (value) {
-                  $.get(api.mail+'/?phone='+value, (response) =>{
-                   // console.log('Mailer: ', response);
+                  var query = api.mail+'?phone='+value+'&food='+_.escape(obj.title);
+                  console.log('delivery query: ', query, obj);
+                  $.get(query, (response) =>{
+                   console.log('Mailer: ', response);
                   });
                   resolve();
                 } else {
@@ -80,9 +83,10 @@ export class MenuItems extends Component {
 
     if ( !isEmpty(menu) ) {
       items = menu.items.map( (obj, key) => {
+        console.log('a', obj);
         return(
-          <div key={key} className="catalog-grid-item col-md-3">
-            <div onClick={self.orderClick.bind(this, obj)} className="catalog-item">
+          <div key={key} className="catalog-grid-item col-md-3 col-xs-6 col-xxs-12">
+            <div className="catalog-item">
               <div className="catalog-item-overlay">
                 <div className="catalog-caption">
                   <b className="catalog-name">{obj.title}</b>
@@ -91,12 +95,11 @@ export class MenuItems extends Component {
                 <div className="catalog-params">
                   <span className="catalog-price">{obj.price} г.</span>
                   <span className="catalog-weight">{obj.weight} Р.</span>
-
-                  <button className="button-square-buy">Заказать</button>
+                  <button onClick={self.orderClick.bind(this, obj)} data-name={obj.title} data-price={obj.price} className="button-square-buy">Заказать</button>
 
                 </div>
               </div>
-              <img src={obj.image.sizes.thumbnail.source_url} />
+              <img src={obj.sizes.thumbnail.source_url} />
             </div>
           </div>
         )

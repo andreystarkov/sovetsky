@@ -167,7 +167,7 @@
       opacity:1;
       transition: 0.3s background-color;
     }
-    &:hover {
+    &:hover, .clicked {
       .catalog-params {
         transform:scale(1) translateY(0);
         opacity:1;
@@ -513,7 +513,7 @@
 
 .food-carousel-description {
     position: absolute;
-    top: 40%;
+    top:65%;
     width:100%;
     /* left: 40%; */
     text-align:center;
@@ -688,7 +688,7 @@
   border: 3px solid @colorMain;
   padding: 0.4rem 1.3rem;
   font-size: @buttonFontSize;
-  font-weight: 400;
+  font-weight: 600;
   min-width: 18rem;
   &:hover {
     border-color: lighten(@colorMain,12%);
@@ -780,6 +780,18 @@ button, input {
   }
 }
 
+.fullscreen-carousel-overlay {
+  display:block;
+  position:fixed;
+  z-index:5;
+  width:100%;
+  height:100%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:fade(#111,50%);
+}
 .interior-header {
   position: absolute;
   z-index: 9;
@@ -892,38 +904,219 @@ button, input {
 }
 
 @media screen and (max-width: 960px){
-  .page-navigation {
-    display:none;
+  body {
+    .header-logo-wrapper {
+      top:8rem
+    }
+    .interior-item .interior-image {
+      height:15rem;
+    }
+    .contact-item {
+      margin-bottom:2rem;
+    }
+    .button-square-send {
+      margin-top:1rem;
+    }
+    .page-navigation {
+      display:none;
+    }
+    .bm-burger-button {
+      display:block;
+      width: 3.5rem;
+      height: 3.5rem;
+      right: 3rem;
+      top: 3rem;
+     }
+    .icon-composition-container {
+      .ani-composition, .ani-icon-composition {
+        height: 80%;
+        width: 50%;
+        position:relative;
+        margin:1rem auto;
+      }
+      height:400px;
+    }
+    .main-food-text {
+      padding-top:3rem;
+      padding-bottom:6rem;
+    }
+  }
+    [data-path="/contacts"] {
+      .react-parallax .icon-composition-container {
+    //    display:none;
+      }
+      .main-food-text {
+        padding-top:0rem;
+        padding-bottom:6rem;
+      }
+    }
+
+
+  [data-path="/"],
+  [data-path="/index"]{
+    .icon-composition-container {
+      // height:400px;
+    }
   }
 }
+
+.turn-screen {
+  display:none;
+  position:fixed;
+  z-index:9999999;
+  background-color: @colorMain;
+  text-align:center;
+  padding:3rem;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  .icon-turn {
+    margin: 8rem auto;
+    width: 120px;
+    svg {
+      width:100%;
+      path {
+        fill:#fff !important;
+      }
+    }
+  }
+  b {
+    font-family: 'Pobeda';
+    color:#fff;
+    font-size:3.5rem;
+  }
+}
+
+@media screen and (max-width: 960px){
+  body {
+
+  }
+}
+@media screen and (max-width: 960px) and (orientation:portrait){
+  body {
+    .turn-screen {
+      display:block;
+    }
+    .section-catalog .catalog-grid-item {
+      flex-basis: 100%;
+      max-width: 100%;
+      width:100%
+    }
+  }
+  [data-path="/gallery"] {
+    .main-food-text {
+      padding-top:0;
+    }
+    .icon-camera {
+      text-align:center;
+      svg {
+        width:80%;
+      }
+    }
+  }
+  [data-path="/interior"] {
+    .main-food-text {
+      padding-top:0;
+    }
+
+  }
+  [data-path="/interior"] {
+    .icon-composition-container {
+     // display:none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation:landscape){
+  body {
+    .interior-item .interior-image {
+      height:20rem;
+    }
+    .icon-composition-container {
+      .ani-composition, .ani-icon-composition {
+        height: 80%;
+        width: 50%;
+      }
+      height:400px;
+    }
+    .header-logo-wrapper {
+      top: 4rem;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px){
-  html {
-    font-size:10px;
-  }
-  .decorative-left, .decorative-right {
-    display:none;
-  }
-  .main-food-text {
-    padding-top:10rem;
-    padding-bottom:7rem;
-  }
-  .decorative-section-content {
-    padding-left:1rem;
-    padding-right:1rem;
-    h2 {
-      font-size:3.2rem;
+  body {
+    [data-path="/delivery"] {
+      .food-carousel {
+        height: auto;
+        max-height:80vh
+      }
     }
-  }
-  .food-carousel-description {
-    top: auto;
-    bottom: 2rem;
-    .box b {
-      font-size:2rem;
-      margin-right:0;
+    .food-carousel.interior-carousel {
+      height: auto;
+      max-height:80vh
     }
-  }
-  .slick-next [class^="flaticon-"]:before, .slick-prev [class^="flaticon-"]:before, .slick-next [class*=" flaticon-"]:before, .slick-prev [class*=" flaticon-"]:before, .slick-next [class^="flaticon-"]:after, .slick-prev [class^="flaticon-"]:after, .slick-next [class*=" flaticon-"]:after, .slick-prev [class*=" flaticon-"]:after {
-    font-size:4rem;
+    .food-carousel-item img {
+      margin-top:0;
+    }
+    .interior-item .iterior-image {
+      height:15rem;
+    }
+    .icon-camera {
+      max-width:28rem;
+    }
+    .button-square-buy {
+      font-size: 2.5rem;
+    }
+    .section-catalog .catalog-item .catalog-params .catalog-price, .section-catalog .catalog-item .catalog-params .catalog-weight {
+      font-size: 1.7rem;
+    }
+    .bm-burger-button {
+      display:block;
+      width: 4rem;
+      height: 4rem;
+      right: 2.5rem;
+      top: 2.5rem;
+     }
+    .page-navigation {
+      display:none;
+    }
+    .container {
+      text-align:center;
+    }
+
+    html {
+      font-size:10px;
+    }
+    .decorative-left, .decorative-right {
+      display:none;
+    }
+    .main-food-text {
+      padding-top:10rem;
+      padding-bottom:7rem;
+    }
+    .decorative-section-content {
+      padding-left:1rem;
+      padding-right:1rem;
+      h2 {
+        font-size:3.2rem;
+      }
+    }
+    .food-carousel-description {
+      top: auto;
+      bottom: 2rem;
+      .box b {
+        font-size:2rem;
+        margin-right:0;
+      }
+    }
+    .slick-next [class^="flaticon-"]:before, .slick-prev [class^="flaticon-"]:before, .slick-next [class*=" flaticon-"]:before, .slick-prev [class*=" flaticon-"]:before, .slick-next [class^="flaticon-"]:after, .slick-prev [class^="flaticon-"]:after, .slick-next [class*=" flaticon-"]:after, .slick-prev [class*=" flaticon-"]:after {
+      font-size:4rem;
+    }
   }
 }
 
@@ -962,12 +1155,13 @@ button, input {
     }
     display: block;
     color: #111;
-    font-family: 'Roboto Condensed';
-    font-weight: 500;
-    font-size:1.52rem;
+    font-family: 'Pobeda';
+    font-weight: 600;
+    font-size:2.5rem;
     text-transform:uppercase;
-    padding-top:0.7rem;
+    padding-top:0.8rem;
     padding-bottom:0.7rem;
+    border-bottom:0 !important;
     transition: 0.3s all;
     margin-left:0;
     margin-right:0;
@@ -1079,7 +1273,7 @@ button, input {
 
 [data-path="/delivery"] {
   .map {
-    display:none;
+   // display:none;
     height:100vh;
   }
 }
@@ -1088,6 +1282,9 @@ button, input {
   .map {
     display:none;
     height:100vh;
+  }
+  .slick-slider {
+   // display:none;
   }
 }
 
@@ -1125,15 +1322,15 @@ body {
 .icon-brew {
   position: absolute;
   z-index: 2;
-  top: 30%;
-  width: 60%;
+  top: 27%;
+  width: 55%;
   left: 45%;
 }
 
 .icon-soup {
   text-align: center;
   position: absolute;
-  top: -10%4;
+  top: -13%;
   width: 75%;
   left: 5%;
   svg {
@@ -1142,9 +1339,16 @@ body {
 }
 
 .icon-camera {
-  width: 18rem;
-  position: absolute;
-  left: 13rem;
+  //width: 18rem;
+  //position: absolute;
+  //left: 13rem;
+  width:90%;
+  margin:0 auto;
+  margin-top:-4rem;
+  max-width:28rem;
+  svg {
+    width:100%;
+  }
 }
 
 .ani-icon {
@@ -1176,7 +1380,7 @@ body {
 }
 
 .contacts-page-header {
-     height: 100vh;
+     height: 85vh;
      padding-top:0;
      padding-bottom:0;
     .ani-icon-phone {
@@ -1221,4 +1425,9 @@ body {
       left: 4rem;
       top: 8rem;
     }
+}
+
+
+.section-header, .main-header, .page-content-wrapper, .page-wrapper, #top-wrapper, body, html {
+  width:100%;
 }

@@ -150,6 +150,7 @@ export function fetchInteriorMain() {
                       title: obj.title.rendered,
                       text: obj.content.rendered,
                       media: obj.better_featured_image,
+                      sizes: obj.better_featured_image.media_details.sizes,
                       full: obj.better_featured_image.source_url
                     });
                     dispatch(receiveInteriorMain(total))
@@ -209,6 +210,7 @@ export function fetchSliderMain() {
                       text: obj.content.rendered,
                       media: obj.better_featured_image,
                       image: obj.better_featured_image,
+                      sizes: obj.better_featured_image.media_details.sizes,
                       full: obj.better_featured_image.source_url
                     });
                     dispatch(receiveSliderMain(total))
@@ -250,33 +252,19 @@ export function fetchSliderInterior() {
               if( list ){
 
                 list.map( (obj,key) => {
-
-                  fetch(api.media+obj.featured_media)
-                      .then(response => response.json())
-                      .then(data => {
-                   //     console.log('sliderInterior media:' ,data);
-                        total.push({
-                          title: obj.title.rendered,
-                          text: obj.content.rendered,
-                          media: obj.featured_media,
-                          full: data.source_url,
-                          image: data.media_details
-                        });
-                         dispatch(receiveSliderInterior(total))
-                      });
-
+                    total.push({
+                      title: obj.title.rendered,
+                      text: obj.content.rendered,
+                      media: obj.better_featured_image,
+                      image: obj.better_featured_image,
+                      sizes: obj.better_featured_image.media_details.sizes,
+                      full: obj.better_featured_image.source_url
+                    });
+                    dispatch(receiveSliderInterior(total))
                 });
 
-             //   console.log('SliderInterior total: ', total);
-
-                if( total ) {
-                  //dispatch(receiveSliderMain(total));
-                  setTimeout( () => {
-                   // console.log('SliderMain Timeout: ', total);
-                  }, 1500);
-                }
-
               }
+
 
             });
     }
@@ -307,8 +295,6 @@ export function fetchMenuItems() {
            // console.log('fetchMenu: ', menuData);
               var list = menuData[0], total = [];
 
-          // console.log('fetchMenuItems result: ', list);
-
               if( list ){
 
                 list.map( (obj,key) => {
@@ -316,46 +302,24 @@ export function fetchMenuItems() {
                   fetch(api.acf.post + obj.id)
                     .then(response => response.json())
                     .then(acf => {
-                  //    console.log('fetchMenuItems ACF:' ,acf);
-                      if( obj.featured_media ){
-                        fetch(api.media + obj.featured_media)
-                            .then(response => response.json())
-                            .then(data => {
-                              console.log('fetchMenuItems media:' ,data);
-                              if( !data.code ){
-                                total.push({
-                                  title: obj.title.rendered,
-                                  description: acf.acf.description,
-                                  price: acf.acf.price,
-                                  weight: acf.acf.weight,
-                                  media: obj.featured_media,
-                                  full: data.source_url,
-                                  image: data.media_details
-                                  //fields: acf.acf
-                                });
-                                dispatch(receiveMenuItems(total))
-                              }
-                            });
-                      }
-                    });
+                     console.log('fetchMenuItems ACF:' ,acf);
 
+                      total.push({
+                        title: obj.title.rendered,
+                        description: acf.acf.description,
+                        price: acf.acf.price,
+                        weight: acf.acf.weight,
+                        image: obj.better_featured_image,
+                        sizes: obj.better_featured_image.media_details.sizes,
+                        full: obj.better_featured_image.source_url
+                      });
+                      dispatch(receiveMenuItems(total))
 
-
+                  });
                 });
-
-               // console.log('SliderMenuItems  total: ', total);
-
-                if( total ) {
-                  //dispatch(receiveSliderMain(total));
-                  setTimeout( () => {
-                   // console.log('SliderMain Timeout: ', total);
-                  }, 1500);
-                }
-
               }
-
             });
-    }
+        }
 }
 
 

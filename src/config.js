@@ -1,4 +1,4 @@
-export const WP_URL = 'http://xn----7sbhjdshgxidscmfdhj.xn--p1ai';
+export const WP_URL = 'http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp';
 
 export const api = {
   main: {
@@ -16,5 +16,13 @@ export const api = {
   nav: WP_URL + '/wp-json/wp-api-menus/v2/menus/2',
   menu: WP_URL + '/wp-json/wp/v2/menuitems',
   media: WP_URL + '/wp-json/wp/v2/media/',
-  mail: WP_URL + '/mail.php'
+  mail: 'http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/mail.php'
+}
+
+export const swalSettings = {
+    confirmButtonText: 'Продолжить',
+    cancelButtonText: 'Отменить',
+    padding: '50',
+    buttonsStyling: false,
+    customClass: 'modal-confirm'
 }

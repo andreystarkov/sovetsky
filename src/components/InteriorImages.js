@@ -29,7 +29,7 @@ export class InteriorImages extends Component {
   }
   openLightBox( index ) {
       var images = this.props.interior.main;
-      console.log(' _openLightBox: ', images );
+      //console.log(' _openLightBox: ', images );
       this.setState({
         index: index, isOpen: true
       })
@@ -42,23 +42,19 @@ export class InteriorImages extends Component {
     images,
     maximum = this.props.max || 8;
 
-   // console.log('InteriorImages props: ', imagesList);
+    //console.log('InteriorImages props: ', this.props);
 
     var images = imagesList.map( (obj, key) => {
-     // console.log('imagez', obj);
+      var thumbSrc = obj.sizes.thumbnail.source_url || obj.full;
       if ( key < maximum ) return(
         <div className="col-xs-6 col-md-3 interior-item" key={key} onClick={self.openLightBox.bind(this, key)} >
           <div className="interior-image-link" >
             <div className="image-overlay" />
-            <div className="interior-image" style={{ backgroundImage: 'url(' + obj.full + ')' }} />
-             {/* <img className="interior-image" src={obj.full} />*/}
+            <div className="interior-image" style={{ backgroundImage: 'url(' + thumbSrc + ')' }} />
           </div>
         </div>
       )
     });
-
-   // console.log('InteriorImages sasa', images);
-
 
     function placeX(isOpen){
       if(isOpen){

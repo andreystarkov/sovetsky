@@ -11,20 +11,14 @@ import InteriorImages from '../components/InteriorImages'
 import aniItemsRandom from '../animation/aniItemsRandom'
 //import Menu from 'react-burger-menu'
 import { Parallax } from 'react-parallax'
+import { api, WP_URL, swalSettings } from '../config'
 import MainLogo from '../svg/MainLogo'
 import $ from 'jquery'
+import { default as swal } from 'sweetalert2'
 
 var Menu = require('react-burger-menu').push;
 //   width="512px" height="512px"
 class ContactsComposition extends Component {
-  componentDidMount(){
-
-    aniItemsRandom('.ani-icon-map path, .ani-icon-map ellipse, .ani-icon-map circle');
-
-    setTimeout(() => {
-      aniItemsRandom('.ani-icon-phone path, .ani-icon-phone ellipse, .ani-icon-phone circle');
-    },500);
-  }
   render(){
     return(
     <div className="ani-icon-composition">
@@ -70,46 +64,6 @@ class ContactsComposition extends Component {
   }
 }
 
-class MainHeader extends Component {
-  render() {
-    return(
-      <section className="main-header contacts-header">
-        <Parallax blur={5} bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0023.jpg" strength={600}>
-          <div className="main-header-container container">
-            <div className="contact-us">
-
-                <h3>Есть вопросы? Оставьте заявку, наше менеджер перезвонит вам!</h3>
-                <input className="input-square" type="text" placeholder="Введите ваш номер телефона" name="phone" />
-                <button id="button-send" className="button-square-send">Отправить заявку</button>
-
-                <div className="contact-items">
-                  <div className="contact-item">
-                    <i className="flaticon-phone-call" />
-                    <b className="_phone"><span>3532</span> 660001</b>
-                    <div className="_subscript">заказ столиков, менеджер</div>
-                  </div>
-                  <div className="contact-item">
-                    <i className="flaticon-phone-call" />
-                    <b className="_phone"><span>3532</span> 291129</b>
-                    <div className="_subscript">служба доставки</div>
-                  </div>
-                  <div className="contact-item-address">
-                    <i className="flaticon-place-localizer" />
-                    <b className="_where">г. Оренбург. Просторная 21/1</b>
-                  </div>
-                </div>
-
-                <button className="button-map" id="scroll-to-map">
-                  Посмотреть на карте <i className="flaticon-down-arrow" />
-                </button>
-            </div>
-          </div>
-        </Parallax>
-      </section>
-    )
-  }
-}
-
 export default class ContactsPage extends Component {
   componentDidMount(){
     $('#scroll-to-map').click(function(){
@@ -117,31 +71,52 @@ export default class ContactsPage extends Component {
           'scrollTop':  $('#map').offset().top
       }, 1000);
     });
+
+    aniItemsRandom('.ani-icon-map path, .ani-icon-map ellipse, .ani-icon-map circle');
+
+    setTimeout(() => {
+      aniItemsRandom('.ani-icon-phone path, .ani-icon-phone ellipse, .ani-icon-phone circle');
+    },500);
+
+  }
+  onSend(e){
+    var phone = $('#input-contact-phone').val();
+
+  //  console.log('phone: ', e, phone);
+
+    if( phone ){
+        $.get(api.mail+'?phone='+phone, (response) =>{
+          swal({
+            type: 'success',
+            title: 'Спасибо за заявку!',
+            html: 'В ближайшее время мы позвоним вам на номер ' + phone + '.',
+            ...swalSettings
+          })
+        });
+    }
+
   }
   render() {
       return (
           <div>
             <section className="decorative-menu-section main-food-text contacts-page-header">
-            <Parallax blur={10} bgImage="http://xn----7sbhjdshgxidscmfdhj.xn--p1ai/wp-content/uploads/2016/10/M26A0023.jpg" strength={600}>
+            <Parallax blur={5} bgImage={WP_URL + '/wp-content/uploads/2016/10/M26A0023.jpg'} strength={400}>
             <Waypoint
               onEnter={this._handleWaypointEnter}
               onLeave={this._handleWaypointLeave}
             />
-            <div className="decorative-left" >
-
-            </div>
             <div className="container">
               <div className="row">
-                <div className="col-md-5">
+                <div className="col-md-5 col-xs-12 icon-composition-container">
                  <ContactsComposition />
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-7 col-xs-12">
                   <div className="decorative-section-content">
                     <h2>Свяжитесь с нами</h2>
 
                     <div className="input-group-send">
                       <input id="input-contact-phone" className="input-square" type="text" placeholder="Введите ваш номер телефона" name="phone" />
-                      <button id="button-send" className="button-square-send">Отправить заявку</button>
+                      <button onClick={this.onSend.bind(this)} id="button-send" className="button-square-send">Отправить заявку</button>
                     </div>
 
                     <div className="contact-items">
