@@ -98,13 +98,13 @@ export default function aniItemsRandom(selector, callback, maxDuration = 300, ma
       }
     };
 
-  console.log('aniItemsRandom: '+selector, params);
+  //console.log('aniItemsRandom: '+selector, params);
 
   if( !$(selector).hasClass('animated') ) {
     $(selector).addClass('animated');
     anime(params);
   } else {
-    console.log('Already animated. Skipping');
+   // console.log('Already animated. Skipping');
   }
 
 }

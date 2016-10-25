@@ -1,0 +1,629 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Admin UI Customize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-22 12:41+0900\n"
+"PO-Revision-Date: 2014-08-22 14:31+0900\n"
+"Last-Translator: gqevu6bsiz <gqevu6bsiz@gmail.com>\n"
+"Language-Team: Chinese Traditional DP.Studio <rwd.com.tw@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.5\n"
+"Language: zh_TW\n"
+"X-Poedit-Country: TAIWAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-admin-ui-customize.php:4
+msgid "An excellent plugin to customize the management screens."
+msgstr "一個優秀的WP管理界面插件。"
+
+#: wp-admin-ui-customize.php:142
+#: wp-admin-ui-customize.php:181
+#: inc/reset_userrole.php:22
+msgid "Reset User Roles"
+msgstr "重設用戶角色"
+
+#: wp-admin-ui-customize.php:171
+#: inc/reset_userrole.php:56
+#: inc/setting_site.php:23
+msgid "Site Settings"
+msgstr "網站相關設置"
+
+#: wp-admin-ui-customize.php:172
+#: inc/reset_userrole.php:57
+#: inc/setting_admin_general.php:23
+#, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s%2$s"
+
+#: wp-admin-ui-customize.php:174
+#: inc/reset_userrole.php:59
+#: inc/setting_admin_bar_menu.php:25
+msgid "Admin Bar Menu"
+msgstr "管理欄菜單-上方"
+
+#: wp-admin-ui-customize.php:175
+#: inc/reset_userrole.php:60
+#: inc/setting_sidemenu.php:25
+msgid "Side Menu"
+msgstr "左側選單制定"
+
+#: wp-admin-ui-customize.php:176
+#: inc/reset_userrole.php:61
+#: inc/setting_manage_metabox.php:24
+msgid "Manage meta box"
+msgstr "管理 meta box"
+
+#: wp-admin-ui-customize.php:177
+#: inc/reset_userrole.php:62
+#: inc/setting_post_add_edit.php:23
+msgid "Add New Post and Edit Post Screen Setting"
+msgstr "添加/編輯 貼文設定"
+
+#: wp-admin-ui-customize.php:178
+#: inc/reset_userrole.php:63
+#: inc/setting_appearance_menus.php:22
+msgid "Appearance Menus Screen Setting"
+msgstr "選單基本設置"
+
+#: wp-admin-ui-customize.php:179
+#: inc/reset_userrole.php:64
+#: inc/setting_loginscreen.php:34
+msgid "Login Screen"
+msgstr "前台登錄端口設定"
+
+#: wp-admin-ui-customize.php:180
+#: inc/reset_userrole.php:65
+#: inc/setting_plugin_cap.php:23
+#, php-format
+msgid "%1$s of %2$s %3$s"
+msgstr "%1$s 的 %2$s%3$s"
+
+#: wp-admin-ui-customize.php:331
+#, php-format
+msgid "Authority to apply the setting is not selected. <a href=\"%s\">From here</a>, please select the permissions you want to set."
+msgstr "管理角色設置沒有被選中。請<a href =“%s\">從這裡</a>選擇要設置的角色群。"
+
+#: wp-admin-ui-customize.php:356
+msgid "Apply user roles"
+msgstr "角色權限 應用"
+
+#: wp-admin-ui-customize.php:688
+#: wp-admin-ui-customize.php:861
+msgid "Sub Menus"
+msgstr "子選單"
+
+#: wp-admin-ui-customize.php:783
+#: wp-admin-ui-customize.php:805
+msgid "Menu Group"
+msgstr ""
+
+#: wp-admin-ui-customize.php:803
+msgid "Show only on front end."
+msgstr ""
+
+#: wp-admin-ui-customize.php:823
+msgid "If you want edit to name, please edit of translation file(PO)."
+msgstr ""
+
+#: wp-admin-ui-customize.php:1023
+msgid "Front"
+msgstr ""
+
+#: wp-admin-ui-customize.php:2276
+#: inc/setting_default.php:187
+msgid "Thank you for your donation."
+msgstr ""
+
+#: wp-admin-ui-customize.php:2291
+msgid "Please consider making a donation."
+msgstr ""
+
+#: wp-admin-ui-customize.php:2291
+#: inc/setting_default.php:39
+msgid "Donate"
+msgstr ""
+
+#: inc/list_variables.php:20
+#: inc/setting_admin_bar_menu.php:32
+#: inc/setting_admin_general.php:132
+#: inc/setting_admin_general.php:155
+#: inc/setting_loginscreen.php:71
+#: inc/setting_loginscreen.php:84
+#: inc/setting_loginscreen.php:96
+#: inc/setting_loginscreen.php:124
+#: inc/setting_loginscreen.php:136
+#: inc/setting_sidemenu.php:32
+msgid "Shortcodes"
+msgstr ""
+
+#: inc/list_variables.php:45
+msgid "Blog name of logged in."
+msgstr ""
+
+#: inc/list_variables.php:54
+msgid "Blog URL of logged in."
+msgstr ""
+
+#: inc/list_variables.php:108
+#: inc/list_variables.php:115
+#: inc/list_variables.php:122
+#: inc/list_variables.php:129
+msgid "In your case."
+msgstr ""
+
+#: inc/reset_userrole.php:30
+msgid "Applied user roles"
+msgstr ""
+
+#: inc/reset_userrole.php:40
+msgid "You want to reset the user roles?"
+msgstr ""
+
+#: inc/reset_userrole.php:42
+#: inc/setting_admin_bar_menu.php:95
+#: inc/setting_admin_general.php:201
+#: inc/setting_appearance_menus.php:99
+#: inc/setting_dashboard.php:151
+#: inc/setting_default.php:132
+#: inc/setting_loginscreen.php:160
+#: inc/setting_manage_metabox.php:353
+#: inc/setting_plugin_cap.php:94
+#: inc/setting_post_add_edit.php:109
+#: inc/setting_sidemenu.php:241
+#: inc/setting_site.php:168
+msgid "Reset settings"
+msgstr ""
+
+#: inc/reset_userrole.php:49
+#: inc/reset_userrole.php:71
+msgid "Reset settings of all"
+msgstr ""
+
+#: inc/reset_userrole.php:54
+msgid "Setting all of the below will be deleted."
+msgstr ""
+
+#: inc/reset_userrole.php:69
+msgid "Are you sure you want to delete all settings?"
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:26
+#: inc/setting_sidemenu.php:26
+msgid "Please change the menu by drag and drop."
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:27
+#: inc/setting_sidemenu.php:28
+msgid "Notice: Please do not place the same multiple menu slug."
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:28
+msgid "Can be more than one custom menu."
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:32
+#: inc/setting_admin_general.php:132
+#: inc/setting_admin_general.php:155
+#: inc/setting_loginscreen.php:71
+#: inc/setting_loginscreen.php:84
+#: inc/setting_loginscreen.php:96
+#: inc/setting_loginscreen.php:124
+#: inc/setting_loginscreen.php:136
+#: inc/setting_sidemenu.php:32
+msgid "Available Shortcodes"
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:40
+msgid "Sub-menu settings apply to maximum of four levels deep."
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:41
+msgid "Admin bar settings documentation page"
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:94
+#: inc/setting_admin_general.php:200
+#: inc/setting_appearance_menus.php:98
+#: inc/setting_dashboard.php:150
+#: inc/setting_default.php:131
+#: inc/setting_loginscreen.php:159
+#: inc/setting_manage_metabox.php:352
+#: inc/setting_plugin_cap.php:93
+#: inc/setting_post_add_edit.php:108
+#: inc/setting_sidemenu.php:240
+#: inc/setting_site.php:167
+msgid "Reset all settings?"
+msgstr ""
+
+#: inc/setting_admin_bar_menu.php:100
+#: inc/setting_sidemenu.php:27
+#: inc/setting_sidemenu.php:48
+msgid "Menu items that can be added"
+msgstr ""
+
+#: inc/setting_admin_general.php:41
+msgid "Notifications"
+msgstr ""
+
+#: inc/setting_admin_general.php:47
+msgid "WordPress core update notice"
+msgstr ""
+
+#: inc/setting_admin_general.php:53
+#: inc/setting_admin_general.php:64
+#: inc/setting_admin_general.php:75
+msgid "Not notified"
+msgstr ""
+
+#: inc/setting_admin_general.php:58
+msgid "Plugin update notice"
+msgstr ""
+
+#: inc/setting_admin_general.php:69
+msgid "Theme update notice"
+msgstr ""
+
+#: inc/setting_admin_general.php:85
+msgid "Screen Options and Help Tab"
+msgstr ""
+
+#: inc/setting_admin_general.php:124
+#: inc/setting_loginscreen.php:130
+msgid "Footer text"
+msgstr ""
+
+#: inc/setting_admin_general.php:149
+#: inc/setting_loginscreen.php:118
+msgid "CSS file to load"
+msgstr ""
+
+#: inc/setting_admin_general.php:161
+msgid "Title tag for Admin screen"
+msgstr ""
+
+#: inc/setting_admin_general.php:166
+msgid "Remove \"Wordpress\" from the title tag of the Admin screen"
+msgstr ""
+
+#: inc/setting_admin_general.php:173
+msgid "Resizing Admin bar"
+msgstr "調整管理欄"
+
+#: inc/setting_admin_general.php:178
+msgid "Don't resize"
+msgstr ""
+
+#: inc/setting_appearance_menus.php:47
+msgid "Create a new menu"
+msgstr ""
+
+#: inc/setting_appearance_menus.php:53
+#: inc/setting_appearance_menus.php:72
+msgid "This is useful when you want to use only the menus have been created."
+msgstr ""
+
+#: inc/setting_dashboard.php:41
+msgid "Meta boxes"
+msgstr ""
+
+#: inc/setting_dashboard.php:50
+#: inc/setting_manage_metabox.php:63
+#: inc/setting_manage_metabox.php:160
+#: inc/setting_manage_metabox.php:265
+#, php-format
+msgid "Metaboxes loading for %s"
+msgstr ""
+
+#: inc/setting_dashboard.php:68
+#: inc/setting_manage_metabox.php:84
+#: inc/setting_manage_metabox.php:181
+#: inc/setting_manage_metabox.php:286
+msgid "Change metabox title to"
+msgstr ""
+
+#: inc/setting_dashboard.php:117
+msgid "Other"
+msgstr ""
+
+#: inc/setting_dashboard.php:124
+msgid "Meta box movement restriction"
+msgstr ""
+
+#: inc/setting_dashboard.php:129
+msgid "Prevent selected roles from re-arranging metaboxes"
+msgstr ""
+
+#: inc/setting_default.php:23
+msgid "Customize the UI of the management screen for all users."
+msgstr ""
+
+#: inc/setting_default.php:24
+msgid "Please select the user roles that all settings will apply to."
+msgstr ""
+
+#: inc/setting_default.php:26
+msgid "Please use the Multiple Add-on if you want per role customization."
+msgstr ""
+
+#: inc/setting_default.php:40
+msgid "Are you happy with this plugin?<br />Japanese law prohibits PayPal donations. <br />Please consider purchasing the Line Break First and End plugin in lieu of a donation."
+msgstr ""
+
+#: inc/setting_default.php:47
+msgid "Features"
+msgstr ""
+
+#: inc/setting_default.php:48
+msgid "Line Break First and End plugin allows for line breaks when using the visual editor TinyMCE."
+msgstr "這是一個換行插件,，開始 / 結束 在可視化編輯器TinyMCE 代碼中"
+
+#: inc/setting_default.php:51
+msgid "The primary use of donations"
+msgstr "主要捐款"
+
+#: inc/setting_default.php:53
+msgid "Liquidation of time and value"
+msgstr "付費的時間標準計算"
+
+#: inc/setting_default.php:54
+msgid "Additional suggestions feature"
+msgstr "其他推薦的功能"
+
+#: inc/setting_default.php:55
+msgid "Maintain motivation"
+msgstr "維持動機"
+
+#: inc/setting_default.php:56
+msgid "Ensure time as the father of Sunday"
+msgstr "星期日為每個禮拜的第一天"
+
+#: inc/setting_default.php:63
+msgid "About plugin"
+msgstr "關於這個插件"
+
+#: inc/setting_default.php:65
+msgid "Version checked"
+msgstr "版本檢查"
+
+#: inc/setting_default.php:67
+msgid "Plugin's site"
+msgstr "插件網站"
+
+#: inc/setting_default.php:68
+msgid "Developer's site"
+msgstr "開發商"
+
+#: inc/setting_default.php:70
+msgid "Reviews"
+msgstr "評論"
+
+#: inc/setting_default.php:78
+#: inc/setting_loginscreen.php:43
+msgid "Useful plugins"
+msgstr "有用的插件"
+
+#: inc/setting_default.php:81
+msgid "Apply setting on a per-role basis."
+msgstr "附加多用戶角色設置。"
+
+#: inc/setting_default.php:83
+msgid "Easily import/export setting between installations."
+msgstr "導入 / 導出 設置數據。"
+
+#: inc/setting_default.php:85
+msgid "Unified custom management screens for Multisite."
+msgstr "附加於所有站點的管理界面"
+
+#: inc/setting_default.php:87
+msgid "Customize list view columns for posts, pages, custom post types, media library, and other management screens."
+msgstr "定制的文章和頁面的列表。自定義文章類型的頁面。您可以選擇要顯示的自定義的項目。"
+
+#: inc/setting_default.php:89
+msgid "Create dashboard messages to be displayed for selected user roles."
+msgstr "顯示公告在儀表板。顯示不同用戶角色設定。"
+
+#: inc/setting_default.php:91
+msgid "Create custom global variables that can be used with generated template tags or shortcodes."
+msgstr "該插件允許你添加的選項的設定值。您已經創建了權限設定，除了可以在模板標籤中使用，短信代碼可以在文章的正文中。"
+
+#: inc/setting_default.php:140
+msgid "If you have already donated to."
+msgstr "如果您已經捐贈"
+
+#: inc/setting_default.php:141
+msgid "Please enter the 'Donation Delete Key' that was provided on the Line Break First and End download page."
+msgstr "請進入“捐贈刪除鍵”已在“換行開始和結束下載頁面”進行了描述。"
+
+#: inc/setting_default.php:144
+msgid "Donation Delete Key:"
+msgstr "捐贈刪除鍵"
+
+#: inc/setting_default.php:152
+msgid "Do you need professional setup and customization?"
+msgstr "必須要自定義？"
+
+#: inc/setting_default.php:158
+msgid "I provide full service customization for WP Admin UI Customize."
+msgstr "我自定義的管理顯示。"
+
+#: inc/setting_default.php:159
+msgid "Please contact me if you are interested."
+msgstr "請考慮由我修改，如果這是件好事。"
+
+#: inc/setting_default.php:161
+msgid "Example Customize"
+msgstr "自定義範例"
+
+#: inc/setting_default.php:162
+msgid "Contact me"
+msgstr "聯絡我們"
+
+#: inc/setting_loginscreen.php:23
+msgid "Login Screen Settings"
+msgstr "登錄端口的設置"
+
+#: inc/setting_loginscreen.php:32
+msgid "Is not possible to check the login form if you do not log out in the case of MultiSite."
+msgstr "如果你不在多站點的情況下登出，請檢查登錄表單。"
+
+#: inc/setting_loginscreen.php:34
+msgid "Show Current Login Screen"
+msgstr "顯示登陸的畫面"
+
+#: inc/setting_loginscreen.php:46
+msgid "Flexible plugin for login screen customization."
+msgstr "這個插件是可以靈活的設定登錄畫面"
+
+#: inc/setting_loginscreen.php:58
+msgid "Login Form"
+msgstr "登入表單"
+
+#: inc/setting_loginscreen.php:65
+msgid "The link after clicking on the logo"
+msgstr "點擊標誌的連結"
+
+#: inc/setting_loginscreen.php:78
+msgid "Logo Title"
+msgstr "標誌標題"
+
+#: inc/setting_loginscreen.php:90
+msgid "Logo Image path"
+msgstr "小網站標圖16X16的網址"
+
+#: inc/setting_manage_metabox.php:25
+msgid "Please update or add a \"post\" and a \"page\" to load the available meta boxes."
+msgstr "更新 / 增加 一個頁面或文章來加載 meta boxes."
+
+#: inc/setting_manage_metabox.php:26
+msgid "Please enter if you want to change of Metabox label name."
+msgstr "請輸入您想改變Metabox標籤名稱。"
+
+#: inc/setting_manage_metabox.php:82
+#: inc/setting_manage_metabox.php:179
+#: inc/setting_manage_metabox.php:284
+msgid "Default Open"
+msgstr "默認情況下打開"
+
+#: inc/setting_manage_metabox.php:110
+#: inc/setting_manage_metabox.php:206
+#: inc/setting_manage_metabox.php:310
+msgid "Expanded"
+msgstr "不減少"
+
+#: inc/setting_manage_metabox.php:111
+#: inc/setting_manage_metabox.php:207
+#: inc/setting_manage_metabox.php:311
+msgid "Collapsed"
+msgstr "減少"
+
+#: inc/setting_manage_metabox.php:122
+#: inc/setting_manage_metabox.php:218
+#: inc/setting_post_add_edit.php:55
+msgid "Notice: If hide the Discussion on metabox, comments does not display of Add New Post on apply user role."
+msgstr "注意：如果隱藏了Discussion描述欄位的meta box，此用戶則不顯示內容。"
+
+#: inc/setting_manage_metabox.php:124
+#: inc/setting_manage_metabox.php:220
+msgid "Please set from here if you want to view the comments on screen."
+msgstr "如果您要查看螢幕上的說明，請在這裡設置。"
+
+#: inc/setting_plugin_cap.php:24
+#, php-format
+msgid "You can change the user role %2$s of %1$s settings."
+msgstr "您可以更改用戶角色%2$s 的 %1$s的設置。"
+
+#: inc/setting_plugin_cap.php:25
+#, php-format
+msgid "Please choose the minimum role that can modify %s settings."
+msgstr "請選擇要使用的角色%s"
+
+#: inc/setting_plugin_cap.php:42
+#, php-format
+msgid "Capability role for the %s"
+msgstr "對於角色的 %s 的功能"
+
+#: inc/setting_post_add_edit.php:48
+msgid "Allow people to post comments on new articles when hide to discussion of metabox"
+msgstr "允許張貼新的文章，評論隱藏"
+
+#: inc/setting_post_add_edit.php:56
+msgid "Please select if you want to display the comments on Site."
+msgstr "請選擇您希望顯示在網站的意見"
+
+#: inc/setting_post_add_edit.php:57
+#, php-format
+msgid "However, this will follow the setting of %s."
+msgstr "However, this will follow the setting of %s."
+
+#: inc/setting_post_add_edit.php:59
+#, php-format
+msgid "Please select the <strong>%s</strong>"
+msgstr "Please select the %s"
+
+#: inc/setting_post_add_edit.php:85
+msgid "Only appears when you have settings to the default permalink."
+msgstr "只有當你設置為默認,永久鏈接才會出現。"
+
+#: inc/setting_sidemenu.php:27
+#, php-format
+msgid "New plugin menus will be added to the <strong>%s</strong>."
+msgstr "新的外掛程式菜單將被添加到 <strong>%s</strong>。"
+
+#: inc/setting_sidemenu.php:51
+msgid "Sepalator"
+msgstr ""
+
+#: inc/setting_sidemenu.php:122
+msgid "Current menu"
+msgstr ""
+
+#: inc/setting_sidemenu.php:224
+msgid "Delete all the Current menu"
+msgstr ""
+
+#: inc/setting_site.php:42
+msgid "Header Meta"
+msgstr ""
+
+#: inc/setting_site.php:55
+#: inc/setting_site.php:68
+#: inc/setting_site.php:81
+#: inc/setting_site.php:94
+#: inc/setting_site.php:107
+msgid "Tag to be output"
+msgstr ""
+
+#: inc/setting_site.php:67
+msgid "Please display when using the Windows Live Writer."
+msgstr ""
+
+#: inc/setting_site.php:80
+msgid "Information of XML-rpc"
+msgstr ""
+
+#: inc/setting_site.php:93
+msgid "Sitewide feed"
+msgstr ""
+
+#: inc/setting_site.php:106
+msgid "Extra feed"
+msgstr ""
+
+#: inc/setting_site.php:131
+msgid "Admin Bar"
+msgstr ""
+
+#: inc/setting_site.php:134
+msgid "Hide the Admin bar on the front end"
+msgstr ""
+
+#: inc/setting_site.php:134
+msgid "Apply WP Admin UI Customize settings on the front end admin bar also"
+msgstr ""
+

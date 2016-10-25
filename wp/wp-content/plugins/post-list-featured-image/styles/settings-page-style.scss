@@ -1,0 +1,162 @@
+#plugin-admin-page {
+    #tabs {
+
+        ul {
+            li {
+                &.focus, a:focus {
+                    outline : none;
+                }
+            }
+        }
+
+        table {
+            th, td {
+                padding : 10px;
+            }
+        }
+
+        &.ui-tabs-vertical {
+            margin-bottom : 10px;
+            width         : 99%;
+
+            .ui-tabs-nav {
+
+                &.ui-widget-header {
+                    background    : none;
+                    border        : none;
+                    border-radius : 0;
+                    float         : left;
+                    padding       : .2em .1em .2em .2em;
+                    width         : 12em;
+                }
+
+                li {
+                    clear               : left;
+                    width               : 100%;
+                    border-bottom-width : 1px !important;
+                    border-right-width  : 1px !important;
+                    margin              : 0 -1px 0 0;
+
+                    a {
+                        display : block;
+                        width   : 83%;
+                    }
+
+                    &.ui-tabs-active {
+                        padding-bottom     : 0;
+                        padding-right      : .1em;
+                        border-right-width : 0 !important;
+                    }
+                }
+            }
+
+            &.ui-widget-content {
+                background : rgba(0, 0, 0, 0);
+                border     : none;
+            }
+
+            &.ui-tabs {
+                .ui-accordion-content, .ui-tabs-panel {
+                    border : 1px solid #AAA;
+                }
+                .ui-tabs-panel {
+                    background  : #FFF;
+                    margin-left : 13.8%;
+
+                    .form-table {
+                        clear : none;
+
+                        th {
+                            font-weight : normal;
+                        }
+                    }
+
+                    textarea {
+                        min-height : 10em;
+                        width      : 100%;
+                    }
+                }
+            }
+        }
+
+        .ui-widget-content {
+            border     : none;
+            background : transparent;
+            color      : #222;
+        }
+
+        .ui-widget-header {
+            border-bottom : 1px solid #AAA;
+            background    : transparent;
+            color         : #222;
+            font-weight   : bold;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+            border      : 1px solid #D3D3D3;
+            background  : #E6E6E6;
+            font-weight : normal;
+            color       : #555;
+        }
+
+        .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+            border      : 1px solid #999;
+            background  : #DADADA;
+            font-weight : normal;
+            color       : #212121;
+        }
+
+        .ui-tabs-panel {
+            h3 {
+                border : 1px solid #CCC;
+            }
+        }
+
+        .desc {
+            color     : #AAA;
+            font-size : 0.8em;
+        }
+    }
+
+    #left-sortables {
+        padding : 1em 0;
+    }
+
+    .go-pro {
+        #link-btns, .instr-vid {
+            text-align : center;
+        }
+        #pro-btn {
+            background    : #17B817;
+            padding       : 15px 30px;
+            color         : #FAFAFA;
+            font-size     : 24px;
+            border        : none;
+            border-radius : 10px;
+        }
+        #pro-btn:hover {
+            background : #0095DA;
+        }
+    }
+}
+
+#plugin-help {
+    #help-container {
+        h3 {
+            margin : 1rem 0;
+        }
+
+        .shortcodes-help-row {
+            .shortcode-col {
+                align-self  : center;
+                font-weight : bold;
+            }
+
+            .shortcode-desc-col {
+                .row {
+                    padding-bottom : 1em;
+                }
+            }
+        }
+    }
+}

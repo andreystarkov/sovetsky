@@ -1,0 +1,89 @@
+#plugin-admin-page #tabs ul li.focus, #plugin-admin-page #tabs ul li a:focus {
+  outline: none; }
+#plugin-admin-page #tabs table th, #plugin-admin-page #tabs table td {
+  padding: 10px; }
+#plugin-admin-page #tabs.ui-tabs-vertical {
+  margin-bottom: 10px;
+  width: 99%; }
+  #plugin-admin-page #tabs.ui-tabs-vertical .ui-tabs-nav.ui-widget-header {
+    background: none;
+    border: none;
+    border-radius: 0;
+    float: left;
+    padding: .2em .1em .2em .2em;
+    width: 12em; }
+  #plugin-admin-page #tabs.ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 1px !important;
+    margin: 0 -1px 0 0; }
+    #plugin-admin-page #tabs.ui-tabs-vertical .ui-tabs-nav li a {
+      display: block;
+      width: 83%; }
+    #plugin-admin-page #tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+      padding-bottom: 0;
+      padding-right: .1em;
+      border-right-width: 0 !important; }
+  #plugin-admin-page #tabs.ui-tabs-vertical.ui-widget-content {
+    background: transparent;
+    border: none; }
+  #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-accordion-content, #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel {
+    border: 1px solid #AAA; }
+  #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel {
+    background: #FFF;
+    margin-left: 13.8%; }
+    #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel .form-table {
+      clear: none; }
+      #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel .form-table th {
+        font-weight: normal; }
+    #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel textarea {
+      min-height: 10em;
+      width: 100%; }
+#plugin-admin-page #tabs .ui-widget-content {
+  border: none;
+  background: transparent;
+  color: #222; }
+#plugin-admin-page #tabs .ui-widget-header {
+  border-bottom: 1px solid #AAA;
+  background: transparent;
+  color: #222;
+  font-weight: bold; }
+#plugin-admin-page #tabs .ui-state-default, #plugin-admin-page #tabs .ui-widget-content .ui-state-default, #plugin-admin-page #tabs .ui-widget-header .ui-state-default {
+  border: 1px solid #D3D3D3;
+  background: #E6E6E6;
+  font-weight: normal;
+  color: #555; }
+#plugin-admin-page #tabs .ui-state-hover, #plugin-admin-page #tabs .ui-widget-content .ui-state-hover, #plugin-admin-page #tabs .ui-widget-header .ui-state-hover, #plugin-admin-page #tabs .ui-state-focus, #plugin-admin-page #tabs .ui-widget-content .ui-state-focus, #plugin-admin-page #tabs .ui-widget-header .ui-state-focus {
+  border: 1px solid #999;
+  background: #DADADA;
+  font-weight: normal;
+  color: #212121; }
+#plugin-admin-page #tabs .ui-tabs-panel h3 {
+  border: 1px solid #CCC; }
+#plugin-admin-page #tabs .desc {
+  color: #AAA;
+  font-size: 0.8em; }
+#plugin-admin-page #left-sortables {
+  padding: 1em 0; }
+#plugin-admin-page .go-pro #link-btns, #plugin-admin-page .go-pro .instr-vid {
+  text-align: center; }
+#plugin-admin-page .go-pro #pro-btn {
+  background: #17B817;
+  padding: 15px 30px;
+  color: #FAFAFA;
+  font-size: 24px;
+  border: none;
+  border-radius: 10px; }
+#plugin-admin-page .go-pro #pro-btn:hover {
+  background: #0095DA; }
+
+#plugin-help #help-container h3 {
+  margin: 1rem 0; }
+#plugin-help #help-container .shortcodes-help-row .shortcode-col {
+  align-self: center;
+  font-weight: bold; }
+#plugin-help #help-container .shortcodes-help-row .shortcode-desc-col .row {
+  padding-bottom: 1em; }
+
+/*# sourceMappingURL=settings-page-style.css.map */

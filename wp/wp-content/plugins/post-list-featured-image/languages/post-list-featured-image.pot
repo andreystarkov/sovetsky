@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Post List Featured Image 0.5.0\n"
+"POT-Creation-Date: 2014-08-07 09:50+0800\n"
+"PO-Revision-Date: 2014-08-07 11:14+0800\n"
+"Last-Translator: Paul Grejaldo <pcgrejaldo@gmail.com>\n"
+"Language-Team: Jagged Edge Media <support@jaggededgemedia.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../PostListFeaturedImage/Controller/Admin.php:145
+msgid "Featured Image Settings"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:158
+msgid "PLFI Settings"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:175
+msgid "Featured Image List Table Column"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:182
+msgid "Thumbnail Size"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:223
+msgid "The size of the featured image preview in post list table."
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:305
+#, php-format
+msgid "%s News"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:318
+msgid "Want more features? Get more control in the Pro Addon!"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:335
+msgid "Find the plugin useful?"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:453
+msgid "Settings Updated!"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:469
+#: ../PostListFeaturedImage/Controller/Admin.php:476
+#: ../PostListFeaturedImage/Lib/TabsData.php:36
+msgid "Settings"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:490
+msgid "Featured Image"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:537
+#, php-format
+msgid "Show All %s with|without Featured Images"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:541
+#, php-format
+msgid "Show All %s with Featured Image"
+msgstr ""
+
+#: ../PostListFeaturedImage/Controller/Admin.php:545
+#, php-format
+msgid "Show All %s without Featured Image"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/Helper.php:76
+#: ../PostListFeaturedImage/Lib/Helper.php:110
+msgid "ERROR: file not found."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:26
+msgid "Overview"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:46
+msgid "Tools"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:56
+msgid "Help"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:74
+msgid "Change \"Featured Image Thumbnail Size\""
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:76
+msgid ""
+"Under <code>Settings</code> tab, select the desired thumbnail size and click "
+"<code>Save Changes</code> button."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:82
+msgid "Shortcodes"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:86
+msgid "Support"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:89
+#, php-format
+msgid ""
+"Need support for the %s plugin? Visit the support site at <a class=\"link\" "
+"href=\"http://wordpress.org/support/plugin/post-list-featured-image\" target="
+"\"_blank\">Wordpress.org</a>."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:96
+msgid "Tutorial"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:106
+msgid "The ID of the post that has the featured image that you want to get."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:108
+msgid ""
+"The size of the featured image you want returned. <em>Defaults to \"thumbnail"
+"\".</em>"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:112
+msgid ""
+"\"alt\" text of the image. <em>Defaults to the \"alt\" data entered for the "
+"image in media library.</em>"
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:116
+msgid ""
+"Any additional attribute(s) you want to put in the returned &lt;img&gt; tag. "
+"You can pass a URL-query style value as in \"foo=bar&var=foobar\"."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:135
+msgid "Add featured image via shortcode."
+msgstr ""
+
+#: ../PostListFeaturedImage/Lib/TabsData.php:136
+msgid "Parameters:"
+msgstr ""
+
+#: ../PostListFeaturedImage/View/admin-page-social.php:25
+#, php-format
+msgid "Tweets by %s"
+msgstr ""
+
+#: ../PostListFeaturedImage/View/plugin-admin-page.php:24
+#, php-format
+msgid "%s: Settings"
+msgstr ""
+
+#: ../PostListFeaturedImage/View/plugin-admin-page.php:27
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../PostListFeaturedImage/View/plugin-author-news.php:19
+#, php-format
+msgid ""
+"An error occurred while retrieving latest news feed. Check %s site directly "
+"for the latest news."
+msgstr ""
+
+#: ../PostListFeaturedImage/View/plugin-author-news.php:49
+msgid "Read More"
+msgstr ""
+
+#: ../PostListFeaturedImage/View/plugin-author-news.php:67
+#, php-format
+msgid ""
+"Unable to fetch latest news from %s. Check %s site directly for the latest "
+"news."
+msgstr ""
+
+#: ../autoload.php:51
+msgid ""
+"Post List Featured Image plugin requires at least PHP 5.3.0 to work properly."
+msgstr ""

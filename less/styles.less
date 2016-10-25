@@ -48,11 +48,35 @@
 
 @colorCaptionBg: mix(#fff,@colorLightBrown, 20%);
 
+.align-right {
+  text-align:right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+svg {
+  overflow:visible !important;
+}
+
+.as-box {
+  display:inline-block;
+  width:3.5rem;
+  height:3.5rem;
+  svg {
+    path, circle {
+      fill-opacity:0;
+    }
+    width:100%;
+  }
+}
 .index-carousel {
   img {
     margin-top:-10%;
   }
 }
+
 .page-footer {
   padding: 2.5rem 0;
   color: #111;
@@ -60,6 +84,16 @@
   background-color: lighten(#d5cab7,10%);
   font-family: @defaultSans;
   border-top: .1rem solid darken(#d5cab7,5%);
+  .copy {
+    i {
+      font-size:0.8rem;
+      color:mix(#000,#fff,30%);
+    }
+    span {
+      font-size:1rem;
+      color:mix(#000,#fff,50%);
+    }
+  }
 }
 
 .contact-items {
@@ -1279,6 +1313,9 @@ button, input {
   .map {
     height:70vh;
   }
+  .react-parallax-bgimage {
+    width:100%;
+  }
 }
 
 [data-path="/delivery"] {
@@ -1390,51 +1427,51 @@ body {
 }
 
 .contacts-page-header {
-     height: 85vh;
-     padding-top:0;
-     padding-bottom:0;
-    .ani-icon-phone {
-      position: absolute;
-      width: 60%;
-      top: 1rem;
-      left: 7rem;
-    }
-    .decorative-section-content {
-      padding-left:0rem;
+    height: 65vh;
+    padding-top: 10%;
+    padding-bottom: 0;
+  .ani-icon-phone {
+    position: absolute;
+    width: 60%;
+    top: 1rem;
+    left: 7rem;
+  }
+  .decorative-section-content {
+    padding-left:0rem;
 
-    }
-    .input-square {
-      min-width:18rem
-    }
-    .ani-icon-map {
-      position: absolute;
-      width: 65%;
-      top: 0rem;
-      left: 0rem;
-    }
-    .icon-delivery {
-      margin-right:0;
-    }
-    .button-square-send {
-      min-width:12rem;
-    }
-    .react-parallax {
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height:100%;
-      width:100%;
-    }
-    .react-parallax-content {
-      padding-top:13rem;
-    }
-    .decorative-left {
-      left: 4rem;
-      top: 8rem;
-    }
+  }
+  .input-square {
+    min-width:18rem
+  }
+  .ani-icon-map {
+    position: absolute;
+    width: 65%;
+    top: 0rem;
+    left: 0rem;
+  }
+  .icon-delivery {
+    margin-right:0;
+  }
+  .button-square-send {
+    min-width:12rem;
+  }
+  .react-parallax {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:100%;
+    width:100%;
+  }
+  .react-parallax-content {
+    padding-top:13rem;
+  }
+  .decorative-left {
+    left: 4rem;
+    top: 8rem;
+  }
 }
 
 

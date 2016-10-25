@@ -13,7 +13,7 @@ export default class MainLogo extends Component {
                 phrase3 = new Phrase(svgFx, aniEffects.three),
                 phrase4 = new Phrase(svgFx, aniEffects.four);
 
-            //   aniLogo.animate();
+               aniLogo.animate();
 
 
   }

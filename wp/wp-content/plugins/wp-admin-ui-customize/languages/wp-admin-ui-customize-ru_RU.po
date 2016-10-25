@@ -1,0 +1,863 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Admin UI Customize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-16 12:55+0300\n"
+"PO-Revision-Date: 2015-05-16 14:02+0300\n"
+"Last-Translator: gqevu6bsiz <gqevu6bsiz@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/list_variables.php:19 inc/setting_admin_bar_menu.php:25
+#: inc/setting_admin_general.php:125 inc/setting_admin_general.php:148
+#: inc/setting_loginscreen.php:64 inc/setting_loginscreen.php:77
+#: inc/setting_loginscreen.php:89 inc/setting_loginscreen.php:117
+#: inc/setting_loginscreen.php:129 inc/setting_sidemenu.php:24
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+#: inc/list_variables.php:20
+msgid "Value"
+msgstr "Значение"
+
+#: inc/list_variables.php:44
+msgid "Blog name of logged in."
+msgstr "Название сайта при входе."
+
+#: inc/list_variables.php:53
+msgid "Blog URL of logged in."
+msgstr "Адрес сайта при входе."
+
+#: inc/list_variables.php:103 inc/list_variables.php:110
+#: inc/list_variables.php:117 inc/list_variables.php:124
+msgid "In your case."
+msgstr "(в вашем профиле)"
+
+#: inc/list_variables.php:130 inc/setting_manage_metabox.php:38
+#: inc/setting_manage_metabox.php:122
+msgid "Posts"
+msgstr "Записи"
+
+#: inc/list_variables.php:131
+msgid "Current Post Type Name"
+msgstr "Имя текущей записи"
+
+#: inc/list_variables.php:131 inc/setting_manage_metabox.php:134
+#: inc/setting_manage_metabox.php:217
+msgid "Pages"
+msgstr "Страницы"
+
+#: inc/list_variables.php:131
+msgid "Categories"
+msgstr "Категории"
+
+#: inc/list_variables.php:131
+msgid "Tags"
+msgstr "Метки"
+
+#: inc/list_variables.php:131 inc/setting_admin_bar_menu.php:102
+msgid "Custom"
+msgstr "Произвольно"
+
+#: inc/reset_userrole.php:15 wp-admin-ui-customize.php:147
+#: wp-admin-ui-customize.php:186
+msgid "Reset User Roles"
+msgstr "Сбросить настройки Ролей пользователей"
+
+#: inc/reset_userrole.php:23
+msgid "Applied user roles"
+msgstr "Установленные роли пользователей"
+
+#: inc/reset_userrole.php:33 inc/setting_admin_bar_menu.php:87
+#: inc/setting_admin_general.php:191 inc/setting_appearance_menus.php:81
+#: inc/setting_dashboard.php:141 inc/setting_default.php:124
+#: inc/setting_loginscreen.php:152 inc/setting_manage_metabox.php:351
+#: inc/setting_plugin_cap.php:82 inc/setting_post_add_edit.php:101
+#: inc/setting_sidemenu.php:232 inc/setting_site.php:160
+#, php-format
+msgid "Reset the %s?"
+msgstr "Сбросить %s?"
+
+#: inc/reset_userrole.php:33 inc/setting_default.php:124
+msgid "User Roles Settings"
+msgstr "Настройки Ролей пользователей"
+
+#: inc/reset_userrole.php:35 inc/setting_admin_bar_menu.php:88
+#: inc/setting_admin_general.php:192 inc/setting_appearance_menus.php:82
+#: inc/setting_dashboard.php:142 inc/setting_default.php:125
+#: inc/setting_loginscreen.php:153 inc/setting_manage_metabox.php:352
+#: inc/setting_plugin_cap.php:83 inc/setting_post_add_edit.php:102
+#: inc/setting_sidemenu.php:233 inc/setting_site.php:161
+msgid "Reset settings"
+msgstr "Сбросить настройки"
+
+#: inc/reset_userrole.php:42 inc/reset_userrole.php:64
+msgid "Reset settings of all"
+msgstr "Сбросить все настройки"
+
+#: inc/reset_userrole.php:47
+msgid "Setting all of the below will be deleted."
+msgstr "Будут удалены настройки для следующих пунктов:"
+
+#: inc/reset_userrole.php:49 inc/setting_site.php:16 inc/setting_site.php:160
+#: wp-admin-ui-customize.php:176
+msgid "Site Settings"
+msgstr "Настройки сайта"
+
+#: inc/reset_userrole.php:50 inc/setting_admin_general.php:16
+#: inc/setting_admin_general.php:191 wp-admin-ui-customize.php:177
+#, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/reset_userrole.php:50 inc/setting_admin_general.php:16
+#: inc/setting_admin_general.php:135 inc/setting_admin_general.php:191
+#: inc/setting_loginscreen.php:104 inc/setting_site.php:117
+#: wp-admin-ui-customize.php:177
+msgid "General"
+msgstr "Основные настройки"
+
+#: inc/reset_userrole.php:50 inc/setting_admin_bar_menu.php:87
+#: inc/setting_admin_general.php:16 inc/setting_admin_general.php:191
+#: inc/setting_dashboard.php:16 inc/setting_dashboard.php:141
+#: inc/setting_manage_metabox.php:351 inc/setting_plugin_cap.php:82
+#: inc/setting_sidemenu.php:232 wp-admin-ui-customize.php:145
+#: wp-admin-ui-customize.php:177
+msgid "Settings"
+msgstr "Настройки"
+
+#: inc/reset_userrole.php:51 inc/setting_dashboard.php:16
+#: inc/setting_dashboard.php:95 inc/setting_dashboard.php:141
+#: wp-admin-ui-customize.php:178 wp-admin-ui-customize.php:498
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: inc/reset_userrole.php:52 inc/setting_admin_bar_menu.php:18
+#: inc/setting_admin_bar_menu.php:87 wp-admin-ui-customize.php:179
+msgid "Admin Bar Menu"
+msgstr "Верхнее меню"
+
+#: inc/reset_userrole.php:53 inc/setting_sidemenu.php:17
+#: inc/setting_sidemenu.php:232 wp-admin-ui-customize.php:180
+msgid "Side Menu"
+msgstr "Меню"
+
+#: inc/reset_userrole.php:54 inc/setting_manage_metabox.php:18
+#: inc/setting_manage_metabox.php:351 wp-admin-ui-customize.php:181
+msgid "Manage meta box"
+msgstr "Метабоксы"
+
+#: inc/reset_userrole.php:55 inc/setting_post_add_edit.php:16
+#: inc/setting_post_add_edit.php:101 wp-admin-ui-customize.php:182
+msgid "Add New Post and Edit Post Screen Setting"
+msgstr "Страница записи"
+
+#: inc/reset_userrole.php:56 inc/setting_appearance_menus.php:14
+#: inc/setting_appearance_menus.php:81 wp-admin-ui-customize.php:183
+msgid "Appearance Menus Screen Setting"
+msgstr "Внешний вид"
+
+#: inc/reset_userrole.php:57 inc/setting_loginscreen.php:27
+#: wp-admin-ui-customize.php:184
+msgid "Login Screen"
+msgstr "Страница входа"
+
+#: inc/reset_userrole.php:58 inc/setting_plugin_cap.php:17
+#: inc/setting_plugin_cap.php:82 wp-admin-ui-customize.php:185
+#, php-format
+msgid "%1$s of %2$s %3$s"
+msgstr "%1$s из %2$s %3$s"
+
+#: inc/reset_userrole.php:58 inc/setting_plugin_cap.php:17
+#: inc/setting_plugin_cap.php:82 wp-admin-ui-customize.php:185
+msgid "Change"
+msgstr "Изменить"
+
+#: inc/reset_userrole.php:58 inc/setting_plugin_cap.php:17
+#: inc/setting_plugin_cap.php:82 wp-admin-ui-customize.php:185
+msgid "Plugin"
+msgstr "Плагин"
+
+#: inc/reset_userrole.php:58 inc/setting_plugin_cap.php:17
+#: inc/setting_plugin_cap.php:18 inc/setting_plugin_cap.php:43
+#: inc/setting_plugin_cap.php:82 wp-admin-ui-customize.php:185
+msgid "Capabilities"
+msgstr "Возможности"
+
+#: inc/reset_userrole.php:62
+msgid "Are you sure you want to delete all settings?"
+msgstr "Вы уверены, что хотите удалить все настройки?"
+
+#: inc/setting_admin_bar_menu.php:19 inc/setting_sidemenu.php:18
+msgid "Please change the menu by drag and drop."
+msgstr "Изменяйте меню перетаскивая вкладки."
+
+#: inc/setting_admin_bar_menu.php:20 inc/setting_sidemenu.php:20
+msgid "Notice: Please do not place the same multiple menu slug."
+msgstr "Замечание: не размещайте несколько одинаковых меню."
+
+#: inc/setting_admin_bar_menu.php:21
+msgid "Can be more than one custom menu."
+msgstr "Может быть больше, чем одно меню."
+
+#: inc/setting_admin_bar_menu.php:25 inc/setting_admin_general.php:125
+#: inc/setting_admin_general.php:148 inc/setting_loginscreen.php:64
+#: inc/setting_loginscreen.php:77 inc/setting_loginscreen.php:89
+#: inc/setting_loginscreen.php:117 inc/setting_loginscreen.php:129
+#: inc/setting_sidemenu.php:24
+msgid "Available Shortcodes"
+msgstr "Шорткоды"
+
+#: inc/setting_admin_bar_menu.php:33
+msgid "Sub-menu settings apply to maximum of four levels deep."
+msgstr "Настройки вложенного меню до 4-х уровней вложенности."
+
+#: inc/setting_admin_bar_menu.php:34
+msgid "Admin bar settings documentation page"
+msgstr "Документация по настройкам Верхнего меню"
+
+#: inc/setting_admin_bar_menu.php:48 inc/setting_admin_bar_menu.php:102
+#: inc/setting_admin_bar_menu.php:118 inc/setting_appearance_menus.php:32
+msgid "Menus"
+msgstr "Меню"
+
+#: inc/setting_admin_bar_menu.php:83 inc/setting_admin_general.php:187
+#: inc/setting_appearance_menus.php:77 inc/setting_dashboard.php:137
+#: inc/setting_default.php:120 inc/setting_loginscreen.php:148
+#: inc/setting_manage_metabox.php:347 inc/setting_plugin_cap.php:78
+#: inc/setting_post_add_edit.php:97 inc/setting_sidemenu.php:228
+#: inc/setting_site.php:156
+msgid "Save"
+msgstr "Сохранить"
+
+#: inc/setting_admin_bar_menu.php:93 inc/setting_sidemenu.php:19
+#: inc/setting_sidemenu.php:40
+msgid "Menu items that can be added"
+msgstr "Элементы меню навигации"
+
+#: inc/setting_admin_general.php:34
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: inc/setting_admin_general.php:40
+msgid "WordPress core update notice"
+msgstr "Обновления ядра системы"
+
+#: inc/setting_admin_general.php:46 inc/setting_admin_general.php:57
+#: inc/setting_admin_general.php:68
+msgid "Not notified"
+msgstr "Не показывать"
+
+#: inc/setting_admin_general.php:51
+msgid "Plugin update notice"
+msgstr "Обновления плагинов"
+
+#: inc/setting_admin_general.php:62
+msgid "Theme update notice"
+msgstr "Обновления тем"
+
+#: inc/setting_admin_general.php:78
+msgid "Screen Options and Help Tab"
+msgstr "Вкладка «Настройки экрана»"
+
+#: inc/setting_admin_general.php:84
+msgid "Screen Options"
+msgstr "Настройки страницы"
+
+#: inc/setting_admin_general.php:90 inc/setting_admin_general.php:101
+#: inc/setting_appearance_menus.php:44 inc/setting_appearance_menus.php:58
+#: inc/setting_dashboard.php:59 inc/setting_dashboard.php:74
+#: inc/setting_manage_metabox.php:72 inc/setting_manage_metabox.php:167
+#: inc/setting_manage_metabox.php:270 inc/setting_post_add_edit.php:77
+#: inc/setting_site.php:47 inc/setting_site.php:59 inc/setting_site.php:72
+#: inc/setting_site.php:85 inc/setting_site.php:98
+msgid "Hide"
+msgstr "Скрыть"
+
+#: inc/setting_admin_general.php:95
+msgid "Help"
+msgstr "Помощь"
+
+#: inc/setting_admin_general.php:111
+msgid "Footer"
+msgstr "Футер"
+
+#: inc/setting_admin_general.php:117 inc/setting_loginscreen.php:123
+msgid "Footer text"
+msgstr "Текст в подвале"
+
+#: inc/setting_admin_general.php:124 inc/setting_plugin_cap.php:61
+msgid "Default"
+msgstr "По умолчанию"
+
+#: inc/setting_admin_general.php:124
+msgid ""
+"Thank you for creating with <a href=\"http://wordpress.org/\">WordPress</a>."
+msgstr ""
+"Спасибо за творчество с <a href=\"http://wordpress.org/\">WordPress</a>."
+
+#: inc/setting_admin_general.php:142 inc/setting_loginscreen.php:111
+msgid "CSS file to load"
+msgstr "Файл CSS"
+
+#: inc/setting_admin_general.php:154
+msgid "Title tag for Admin screen"
+msgstr "Заголовок Панели управления"
+
+#: inc/setting_admin_general.php:159
+msgid "Remove \"Wordpress\" from the title tag of the Admin screen"
+msgstr "Удалить \"Wordpress\" из заголовка Панели управления"
+
+#: inc/setting_admin_general.php:165
+msgid "Resizing Admin bar"
+msgstr "Размер Верхнего меню"
+
+#: inc/setting_admin_general.php:170
+msgid "Don't resize"
+msgstr "Не менять размер"
+
+#: inc/setting_appearance_menus.php:39
+msgid "Create a new menu"
+msgstr "Создать меню"
+
+#: inc/setting_appearance_menus.php:45 inc/setting_appearance_menus.php:59
+msgid "This is useful when you want to use only the menus have been created."
+msgstr ""
+"Может быть полезно, если необходимо использовать только созданные меню."
+
+#: inc/setting_appearance_menus.php:53
+msgid "Delete Menu"
+msgstr "Удалить меню"
+
+#: inc/setting_dashboard.php:34
+msgid "Meta boxes"
+msgstr "Метабоксы"
+
+#: inc/setting_dashboard.php:45 inc/setting_manage_metabox.php:50
+#: inc/setting_manage_metabox.php:146 inc/setting_manage_metabox.php:250
+msgid "Select All"
+msgstr "Выбрать всё"
+
+#: inc/setting_dashboard.php:47 inc/setting_manage_metabox.php:56
+#: inc/setting_manage_metabox.php:152 inc/setting_manage_metabox.php:256
+msgid "Change metabox title to"
+msgstr "Изменить заголовок метабокса для"
+
+#: inc/setting_dashboard.php:95 inc/setting_manage_metabox.php:122
+#: inc/setting_manage_metabox.php:217 inc/setting_manage_metabox.php:324
+#, php-format
+msgid "Metaboxes loading for %s"
+msgstr "Загрузка метабоксов для %s"
+
+#: inc/setting_dashboard.php:100 inc/setting_manage_metabox.php:127
+#: inc/setting_manage_metabox.php:222 inc/setting_manage_metabox.php:329
+msgid "Loading&hellip;"
+msgstr "Загрузка и помощь"
+
+#: inc/setting_dashboard.php:108
+msgid "Other"
+msgstr "Другое"
+
+#: inc/setting_dashboard.php:115
+msgid "Meta box movement restriction"
+msgstr "Ограничение перемещения метабокса"
+
+#: inc/setting_dashboard.php:120
+msgid "Prevent selected roles from re-arranging metaboxes"
+msgstr "Запрет перемещения метабоксов"
+
+#: inc/setting_default.php:16
+msgid "Customize the UI of the management screen for all users."
+msgstr "Настройка интерфейса Панели управления для всех пользователей."
+
+#: inc/setting_default.php:17
+msgid "Please select the user roles that all settings will apply to."
+msgstr "Выберите роли пользователей, к которым необходимо применить настройки."
+
+#: inc/setting_default.php:19
+msgid "Please use the Multiple Add-on if you want per role customization."
+msgstr "Для разграничения ролей можно воспольоваться плагином "
+
+#: inc/setting_default.php:32 wp-admin-ui-customize.php:2610
+msgid "Donate"
+msgstr "Благодарность"
+
+#: inc/setting_default.php:33
+msgid ""
+"Are you happy with this plugin?<br />Japanese law prohibits PayPal "
+"donations. <br />Please consider purchasing the Line Break First and End "
+"plugin in lieu of a donation."
+msgstr ""
+"Вам понравился этот плагин?<br />Закон Японии запрещает оплату через PayPal."
+"<br />Пожалуйста, сделайте оплату в йенах."
+
+#: inc/setting_default.php:40
+msgid "Features"
+msgstr "Возможности плагина"
+
+#: inc/setting_default.php:41
+msgid ""
+"Line Break First and End plugin allows for line breaks when using the visual "
+"editor TinyMCE."
+msgstr ""
+"Плагин \"Line Break First and End\" позволяет ставить разделители в "
+"редакторе TinyMCE."
+
+#: inc/setting_default.php:44
+msgid "The primary use of donations"
+msgstr "Применение пожертвований"
+
+#: inc/setting_default.php:46
+msgid "Liquidation of time and value"
+msgstr "Ускорение выхода новых версий"
+
+#: inc/setting_default.php:47
+msgid "Additional suggestions feature"
+msgstr "Добавление новых возможностей"
+
+#: inc/setting_default.php:48
+msgid "Maintain motivation"
+msgstr "Мотивация к разработке"
+
+#: inc/setting_default.php:49
+msgid "Ensure time as the father of Sunday"
+msgstr "Благодарность автора"
+
+#: inc/setting_default.php:56
+msgid "About plugin"
+msgstr "О плагине"
+
+#: inc/setting_default.php:58
+msgid "Version checked"
+msgstr "Текущая версия"
+
+#: inc/setting_default.php:60
+msgid "Plugin's site"
+msgstr "Сайт плагина"
+
+#: inc/setting_default.php:61
+msgid "Developer's site"
+msgstr "Сайт разработчика плагина"
+
+#: inc/setting_default.php:62 wp-admin-ui-customize.php:146
+msgid "Support Forums"
+msgstr "Форум поддержки"
+
+#: inc/setting_default.php:63
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: inc/setting_default.php:71 inc/setting_loginscreen.php:36
+msgid "Useful plugins"
+msgstr "Другие полезные плагины"
+
+#: inc/setting_default.php:74
+msgid "Apply setting on a per-role basis."
+msgstr "Расширение этого плагина для разграничения ролей."
+
+#: inc/setting_default.php:76
+msgid "Easily import/export setting between installations."
+msgstr "Расширение этого плагина для импорта и экспорта настроек."
+
+#: inc/setting_default.php:78
+msgid "Unified custom management screens for Multisite."
+msgstr "Расширение этого плагина для режима «Мультисайт»."
+
+#: inc/setting_default.php:80
+msgid ""
+"Customize list view columns for posts, pages, custom post types, media "
+"library, and other management screens."
+msgstr "Изменение колонок в таблицах записей, страниц, медиафайлов."
+
+#: inc/setting_default.php:82
+msgid "Create dashboard messages to be displayed for selected user roles."
+msgstr "Создание сообщений в Панели управления для выборочных пользователей."
+
+#: inc/setting_default.php:84
+msgid ""
+"Create custom global variables that can be used with generated template tags "
+"or shortcodes."
+msgstr ""
+"Создание пользовательских глобальных переменных, которые могут быть "
+"использованы в шаблонах или шорткодах."
+
+#: inc/setting_default.php:103 wp-admin-ui-customize.php:766
+#: wp-admin-ui-customize.php:810
+msgid "User Roles"
+msgstr "Роли пользователей"
+
+#: inc/setting_default.php:133
+msgid "If you have already donated to."
+msgstr "Если Вы уже выразили благодарность"
+
+#: inc/setting_default.php:134
+msgid ""
+"Please enter the 'Donation Delete Key' that was provided on the Line Break "
+"First and End download page."
+msgstr ""
+"Введите ключ благодарности для того, чтобы удалить сообщение с просьбой о "
+"материальной поддержке вверху страницы и информацию об авторе внизу страницы."
+
+#: inc/setting_default.php:137
+msgid "Donation Delete Key:"
+msgstr "Ключ благодарности:"
+
+#: inc/setting_default.php:139
+msgid "Submit"
+msgstr "Удалить сообщение"
+
+#: inc/setting_default.php:145
+msgid "Do you need professional setup and customization?"
+msgstr "Необходима профессиональная настройка?"
+
+#: inc/setting_default.php:151
+msgid "I provide full service customization for WP Admin UI Customize."
+msgstr "Я осуществляю полную настройку плагина WP Admin UI Customize."
+
+#: inc/setting_default.php:152
+msgid "Please contact me if you are interested."
+msgstr "Если Вам интересно это предложение, свяжитесь со мной!"
+
+#: inc/setting_default.php:154
+msgid "Example Customize"
+msgstr "Пример настройки"
+
+#: inc/setting_default.php:155
+msgid "Contact me"
+msgstr "Контакты автора"
+
+#: inc/setting_default.php:180 wp-admin-ui-customize.php:2595
+msgid "Thank you for your donation."
+msgstr "Спасибо за Вашу помощь."
+
+#: inc/setting_loginscreen.php:16 inc/setting_loginscreen.php:152
+msgid "Login Screen Settings"
+msgstr "Настройки страницы входа"
+
+#: inc/setting_loginscreen.php:25
+msgid ""
+"Is not possible to check the login form if you do not log out in the case of "
+"MultiSite."
+msgstr ""
+"Невозможно проверить форму входа пока Вы не вышли из режима «Мультисайт»."
+
+#: inc/setting_loginscreen.php:27
+msgid "Show Current Login Screen"
+msgstr "Показать страницу входа"
+
+#: inc/setting_loginscreen.php:39
+msgid "Flexible plugin for login screen customization."
+msgstr "Гибкий плагин для изменения страницы входа"
+
+#: inc/setting_loginscreen.php:51
+msgid "Login Form"
+msgstr "Форма входа"
+
+#: inc/setting_loginscreen.php:58
+msgid "The link after clicking on the logo"
+msgstr "Ссылка на логотипе"
+
+#: inc/setting_loginscreen.php:71
+msgid "Logo Title"
+msgstr "Заголовок логотипа"
+
+#: inc/setting_loginscreen.php:83
+msgid "Logo Image path"
+msgstr "Логотип"
+
+#: inc/setting_manage_metabox.php:19
+msgid ""
+"Please update or add a \"post\" and a \"page\" to load the available meta "
+"boxes."
+msgstr "Обновите или добавьте записи или страницы для загрузки метабоксов."
+
+#: inc/setting_manage_metabox.php:20
+msgid "Please enter if you want to change of Metabox label name."
+msgstr "Для изменения заголовков метабоксов."
+
+#: inc/setting_manage_metabox.php:54 inc/setting_manage_metabox.php:150
+#: inc/setting_manage_metabox.php:254
+msgid "Default Open"
+msgstr "По умолчанию открыто"
+
+#: inc/setting_manage_metabox.php:74 inc/setting_manage_metabox.php:86
+#: inc/setting_manage_metabox.php:169 inc/setting_manage_metabox.php:181
+#: inc/setting_manage_metabox.php:272 inc/setting_manage_metabox.php:284
+msgid "Show"
+msgstr "Показать"
+
+#: inc/setting_manage_metabox.php:82 inc/setting_manage_metabox.php:177
+#: inc/setting_manage_metabox.php:280
+msgid "Expanded"
+msgstr "Развёрнут"
+
+#: inc/setting_manage_metabox.php:83 inc/setting_manage_metabox.php:178
+#: inc/setting_manage_metabox.php:281
+msgid "Collapsed"
+msgstr "Свёрнут"
+
+#: inc/setting_manage_metabox.php:94 inc/setting_manage_metabox.php:189
+#: inc/setting_post_add_edit.php:48
+msgid ""
+"Notice: If hide the Discussion on metabox, comments does not display of Add "
+"New Post on apply user role."
+msgstr ""
+"Если скрыт метабокс «Обсуждения», комментарии не отображаются на странице "
+"редактирования записи"
+
+#: inc/setting_manage_metabox.php:96 inc/setting_manage_metabox.php:191
+msgid "Please set from here if you want to view the comments on screen."
+msgstr "Включите, если необходимо отображать комментарии."
+
+#: inc/setting_plugin_cap.php:18
+#, php-format
+msgid "You can change the user role %2$s of %1$s settings."
+msgstr "Можно изменить настройки для ролей %2$s из %1$s."
+
+#: inc/setting_plugin_cap.php:19
+#, php-format
+msgid "Please choose the minimum role that can modify %s settings."
+msgstr "Выберите минимальную роль, которая может изменять настройки %s."
+
+#: inc/setting_plugin_cap.php:36
+#, php-format
+msgid "Capability role for the %s"
+msgstr "Возможности для %s"
+
+#: inc/setting_post_add_edit.php:34 inc/setting_post_add_edit.php:65
+msgid "Add New Post"
+msgstr "Новая запись"
+
+#: inc/setting_post_add_edit.php:34
+msgid "Add New Page"
+msgstr "Новая страница"
+
+#: inc/setting_post_add_edit.php:41
+msgid ""
+"Allow people to post comments on new articles when hide to discussion of "
+"metabox"
+msgstr ""
+"Разрешить оставлять комментарии на новые статьи при скрытом метабоксе "
+"«Обсуждения»"
+
+#: inc/setting_post_add_edit.php:47
+msgid "Allow"
+msgstr "Разрешить"
+
+#: inc/setting_post_add_edit.php:49
+msgid "Please select if you want to display the comments on Site."
+msgstr "Выберите, если необходимо отображать комментарии на сайте."
+
+#: inc/setting_post_add_edit.php:50
+#, php-format
+msgid "However, this will follow the setting of %s."
+msgstr "Эти настройки применяются после %s."
+
+#: inc/setting_post_add_edit.php:50
+msgid "Default article settings"
+msgstr "Удалить настройки статьи"
+
+#: inc/setting_post_add_edit.php:52
+#, php-format
+msgid "Please select the <strong>%s</strong>"
+msgstr "Выберите <strong>%s</strong>"
+
+#: inc/setting_post_add_edit.php:52
+msgid "Allow people to post comments on new articles"
+msgstr "Разрешить оставлять комментарии на новые статьи"
+
+#: inc/setting_post_add_edit.php:65
+msgid "Edit Post"
+msgstr "Редактировать запись"
+
+#: inc/setting_post_add_edit.php:72
+msgid "Change Permalinks"
+msgstr "Кнопка «Постоянные ссылки»"
+
+#: inc/setting_post_add_edit.php:78
+msgid "Only appears when you have settings to the default permalink."
+msgstr "Видна только когда включены настройки постоянных ссылок."
+
+#: inc/setting_sidemenu.php:19
+#, php-format
+msgid "New plugin menus will be added to the <strong>%s</strong>."
+msgstr "Новые меню были добавлены в <strong>%s</strong>."
+
+#: inc/setting_sidemenu.php:43
+msgid "Sepalator"
+msgstr "Разделитель"
+
+#: inc/setting_sidemenu.php:54 inc/setting_sidemenu.php:133
+msgid "Comments"
+msgstr "Коментарии"
+
+#: inc/setting_sidemenu.php:56 inc/setting_sidemenu.php:135
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: inc/setting_sidemenu.php:58 inc/setting_sidemenu.php:137
+msgid "Plugins"
+msgstr "Плагины"
+
+#: inc/setting_sidemenu.php:76 inc/setting_sidemenu.php:148
+msgid "Update"
+msgstr "Обновить"
+
+#: inc/setting_sidemenu.php:114
+msgid "Current menu"
+msgstr "Текущее меню"
+
+#: inc/setting_sidemenu.php:216
+msgid "Delete all the Current menu"
+msgstr "Удалить все пункты меню"
+
+#: inc/setting_site.php:35
+msgid "Header Meta"
+msgstr "Мета-заголовок"
+
+#: inc/setting_site.php:48 inc/setting_site.php:61 inc/setting_site.php:74
+#: inc/setting_site.php:87 inc/setting_site.php:100
+msgid "Tag to be output"
+msgstr "Тэг"
+
+#: inc/setting_site.php:60
+msgid "Please display when using the Windows Live Writer."
+msgstr "Включите, если используете Windows Live Writer."
+
+#: inc/setting_site.php:73
+msgid "Information of XML-rpc"
+msgstr "XML-RPC"
+
+#: inc/setting_site.php:86
+msgid "Sitewide feed"
+msgstr "Фид"
+
+#: inc/setting_site.php:87
+#, php-format
+msgid "%1$s %2$s Feed"
+msgstr "%1$s %2$s Фидов"
+
+#: inc/setting_site.php:99
+msgid "Extra feed"
+msgstr "Экстра фид"
+
+#: inc/setting_site.php:100
+#, php-format
+msgid "%1$s %2$s Comments Feed"
+msgstr "%1$s %2$s Комментариев"
+
+#: inc/setting_site.php:124
+msgid "Admin Bar"
+msgstr "Верхнее меню"
+
+#: inc/setting_site.php:127
+msgid "Hide the Admin bar on the front end"
+msgstr "Скрыть только во фронтэнде"
+
+#: inc/setting_site.php:127
+msgid "Apply WP Admin UI Customize settings on the front end admin bar also"
+msgstr "Скрыть везде"
+
+#: wp-admin-ui-customize.php:349
+#, php-format
+msgid ""
+"Authority to apply the setting is not selected. <a href=\"%s\">From here</"
+"a>, please select the permissions you want to set."
+msgstr ""
+"Права для применения настроек не выбраны. Установите права <a href=\"%s"
+"\">здесь</a>."
+
+#: wp-admin-ui-customize.php:374
+msgid "Apply user roles"
+msgstr "Применить для ролей пользователей"
+
+#: wp-admin-ui-customize.php:384
+msgid "None"
+msgstr "Нет"
+
+#: wp-admin-ui-customize.php:502
+#, php-format
+msgid "Howdy, %1$s"
+msgstr "Привет, %1$s"
+
+#: wp-admin-ui-customize.php:602
+msgid "Edit"
+msgstr "Редактировать"
+
+#: wp-admin-ui-customize.php:606
+msgid "Search"
+msgstr "Поиск"
+
+#: wp-admin-ui-customize.php:612
+msgid "View"
+msgstr "Просмотр"
+
+#: wp-admin-ui-customize.php:759
+msgid "Url"
+msgstr "Ссылка"
+
+#: wp-admin-ui-customize.php:762 wp-admin-ui-customize.php:807
+msgid "Slug"
+msgstr "Короткая ссылка"
+
+#: wp-admin-ui-customize.php:777 wp-admin-ui-customize.php:821
+#: wp-admin-ui-customize.php:915
+msgid "Title"
+msgstr "Заголовок"
+
+#: wp-admin-ui-customize.php:784 wp-admin-ui-customize.php:958
+msgid "Sub Menus"
+msgstr "Вложенные меню"
+
+#: wp-admin-ui-customize.php:827 wp-admin-ui-customize.php:839
+#: wp-admin-ui-customize.php:989
+msgid "Remove"
+msgstr "Удалить"
+
+#: wp-admin-ui-customize.php:879 wp-admin-ui-customize.php:901
+msgid "Menu Group"
+msgstr "Группа меню"
+
+#: wp-admin-ui-customize.php:899
+msgid "Show only on front end."
+msgstr "Отобразить только во фронтенде."
+
+#: wp-admin-ui-customize.php:946
+msgid "Open link in a new window/tab"
+msgstr "Открыть ссылку в новом окне"
+
+#: wp-admin-ui-customize.php:1208
+msgid "Left"
+msgstr "Влево"
+
+#: wp-admin-ui-customize.php:1208
+msgid "Right"
+msgstr "Вправо"
+
+#: wp-admin-ui-customize.php:1208
+msgid "Front"
+msgstr "Фронтенд"
+
+#: wp-admin-ui-customize.php:1747
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: wp-admin-ui-customize.php:1764
+msgid "Powered by WordPress"
+msgstr "Сайт работает на WordPress"
+
+#: wp-admin-ui-customize.php:2593
+msgid "Settings saved."
+msgstr "Настройки сохранены"
+
+#: wp-admin-ui-customize.php:2610
+msgid "Please consider making a donation."
+msgstr "Пожалуйста, выразите материальную"

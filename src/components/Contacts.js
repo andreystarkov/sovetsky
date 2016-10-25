@@ -6,6 +6,7 @@ import aniItemsRandom from '../animation/aniItemsRandom'
 import drawPath from '../animation/drawPath'
 import Waypoint from 'react-waypoint'
 import {api, swalSettings} from '../config'
+import {getUserProfile, addUserProfile} from '../etc'
 
 export class TheMap extends Component {
   componentDidMount(){
@@ -74,6 +75,12 @@ class ContactsComposition extends Component {
 }
 
 export default class Contacts extends Component {
+  componentDidMount(){
+    var user = getUserProfile();
+    if ( user.phone ) {
+      $('#input-contact-phone').val(user.phone);
+    }
+  }
   _handleWaypointEnter(){
 
     aniItemsRandom('.ani-icon-map path, .ani-icon-map ellipse, .ani-icon-map circle');
@@ -101,7 +108,13 @@ export default class Contacts extends Component {
             title: 'Спасибо за заявку!',
             html: 'В ближайшее время мы позвоним вам на номер ' + phone + '.',
             ...swalSettings
-          })
+          });
+
+          var user = {
+            phone: phone
+          };
+
+          addUserProfile(user);
         });
     }
 

@@ -1,0 +1,13 @@
+@media screen and (max-width: 782px) {
+	html #wpadminbar {
+		height: auto;
+	}
+	#wpadminbar #wp-toolbar>ul>li {
+		display: block;
+		position: static;
+	}
+	#wpadminbar #wp-toolbar>ul>li>.ab-item {
+		width: auto;
+		text-indent: inherit;
+	}
+}

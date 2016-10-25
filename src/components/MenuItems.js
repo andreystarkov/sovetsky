@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchMenuItems } from '../actions'
 import { default as swal } from 'sweetalert2'
+import { addUserProfile, getUserProfile } from '../etc'
 import $ from 'jquery'
 import {api} from '../config'
 import _ from 'underscore'
@@ -32,6 +33,10 @@ export class MenuItems extends Component {
   orderClick( obj, e){
     console.log('orderClick', e, obj);
 
+    var userProfile = getUserProfile(),
+        inputDefault = userProfile.phone || '';
+
+        console.log('orderClick: ', userProfile, inputDefault);
     swal({
       type: 'question',
       title: 'Подветждение заказа',
@@ -40,19 +45,29 @@ export class MenuItems extends Component {
             'Стоимость: <b>'+obj.price+'</b> Р.',
             ...modalSettings
     }).then( (result) => {
+
       if( result ){
           swal({
             type: 'question',
             title: 'Введите ваш номер телефона',
             input: 'text',
+            inputValue: inputDefault,
             ...modalSettings,
             inputValidator: (value) => {
               return new Promise( (resolve, reject) => {
                 if (value) {
-                  var query = api.mail+'?phone='+value+'&food='+_.escape(obj.title);
-                  console.log('delivery query: ', query, obj);
+                  var query = api.mail+'?phone='+value+'&food='+_.escape(obj.title+'<br><br><b>Стоимость:</b> '+obj.price);
+
+                  var user = {
+                    phone: value
+                  };
+
+                  console.log('LS | Add User: ', user);
+
+                  addUserProfile(user);
+
                   $.get(query, (response) =>{
-                   console.log('Mailer: ', response);
+                  // console.log('Mailer: ', response);
                   });
                   resolve();
                 } else {
@@ -60,12 +75,12 @@ export class MenuItems extends Component {
                 }
               })
             }
-          }).then( () => {
+          }).then(() => {
 
            swal({
               type: 'success',
               title: 'Спасибо за заказ!',
-              html: 'В ближайшее время мы позвоним вам на номер ' + result + ', для уточнения деталей',
+              html: 'В ближайшее время мы перезвоним вам для уточнения деталей заказа.',
               ...modalSettings
             })
           })

@@ -50,7 +50,6 @@ export default class FullscreenCarousel extends Component {
         return(
           <div key={key} className="food-carousel-item">
            <img src={obj.full} />
-
           </div>
         )
       });

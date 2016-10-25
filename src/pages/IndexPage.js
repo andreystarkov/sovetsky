@@ -277,7 +277,7 @@ class DecorativeMenuSection extends Component {
               <h2>Доставка блюд</h2>
               <p>Для настящих ценителей качественной советской кухни мы осуществляем доставку блюд на дом. Для заказа передйте в соответствующий раздел.</p>
 
-              <button className="button-more button-square-red">Посмотреть меню</button>
+              <a className="button-more button-square-red" href="/delivery">Посмотреть меню</a>
             </div>
           </div>
         </div>

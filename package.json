@@ -119,7 +119,7 @@
     "react-images": "^0.5.1",
     "react-motion": "^0.4.5",
     "react-motion-ui-pack": "^0.9.0",
-    "react-parallax": "^0.4.5",
+    "react-parallax": "^1.0.4",
     "react-redux": "^4.4.5",
     "react-responsive-image": "^3.3.3",
     "react-router": "^2.8.0",
