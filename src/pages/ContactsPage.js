@@ -149,10 +149,19 @@ export default class ContactsPage extends Component {
                         <b className="_phone"><span>3532</span> 291129</b>
                         <div className="_subscript">служба доставки</div>
                       </div>
-{/*                      <div className="contact-item-address">
+                      <div className="contact-item">
+                        <div className="svg-icn icon-manager">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.012 31.012">
+                            <path d="M28.512 26.53H2.5c-1.378 0-2.5-1.122-2.5-2.5V6.98c0-1.38 1.122-2.5 2.5-2.5h26.012c1.378 0 2.5 1.12 2.5 2.5V24.03c0 1.378-1.122 2.5-2.5 2.5zM2.5 5.48c-.827 0-1.5.673-1.5 1.5V24.03c0 .826.673 1.5 1.5 1.5h26.012c.827 0 1.5-.674 1.5-1.5V6.98c0-.827-.673-1.5-1.5-1.5H2.5z"/>
+                            <path d="M15.506 18.018c-.665 0-1.33-.22-1.836-.662L.89 6.22C.684 6.036.66 5.72.844 5.513c.182-.21.498-.23.706-.05l12.777 11.138c.64.557 1.72.556 2.358 0L29.46 5.466c.207-.183.522-.162.706.05.182.207.16.522-.048.704L17.342 17.355c-.506.442-1.17.663-1.836.663z"/>
+                          </svg>
+                        </div>
+                        <b>oren.sssr@gmail.com</b>
+                      </div>
+                      <div className="contact-item-address">
                         <i className="flaticon-place-localizer" />
                         <b className="_where">г. Оренбург. Просторная 21/1</b>
-                      </div>*/}
+                      </div>
                     </div>
 
                   </div>

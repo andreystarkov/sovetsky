@@ -48,6 +48,9 @@
 
 @colorCaptionBg: mix(#fff,@colorLightBrown, 20%);
 
+a {
+  color: #e12210;
+}
 .align-right {
   text-align:right;
 }
@@ -917,7 +920,7 @@ button, input {
   }
   &.scrolled {
     .main-logo-wrapper {
-      transform: scale(0.42) translateY(-4.55rem);
+      transform: scale(0.40) translateY(-4.7rem);  //scale(0.42) translateY(-4.55rem);
     }
     .main-navigation {
       margin-top: 0rem;
@@ -1327,13 +1330,18 @@ button, input {
 
 [data-path="/index"],
 [data-path="/"] {
-  .main-navigation .nav-item:first-child {
-   // display:none;
-  }
-  .top-logo-container {
-   // display:none;
+
+}
+
+
+[data-path="/interior"],
+[data-path="/delivery"],
+[data-path="/gallery"] {
+  #map-container {
+    display:none;
   }
 }
+
 
 [data-path="/contacts"] {
   .map {
@@ -1345,17 +1353,11 @@ button, input {
 }
 
 [data-path="/delivery"] {
-  .map {
-   // display:none;
-    height:70vh;
-  }
+
 }
 
 [data-path="/interior"] {
-  .map {
-    //display:none;
-    height:70vh;
-  }
+
   .slick-slider {
    // display:none;
   }

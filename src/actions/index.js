@@ -348,7 +348,7 @@ export function fetchGallery() {
 
               var list = sliderData[0], total = [];
 
-              // console.log('fetchGallery result: ', list);
+              //    +console.log('fetchGallery result: ', list);
 
               if( list ){
 

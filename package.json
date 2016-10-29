@@ -100,6 +100,7 @@
     "html-webpack-plugin": "^2.22.0",
     "immutable": "^3.8.1",
     "imports-loader": "^0.6.5",
+    "instafeed.js": "^1.4.1",
     "ip": "^1.1.2",
     "ismobilejs": "^0.4.0",
     "isomorphic-fetch": "*",

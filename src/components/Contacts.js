@@ -13,7 +13,8 @@ export class TheMap extends Component {
       DG.then(function() {
           var map = DG.map('map', {
               center: [51.836645,55.159559],
-              zoom: 16,
+              zoom: 15,
+              dragging:false,
               scrollWheelZoom: false
           });
           DG.marker([51.836645,55.159559]).addTo(map).bindPopup('Ресторан Советский');
@@ -21,7 +22,7 @@ export class TheMap extends Component {
   }
   render(){
     return(
-      <div>
+      <div id="map-container">
         <div id="map" className="map"></div>
       </div>
     )

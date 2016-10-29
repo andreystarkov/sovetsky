@@ -8,7 +8,9 @@ import Contacts from '../components/Contacts'
 import InteriorImages from '../components/InteriorImages'
 import { Parallax } from 'react-parallax'
 import MainLogo from '../svg/MainLogo'
+import InstaBox from '../components/InstaBox'
 
+var Instafeed = require("instafeed.js");
 var Menu = require('react-burger-menu').push;
 
 
@@ -21,7 +23,6 @@ class InteriorHeader extends Component {
           </div>
           <div className="main-header-container container">
           </div>
-
       </section>
     )
   }
@@ -42,7 +43,8 @@ export default class InteriorPage extends Component {
       return (
       <div>
         <InteriorCarousel />
-        <InteriorImages />
+        <InteriorImages max={100} />
+        <InstaBox />
         <Contacts />
       </div>
       );
