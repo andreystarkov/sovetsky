@@ -1,110 +1,110 @@
-//import aniEasings from '../animation/easings'
+// import aniEasings from '../animation/easings'
 import anime from 'animejs'
 import $ from 'jquery'
 
-var aniEasings = [
-  'easeInBack',
+const aniEasings = [
   'easeInBounce',
-  'easeInCirc',
-  'easeInCubic',
-  'easeInElastic',
-  'easeInExpo',
-  'easeInOutBack',
-  'easeInOutBounce',
-  'easeInOutCirc',
-  'easeInOutCubic',
-  'easeInOutElastic',
-  'easeInOutExpo',
-  'easeInOutQuad',
-  'easeInOutQuart',
-  'easeInOutQuint',
-  'easeInOutSine',
-  'easeInQuad',
-  'easeInQuart',
-  'easeInQuint',
+  'linear',
+  // 'easeInQuad',
+  // 'easeInQuart',
+  // 'easeInQuint',
   'easeInSine',
-  'easeOutBack',
-  'easeOutBounce',
-  'easeOutCirc',
-  'easeOutCubic',
-  'easeOutElastic',
-  'easeOutExpo',
-  'easeOutInBack',
-  'easeOutInBounce',
-  'easeOutInCirc',
-  'easeOutInCubic',
-  'easeOutInElastic',
-  'easeOutInExpo',
-  'easeOutInQuad',
-  'easeOutInQuart',
-  'easeOutInQuint',
-  'easeOutInSine',
-  'easeOutQuad',
-  'easeOutQuart',
-  'easeOutQuint',
-  'easeOutSine',
-  'linear'
-];
+  // 'easeInBack',
+  'easeInBounce',
+  'easeInElastic'
+  // 'easeOutBack',
+  // 'easeOutBounce',
+  // 'easeOutCirc',
+  // 'easeOutCubic',
+  // 'easeOutElastic',
+  // 'easeOutExpo',
+  // 'easeOutInBack',
+  // 'easeOutInBounce',
+  // 'easeOutInCirc',
+  // 'easeOutInCubic',
+  // 'easeOutInElastic',
+  // 'easeOutInExpo',
+  // 'easeOutInQuad',
+  // 'easeOutInQuart',
+  // 'easeOutInQuint',
+  // 'easeOutInSine',
+  // 'easeOutQuad',
+  // 'easeOutQuart',
+  // 'easeOutQuint',
+]
+/*
 
-export default function aniItemsRandom(selector, callback, maxDuration = 300, maxDelay = 120){
+ */
+function randEasing(log) {
+  const easing = aniEasings[anime.random(0, aniEasings.length)]
+  if (log) console.log(easing)
+  return easing || 'linear'
+}
 
-  var easing = aniEasings[anime.random(0,19)];
-
-  var params = {
-      targets: selector,
-      fillOpacity: {
-        value: [0,1],
-        duration: anime.random(150,maxDuration)
-      },
-      opacity: [0,1],
-      translateY: {
-        value: () => {
-          return [anime.random(400,10), 0]
-        },
-        duration: anime.random(150,maxDuration)
-      },
-      translateX: {
-        value: () => {
-          return [anime.random(400,10), 0]
-        },
-        duration: anime.random(150,maxDuration)
-      },
-      rotate: {
-        value: () => {
-          return [anime.random(10,90), 0]
-        },
-        duration: anime.random(150,maxDuration)
-      },
-      rotateX: {
-        value: () => {
-          return [anime.random(10,90), 0]
-        },
-        duration: anime.random(150,maxDuration)
-      },
-      rotateY: {
-        value: () => {
-          return [anime.random(10,90), 0]
-        },
-        duration: anime.random(150,maxDuration)
-      },
-      loop: false,
-      easing: easing,
-      delay: function(el, index) {
-        return index * anime.random(10,maxDelay)
-      },
-      complete: (a) => {
-       // $(selector).addClass('animated');
-        if(callback) callback();
-      }
-    };
-
-  //console.log('aniItemsRandom: '+selector, params);
-
-  if( !$(selector).hasClass('animated') ) {
-    $(selector).addClass('animated');
-    anime(params);
-  } else {
-   // console.log('Already animated. Skipping');
+export default function aniItemsRandom(selector, callback, maxDuration = 700, maxDelay = 220, minDuration = 350) {
+  const params = {
+    targets: selector,
+    opacity: {
+      value: [0, 1],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(40, maxDelay)
+    },
+    fillOpacity: {
+      value: [0, 1],
+      duration: anime.random(minDuration + 200, maxDuration + 300),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(50, maxDelay)
+    },
+    translateY: {
+      value: () => [anime.random(200, 50), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    translateX: {
+      value: () => [anime.random(200, 50), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    translateZ: {
+      value: () => [anime.random(200, 50), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    rotateZ: {
+      value: () => [anime.random(10, 70), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    rotateX: {
+      value: () => [anime.random(70, 30), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    rotateY: {
+      value: () => [anime.random(10, 70), 0],
+      duration: anime.random(minDuration, maxDuration),
+      easing: randEasing(),
+      delay: (el, index) => index * anime.random(10, maxDelay)
+    },
+    loop: false,
+    complete: (a) => {
+         // $(selector).addClass('animeted');
+      if (callback) callback()
+    }
   }
 
+    // console.log('aniItemsRandom: '+selector, params);
+
+  if (!$(selector).hasClass('animeted')) {
+    $(selector).addClass('animeted')
+    anime(params)
+  } else {
+     // console.log('Already animeted. Skipping');
+  }
 }
