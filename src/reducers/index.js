@@ -9,13 +9,13 @@ import gallery from './gallery'
 // TODO: try to import * from './' instead of importing individual reducers
 
 const rootReducer = combineReducers({
-    pages,
-    posts,
-    menus,
-    interior,
-    slider,
-    menu,
-    gallery
-});
+  pages,
+  posts,
+  menus,
+  interior,
+  slider,
+  menu,
+  gallery
+})
 
-export default rootReducer;
+export default rootReducer

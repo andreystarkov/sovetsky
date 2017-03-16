@@ -104,10 +104,24 @@ svg {
   font-family: @defaultSans;
 }
 
+.contact-item-email {
+  display:block;
+  b {
+    margin-top:0rem;
+    display:block;
+    width:1px;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
 .contact-item-address {
   display:block;
   color: #111;
-  margin-top:4rem;
+  margin-top:1.5rem;
   b {
     line-height:2rem;
     display: inline-block;
@@ -774,8 +788,17 @@ button, input {
   z-index:66;
   cursor:pointer;
 }
-
-.slick-next, .slick-prev {
+.contact-item {
+  display:block;
+  margin-top:20px;
+}
+@media all and (max-width:1000px) {
+  .icon-instagram {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+  .slick-next, .slick-prev {
   [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
     display:block;
     line-height:1rem;
@@ -1592,4 +1615,3 @@ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox=
 .letter__layer:nth-child(4) { stroke: #f79c8c; }
 .letter__layer:nth-child(5) { stroke: #84b5bd; }*/
 .color-6 { stroke: #feefde; }
-
