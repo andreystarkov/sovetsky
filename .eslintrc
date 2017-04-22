@@ -37,6 +37,9 @@
     "class-methods-use-this": "off",
     "generator-star-spacing": "off",
     "space-before-function-paren": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off",
+    "react/jsx-no-bind": "off",
+    "no-unused-vars": "warn"
   },
 }
