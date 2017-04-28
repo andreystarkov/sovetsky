@@ -1,0 +1,98 @@
+@keyframes strike {
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
+
+.the-cart {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  z-index:10;
+  background: white;
+  padding:0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Open Sans Condensed';
+  .cart-summary {
+    .col {
+      text-align: center;
+    }
+    .btn {
+      text-transform: uppercase;
+      background: #111;
+      color:#fff;
+      display:block;
+      width:100%;
+      font-size:1.3rem;
+      padding:0.3rem 0.6rem;
+    }
+  }
+  .cart-total {
+    padding:0.2rem 0.6rem;
+    display: inline-block;
+    color:#000;
+    font-size:1.5rem;
+
+    text-transform: uppercase;
+  }
+  .cart-item {
+    display:inline-block;
+    padding:0.25rem 0.8rem;
+    border-right:3px solid fade(#222,20%);
+    &:last-child {
+      border-right:0;
+    }
+    .name {
+      color:#000;
+      text-transform: uppercase;
+      font-weight:700;
+      font-size:1rem;
+      display:inline-block;
+      position: relative;
+
+      cursor: pointer;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        top: 50%;
+        margin-top: -0.5px;
+        background: #000;
+      }
+
+      &:before {
+        left: -2.5px;
+      }
+      &:after {
+        right: 2.5px;
+        background: #000;
+        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+
+      &:hover:before {
+        background: #000;
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+
+      &:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+      }
+    }
+    .price {
+      margin-left:10px;
+      font-size:1rem;
+      color:#555;
+      font-weight:400;
+      display:inline-block;
+    }
+  }
+}

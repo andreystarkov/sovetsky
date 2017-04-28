@@ -4,7 +4,7 @@ import notie from 'notie'
 import { Col, Row, Button, Container } from 'reactstrap'
 import { fetchMenuItems } from '../../actions'
 import CatalogItem from './CatalogItem/CatalogItem'
-import './Cart.less'
+import Cart from './Cart/Cart'
 
 class CatalogGrid extends Component {
   constructor(props) {
@@ -28,26 +28,28 @@ class CatalogGrid extends Component {
       cart: cart
     })
   }
+  cartRemove(item) {
+    const cart = this.state.cart.filter(f => f.id !== item.id)
+//    const that = cart.findIndex(f => f.id === item.id)
+//    cart.slice(that, 1)
+    this.setState({ cart: cart })
+//    console.log(that, cart)
+  }
   render() {
     const menu = this.props.menu
-
+    const cart = this.state.cart
     return (
       <section className='section-catalog'>
-        <div className='the-cart'>
-          {this.state.cart.map(e => {
-            return (
-              <div className='cart-item'>
-                <b className='name'>{e.title}</b>
-                <span className='price'>{e.price}</span>
-              </div>
-            )
-          })}
-        </div>
+        {cart && cart.length
+          ? <Cart
+            onRemove={this.cartRemove.bind(this)}
+            items={this.state.cart}
+        /> : ''}
         <Container fluid>
           <Row>
             {menu.items.map((obj, key) => {
               return (
-                <Col key={key} md={4} xs={12}>
+                <Col key={key} md={3} xs={12}>
                   <CatalogItem onCart={this.onCart.bind(this)} item={obj} />
                 </Col>
               )

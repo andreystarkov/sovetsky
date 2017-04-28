@@ -265,16 +265,15 @@ export function fetchMenuItems() {
             .then(response => Promise.all([response.json()]))
             .then(menuData => {
            // console.log('fetchMenu: ', menuData);
-              var list = menuData[0], total = []
-
+              const list = menuData[0]
+              const total = []
               if (list) {
                 list.map((obj, key) => {
                   fetch(api.acf.post + obj.id)
                     .then(response => response.json())
                     .then(acf => {
-                     // console.log('fetchMenuItems ACF:' ,acf);
-
                       total.push({
+                        id: key,
                         title: obj.title.rendered,
                         description: acf.acf.description,
                         price: acf.acf.price,
@@ -283,6 +282,7 @@ export function fetchMenuItems() {
                         sizes: obj.better_featured_image.media_details.sizes,
                         full: obj.better_featured_image.source_url
                       })
+                      console.log(total)
                       dispatch(receiveMenuItems(total))
                     })
                 })

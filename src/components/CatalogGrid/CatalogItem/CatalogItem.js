@@ -3,7 +3,7 @@ import { Button } from 'reactstrap'
 
 import notie from 'notie'
 import anime from 'animejs'
-import $ from 'jquery'
+import Img from '../../Common/Image'
 import { AddCartIcon } from '../../../svg/Cart'
 import drawStroke from '../../../animation/drawStroke'
 // import store from 'store'
@@ -17,7 +17,6 @@ export default class CatalogItem extends React.Component {
     }
   }
   toCart(obj, e) {
-    console.log('add: ', obj)
     if (this.props.onCart) this.props.onCart(obj)
     notie.alert({
       type: 'success',
@@ -25,42 +24,40 @@ export default class CatalogItem extends React.Component {
       time: 3
     })
 
-    const path = e.target.querySelectorAll('path')
-    anime({
-      targets: path,
-      translateY: {
-        value: [0, '-300px']
-      },
-      opacity: [1, 0],
-      duration: 1300,
-      rotate: [0, 10],
-      elasticity: anime.random(300, 700)
-    })
+    const path = e.target.querySelectorAll('path.spoon')
+
     // anime({
     //   targets: path,
-    //   rotateY: [0, -15],
-    //   translateZ: [0, -15],
-    //   scale: [1, 1.05]
+    //   d: 'M368.911,155.586L234.663,289.834l-70.248-70.248c-8.331-8.331-21.839-8.331-30.17,0s-8.331,21.839,0,30.17 l85.333,85.333c8.331,8.331,21.839,8.331,30.17,0l149.333-149.333c8.331-8.331,8.331-21.839,0-30.17 S377.242,147.255,368.911,155.586z',
+    //   duration: 1000,
+    //   easing: 'linear',
+    //   scale: 0.9
     // })
   }
   onMouseEnterHandle(e) {
     const path = e.target.querySelectorAll('path')
     drawStroke(path)
-    // anime({
-    //   targets: path,
-    //   rotateY: [0, -15],
-    //   translateZ: [0, -15],
-    //   scale: [1, 1.05]
-    // })
-  //  drawStroke(icon)
-  //  this.setState({ hover: true })
-
-//    console.log('enter', e.querySelector('.svg-icon path'), $('path', e))
   }
   onMouseLeaveHandle() {
-  //  this.setState({ hover: false })
-    console.log('leave')
+    // this.setState({ hover: false })
   }
+
+  handleImageLoaded(e) {
+    anime({
+      targets: e.target.parentNode.parentNode,
+      opacity: {
+        value: [0, 1],
+        duration: 300
+      },
+      translateY: {
+        value: ['500px', 0],
+        duration: 300
+      },
+      easing: 'easeInOutQuart',
+      elasticity: 600
+    })
+  }
+
   // <span className='catalog-price'>{obj.price} г.</span>
   // <span className='catalog-weight'>{obj.weight} Р.</span>
   render() {
@@ -73,11 +70,13 @@ export default class CatalogItem extends React.Component {
         className='catalog-item'
         onMouseEnter={this.onMouseEnterHandle.bind(this)}
         onMouseLeave={this.onMouseLeaveHandle.bind(this)}
-        style={{backgroundImage: `url(${obj.sizes.thumbnail.source_url})`}}
+        style={{backgroundImage: `url(${obj.sizes.thumbnail.source_url})`, opacity: 0}}
         >
         <div className='catalog-item-overlay'>
           <div className='catalog-caption'>
-            <b className='catalog-name'>{obj.title}</b>
+            <b className='catalog-name'>
+              {obj.title}
+            </b>
             <span className='catalog-description'>{obj.description}</span>
           </div>
           <div className='catalog-params'>
@@ -86,12 +85,17 @@ export default class CatalogItem extends React.Component {
               onClick={this.toCart.bind(this, obj)}
               data-name={obj.title}
               data-price={obj.price}
-            > <AddCartIcon />
+            >
+              <AddCartIcon />
             </Button>
           </div>
         </div>
         <div className='catalog-img'>
-          <img src={obj.sizes.thumbnail.source_url} />
+          <img
+            src={obj.sizes.thumbnail.source_url}
+            alt={obj.title}
+            onLoad={this.handleImageLoaded.bind(this)}
+          />
         </div>
       </div>
     )
